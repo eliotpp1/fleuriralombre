@@ -1,6 +1,6 @@
 export default function Portfolio({ projects }) {
   return (
-    <section className="portfolio">
+    <section className="portfolio" id="portfolio">
       <div className="portfolio-grid">
         {projects.map((project) => (
           <div key={project.slug} className="portfolio-item">
