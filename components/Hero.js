@@ -6,7 +6,7 @@ export default function Hero() {
         <h1>Fao.studio Design Studio</h1>
         <p>Graphisme, Vidéo, Motion, 3D</p>
         <a href="#portfolio" className="cta-button">
-          Découvrez nos projets
+          Découvrez nos projetsss
         </a>
       </div>
     </section>
