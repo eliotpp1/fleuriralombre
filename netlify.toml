@@ -5,9 +5,8 @@
   publish = "out"
   
   # Optional: if you want to specify the build environment variables
-  environment = { 
+  [build.environment]
     NODE_VERSION = "16"  # or any specific version that works with your build
-  }
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
