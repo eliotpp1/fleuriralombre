@@ -1,7 +1,7 @@
 # netlify.toml
 
 [build]
-  command = "npm install --legacy-peer-deps && npm run build && npm run export"
+  command = "npm install --force && npm run build && npm run export"
   publish = "out"
   
   # Optional: if you want to specify the build environment variables
