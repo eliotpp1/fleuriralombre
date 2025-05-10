@@ -1,163 +1,48 @@
-/* styles/globals.css */
+/* Reset CSS pour uniformiser les navigateurs */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Variables CSS pour couleurs, tailles, etc. */
+:root {
+  --primary-color: #333;
+  --secondary-color: #007bff;
+  --font-size-base: 16px;
+  --font-size-large: 24px;
+  --font-size-xl: 36px;
+}
+
+/* Styles globaux */
+html {
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "CustomFont", sans-serif;
+  font-weight: 400;
+  color: var(--primary-color);
   line-height: 1.6;
-  color: #333;
 }
 
-.hero {
-  background-color: #1a202c;
-  color: white;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+h1,
+h2,
+h3 {
+  font-family: "CustomFont", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-}
-
-.cta-button {
-  background-color: #2563eb;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+a {
   text-decoration: none;
+  color: var(--secondary-color);
 }
 
-.cta-button:hover {
-  background-color: #1d4ed8;
-}
-
-.portfolio {
-  padding: 4rem 1rem;
-  background-color: #f7fafc;
-}
-
-.portfolio h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.portfolio-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.portfolio-card {
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  overflow: hidden;
-}
-
-.portfolio-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.portfolio-card h3 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  padding: 1rem;
-}
-
-.portfolio-card p {
-  padding: 0 1rem 1rem;
-  color: #4a5568;
-}
-
-.about {
-  padding: 4rem 1rem;
-}
-
-.about-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.about-container img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 0.5rem;
-}
-
-.about-text {
-  flex: 1;
-}
-
-.about-text h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.about-text p {
-  color: #4a5568;
-}
-
-.contact {
-  padding: 4rem 1rem;
-  background-color: #1a202c;
-  color: white;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.contact-form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  border: none;
-}
-
-.contact-form button {
-  background-color: #2563eb;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #1d4ed8;
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
 }

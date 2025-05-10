@@ -1,0 +1,40 @@
+.aboutus {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.aboutus.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.aboutus-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.aboutus-title {
+  font-size: var(--font-size-large);
+  margin-bottom: 1rem;
+}
+
+.aboutus-text {
+  font-size: 1rem;
+}
+
+.aboutus-image {
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .aboutus {
+    padding: 2rem 1rem;
+  }
+}
