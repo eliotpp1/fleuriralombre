@@ -12,8 +12,6 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>Fleurir à l'ombre</title>
         <link rel="icon" href="/favicon.ico" />
-        <title>Tadéo Design Studio</title>
-        <link rel="icon" href="/favicon.ico" />
         <link
           rel="preload"
           href="/fonts/Tagesschrift-Regular.woff2"
