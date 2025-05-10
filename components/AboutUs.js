@@ -4,7 +4,7 @@ export default function AboutUs({ about }) {
       <div className="about-container">
         <img src={about.image} alt="About us" />
         <div className="about-text">
-          <h2>À propos de noussqdqsd</h2>
+          <h2>À propos de nous</h2>
           <p>{about.description}</p>
         </div>
       </div>
