@@ -2,9 +2,7 @@ import Hero from "../components/Hero";
 import Portfolio from "../components/Portfolio";
 import AboutUs from "../components/AboutUs";
 import Contact from "../components/Contact";
-import { promises as fs } from "fs";
-import path from "path";
-import matter from "gray-matter";
+import { createClient } from "contentful";
 
 export default function Home({ projects, about }) {
   return (
@@ -18,30 +16,59 @@ export default function Home({ projects, about }) {
 }
 
 export async function getStaticProps() {
-  const projectsDir = path.join(process.cwd(), "content/projects");
-  const aboutFile = path.join(process.cwd(), "content/about.md");
+  // Connexion à Contentful
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
 
-  const projectFiles = await fs.readdir(projectsDir);
-  const projects = await Promise.all(
-    projectFiles.map(async (file) => {
-      const filePath = path.join(projectsDir, file);
-      const fileContent = await fs.readFile(filePath, "utf8");
-      const { data } = matter(fileContent);
-      return {
-        slug: file.replace(".md", ""),
-        title: data.title,
-        description: data.description,
-        image: data.image,
+  let projects = [];
+  let about = { description: "", image: "" };
+
+  const projectEntries = await client.getEntries({
+    content_type: "projet",
+  });
+  console.log("Projets:", projectEntries);
+
+  const aboutEntry = await client.getEntries({
+    content_type: "a-propos",
+  });
+  console.log("À propos:", aboutEntry);
+
+  try {
+    // Récupérer les projets
+    const projectEntries = await client.getEntries({
+      content_type: "projet", // Utilise l'ID correct
+    });
+
+    projects = projectEntries.items.map((entry) => ({
+      slug: entry.fields.title.toLowerCase().replace(/\s+/g, "-"),
+      title: entry.fields.title,
+      description: entry.fields.description,
+      image: entry.fields.image?.fields?.file?.url
+        ? `https:${entry.fields.image.fields.file.url}`
+        : "",
+    }));
+
+    // Récupérer la section À propos
+    const aboutEntry = await client.getEntries({
+      content_type: "a-propos", // Utilise l'ID correct
+    });
+
+    if (aboutEntry.items[0]) {
+      about = {
+        description: aboutEntry.items[0].fields.description,
+        image: aboutEntry.items[0].fields.image?.fields?.file?.url
+          ? `https:${aboutEntry.items[0].fields.image.fields.file.url}`
+          : "",
       };
-    })
-  );
-
-  const aboutContent = await fs.readFile(aboutFile, "utf8");
-  const { data: aboutData } = matter(aboutContent);
-  const about = {
-    description: aboutData.description,
-    image: aboutData.image,
-  };
+    }
+  } catch (error) {
+    console.error(
+      "Erreur lors de la récupération des données Contentful:",
+      error
+    );
+  }
 
   return {
     props: {

@@ -6,11 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export"
   },
   "dependencies": {
-    "gray-matter": "^4.0.3",
-    "netlify-cms-app": "^2.15.72",
+    "contentful": "^11.5.20",
     "next": "15.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
