@@ -1,5 +1,6 @@
 export default function Hero() {
   return (
+    // Test pour déploiement automatique
     <section className="hero">
       <div className="hero-content">
         <h1>Fao.studio Design Studio</h1>
