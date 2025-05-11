@@ -25,6 +25,8 @@ body {
   font-weight: 400;
   color: var(--primary-color);
   line-height: 1.6;
+  /* Cursur via url */
+  cursor: url("/cursor.png"), auto;
 }
 
 h1,
