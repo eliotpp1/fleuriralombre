@@ -34,6 +34,7 @@ html::-webkit-scrollbar {
   display: none; /* Chrome, Safari : masque la barre de défilement */
 }
 
+/* Appliquer le masquage également à body pour plus de robustesse */
 body {
   position: relative;
   font-family: "CustomFont", sans-serif;
@@ -42,6 +43,12 @@ body {
   line-height: 1.6;
   cursor: url("/cursor.png"), auto;
   min-height: 100vh;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 h1,
