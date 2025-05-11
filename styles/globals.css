@@ -14,17 +14,34 @@
   --font-size-xl: 36px;
 }
 
-/* Styles globaux */
+html,
+body {
+  width: 100vw;
+  min-height: 100vh; /* Permet au body d'être au moins la hauteur de l'écran */
+  overflow-x: hidden; /* Supprime tout débordement horizontal */
+  overflow-y: auto; /* Permet le défilement vertical */
+}
+
+/* Masquer la barre de défilement tout en permettant le défilement */
 html {
   font-size: var(--font-size-base);
   scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox : masque la barre de défilement */
+  -ms-overflow-style: none; /* IE/Edge : masque la barre de défilement */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari : masque la barre de défilement */
 }
 
 body {
+  position: relative;
   font-family: "CustomFont", sans-serif;
   font-weight: 400;
   color: var(--primary-color);
   line-height: 1.6;
+  cursor: url("/cursor.png"), auto;
+  min-height: 100vh;
 }
 
 h1,

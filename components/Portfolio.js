@@ -10,6 +10,7 @@ export default function Portfolio({ projects }) {
               className="portfolio-image"
             />
             <h3 className="portfolio-title">{project.title}</h3>
+            <p className="portfolio-description">{project.description}</p>
           </div>
         ))}
       </div>

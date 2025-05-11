@@ -1,12 +1,19 @@
+"use client";
+
+import { useEffect } from "react";
+import ThreeScene from "./ThreeScene";
+
 export default function Hero() {
+  useEffect(() => {
+    // Ajoute la classe 'visible' pour l'animation
+    const hero = document.querySelector(".hero");
+    hero.classList.add("visible");
+  }, []);
+
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1 className="hero-title">Tadéo Design Studio</h1>
-        <p className="hero-text">Graphisme, Vidéo, Motion, 3D</p>
-        <a href="#portfolio" className="hero-button">
-          Découvrez nos projets
-        </a>
+        <ThreeScene />
       </div>
     </section>
   );
