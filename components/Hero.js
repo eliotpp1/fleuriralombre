@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Menu from "./Menu";
 import ModelViewer from "./ModelViewer";
 
