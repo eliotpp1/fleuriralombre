@@ -15,7 +15,7 @@ export default function ModelViewer() {
   }, []);
 
   useEffect(() => {
-    if (isMobile) return; // Ne lance pas three.js sur mobile
+    if (isMobile) return;
 
     const container = containerRef.current;
     if (!container) return;

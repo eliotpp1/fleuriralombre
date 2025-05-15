@@ -4,7 +4,6 @@ import ModelViewer from "./ModelViewer";
 
 export default function Hero() {
   useEffect(() => {
-    // Ajoute la classe 'visible' pour l'animation
     const hero = document.querySelector(".hero");
     hero.classList.add("visible");
   }, []);
