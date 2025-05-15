@@ -1,7 +1,5 @@
-"use client";
-
-import { useEffect } from "react";
-import ThreeScene from "./ThreeScene";
+import Menu from "./Menu";
+import ModelViewer from "./ModelViewer";
 
 export default function Hero() {
   useEffect(() => {
@@ -12,9 +10,28 @@ export default function Hero() {
 
   return (
     <section className="hero">
-      <div className="hero-content">
-        <ThreeScene />
+      {/* Croix dans chaque coin */}
+      <div className="corner top-left">
+        <div className="bar-horizontal"></div>
+        <div className="bar-vertical"></div>
       </div>
+      <div className="corner top-right">
+        <div className="bar-horizontal"></div>
+        <div className="bar-vertical"></div>
+      </div>
+      <div className="corner bottom-left">
+        <div className="bar-horizontal"></div>
+        <div className="bar-vertical"></div>
+      </div>
+      <div className="corner bottom-right">
+        <div className="bar-horizontal"></div>
+        <div className="bar-vertical"></div>
+      </div>
+      <Menu />
+      <div className="hero-content">
+        <ModelViewer />
+      </div>
+      <div className="hero-footer">Fleurir’A l’Ombre</div>
     </section>
   );
 }
