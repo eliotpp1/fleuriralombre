@@ -1,8 +1,23 @@
 @font-face {
-  font-family: "CustomFont";
-  src: url("/fonts/Tagesschrift-Regular.woff2") format("woff2"),
-    url("/fonts/Tagesschrift-Regular.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "SwitzerTitle";
+  src: url("/fonts/Switzer/Switzer-Bold.woff2") format("woff2"),
+    url("/fonts/Switzer/Switzer-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SwitzerText";
+  src: url("/fonts/Switzer/Switzer-Regular.woff2") format("woff2"),
+    url("/fonts/Switzer/Switzer-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SwitzerSemibold";
+  src: url("/fonts/Switzer/Switzer-Semibold.woff2") format("woff2"),
+    url("/fonts/Switzer/Switzer-Semibold.woff2") format("woff2");
   font-style: normal;
   font-display: swap;
 }

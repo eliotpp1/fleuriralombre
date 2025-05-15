@@ -1,13 +1,31 @@
+import Menu from "./Menu";
+import ModelViewer from "./ModelViewer";
+
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero-content">
-        <h1 className="hero-title">Tadéo Design Studio</h1>
-        <p className="hero-text">Graphisme, Vidéo, Motion, 3D</p>
-        <a href="#portfolio" className="hero-button">
-          Découvrez nos projets
-        </a>
+      {/* Croix dans chaque coin */}
+      <div className="corner top-left">
+        <div className="bar-horizontal"></div>
+        <div className="bar-vertical"></div>
       </div>
+      <div className="corner top-right">
+        <div className="bar-horizontal"></div>
+        <div className="bar-vertical"></div>
+      </div>
+      <div className="corner bottom-left">
+        <div className="bar-horizontal"></div>
+        <div className="bar-vertical"></div>
+      </div>
+      <div className="corner bottom-right">
+        <div className="bar-horizontal"></div>
+        <div className="bar-vertical"></div>
+      </div>
+      <Menu />
+      <div className="hero-content">
+        <ModelViewer />
+      </div>
+      <div className="hero-footer">Fleurir’A l’Ombre</div>
     </section>
   );
 }

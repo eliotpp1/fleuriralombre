@@ -7,8 +7,9 @@
 
 /* Variables CSS pour couleurs, tailles, etc. */
 :root {
-  --primary-color: #333;
-  --secondary-color: #007bff;
+  --black: #000000;
+  --red: #ff1100;
+  --white: #ffffff;
   --font-size-base: 16px;
   --font-size-large: 24px;
   --font-size-xl: 36px;
@@ -21,12 +22,13 @@ html {
 }
 
 body {
-  font-family: "CustomFont", sans-serif;
+  font-family: "SwitzerText", sans-serif;
   font-weight: 400;
-  color: var(--primary-color);
+  background-color: var(--black);
+  color: var(--white);
   line-height: 1.6;
   /* Cursur via url */
-  cursor: url("/cursor.png"), auto;
+  cursor: url("/cursor.svg"), auto;
 }
 
 h1,
