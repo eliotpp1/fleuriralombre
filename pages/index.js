@@ -4,6 +4,7 @@ import Portfolio from "../components/Portfolio";
 import AboutUs from "../components/AboutUs";
 import Contact from "../components/Contact";
 import Video from "@/components/Video";
+import Presentation from "@/components/Presentation";
 import { createClient } from "contentful";
 
 export default function Home({ projects, about }) {
@@ -11,6 +12,7 @@ export default function Home({ projects, about }) {
     <div>
       <Hero />
       <Video />
+      <Presentation />
       <Portfolio projects={projects} />
       <AboutUs about={about} />
       <Contact />

@@ -7,6 +7,7 @@ import "../styles/components/aboutus.css";
 import "../styles/components/contact.css";
 import "../styles/components/video.css";
 import "../styles/components/menu.css";
+import "../styles/components/presentation.css";
 export default function App({ Component, pageProps }) {
   return (
     <>
