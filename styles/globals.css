@@ -18,21 +18,25 @@
 html,
 body {
   width: 100vw;
-  min-height: 100vh; /* Permet au body d'être au moins la hauteur de l'écran */
-  overflow-x: hidden; /* Supprime tout débordement horizontal */
-  overflow-y: auto; /* Permet le défilement vertical */
+  min-height: 100vh;
+  /* Permet au body d'être au moins la hauteur de l'écran */
+  /* Supprime tout débordement horizontal */
+  /* Permet le défilement vertical */
 }
 
 /* Masquer la barre de défilement tout en permettant le défilement */
 html {
   font-size: var(--font-size-base);
   scroll-behavior: smooth;
-  scrollbar-width: none; /* Firefox : masque la barre de défilement */
-  -ms-overflow-style: none; /* IE/Edge : masque la barre de défilement */
+  scrollbar-width: none;
+  /* Firefox : masque la barre de défilement */
+  -ms-overflow-style: none;
+  /* IE/Edge : masque la barre de défilement */
 }
 
 html::-webkit-scrollbar {
-  display: none; /* Chrome, Safari : masque la barre de défilement */
+  display: none;
+  /* Chrome, Safari : masque la barre de défilement */
 }
 
 /* Appliquer le masquage également à body pour plus de robustesse */
@@ -44,7 +48,7 @@ body {
   color: var(--white);
   line-height: 1.6;
   /* Cursur via url */
-  cursor: url("/cursor.svg"), auto;
+  cursor: url("/cursor.svg") 16 16, auto;
 }
 
 h1,

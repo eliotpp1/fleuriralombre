@@ -69,7 +69,7 @@ export default function Contact() {
           data-netlify="true"
           onSubmit={handleSubmit}
           className="contact-form"
-          netlify
+          netlify="true"
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="form-group">
