@@ -1,0 +1,108 @@
+.sunflower {
+  display: flex;
+  flex-direction: row; /* Image and content side by side on desktop */
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.sunflower-content {
+  flex: 1; /* Take available space */
+  padding: 2rem;
+  max-width: 30%; /* Limit text width on desktop */
+  color: var(--white); /* Assuming white text for contrast */
+  margin-bottom: 15rem;
+  margin-left: 15rem;
+}
+
+.sunflower-title {
+  font-size: clamp(2.5rem, 6vw, 4rem); /* Responsive title size */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sunflower-content p {
+  font-size: clamp(1rem, 3vw, 1.5rem); /* Responsive paragraph size */
+  line-height: 1.6;
+  margin: 0;
+}
+
+.sunflower-image {
+  width: 1000px; /* Fixed width for large screens */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute;
+  right: 0; /* Align to right edge */
+  bottom: 0; /* Stem appears to grow from bottom-right */
+  transform: translateX(30%); /* Shift slightly off-screen for stem effect */
+  object-fit: contain; /* Ensure image isn't distorted */
+  rotate: -34deg; /* Rotate image for a more dynamic look */
+}
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .sunflower {
+    flex-direction: column; /* Stack content and image vertically */
+    justify-content: center;
+    height: auto; /* Allow content to dictate height */
+    padding: 1.5rem;
+    overflow: hidden; /* Prevent image overflow */
+  }
+
+  .sunflower-content {
+    max-width: 90%; /* Slightly less than full width for breathing room */
+    padding: 1.5rem;
+    margin-left: 0; /* Remove large desktop margin */
+    text-align: left; /* Keep left-aligned text for consistency */
+  }
+
+  .sunflower-title {
+    font-size: clamp(2.2rem, 5.5vw, 3.5rem); /* Slightly larger than before */
+    margin-bottom: 0.8rem;
+  }
+
+  .sunflower-content p {
+    font-size: clamp(1rem, 3vw, 1.4rem); /* Slightly larger paragraph */
+    line-height: 1.5;
+  }
+
+  .sunflower-image {
+    width: clamp(20rem, 50vw, 30rem); /* Larger than before, but fits tablet */
+    position: relative; /* Remove absolute positioning */
+    transform: translateX(20%) rotate(-34deg); /* Maintain rotation and offset */
+    margin: 1rem auto; /* Center image */
+    max-width: 80%; /* Prevent overflow */
+  }
+}
+
+/* Phone (max-width: 480px) */
+@media (max-width: 480px) {
+  .sunflower {
+    padding: 1rem;
+  }
+
+  .sunflower-content {
+    max-width: 100%; /* Full width for phones */
+    padding: 1rem;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .sunflower-title {
+    font-size: clamp(1.8rem, 5vw, 3rem); /* Larger for better visibility */
+  }
+
+  .sunflower-content p {
+    font-size: clamp(0.9rem, 2.5vw, 1.3rem); /* Slightly larger */
+    line-height: 1.4;
+  }
+
+  .sunflower-image {
+    width: clamp(15rem, 45vw, 20rem); /* Larger but constrained for phones */
+    transform: translateX(15%) rotate(-34deg); /* Reduced offset, keep rotation */
+    max-width: 90%; /* Ensure it fits */
+    margin: 0.5rem auto;
+  }
+}

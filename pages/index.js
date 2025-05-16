@@ -5,6 +5,7 @@ import AboutUs from "../components/AboutUs";
 import Contact from "../components/Contact";
 import Video from "@/components/Video";
 import Presentation from "@/components/Presentation";
+import Sunflower from "@/components/Sunflower";
 import { createClient } from "contentful";
 
 export default function Home({ projects, about }) {
@@ -13,6 +14,7 @@ export default function Home({ projects, about }) {
       <Hero />
       <Video />
       <Presentation />
+      <Sunflower />
       <Portfolio projects={projects} />
       <AboutUs about={about} />
       <Contact />

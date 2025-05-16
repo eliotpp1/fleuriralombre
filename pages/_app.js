@@ -8,6 +8,7 @@ import "../styles/components/contact.css";
 import "../styles/components/video.css";
 import "../styles/components/menu.css";
 import "../styles/components/presentation.css";
+import "../styles/components/sunflower.css";
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -45,8 +46,10 @@ export default function App({ Component, pageProps }) {
           />
         )}
 
-
-        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
       </Head>
       <Component {...pageProps} />
     </>

@@ -1,49 +1,119 @@
 .presentation {
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  margin-bottom: 30rem;
 }
 
 .presentation-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
-    padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box; /* Ensure padding doesn't increase size */
 }
 
 .studio-title {
-    font-size: 7.5rem;
-    font-weight: bold;
-    color: var(--red);
+  font-size: clamp(5rem, 12vw, 8.5rem); /* Increased font size */
+  font-weight: bold;
+  color: var(--red);
 }
 
 .multidisciplinaire-title {
-    font-size: 7.5rem;
-    font-weight: bold;
-    color: var(--white);
+  font-size: clamp(5rem, 12vw, 8.5rem);
+  font-weight: bold;
+  color: var(--white);
 }
 
 .services-item {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start; /* Align left for smaller screens */
+  gap: 1rem;
+  font-size: clamp(1.8rem, 6vw, 2.5rem); /* Increased font size */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  padding: 0; /* Remove default padding */
 }
 
 .location {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap; /* Wrap on smaller screens */
 }
 
 .location-city {
-    font-size: 3rem;
-    font-weight: bold;
-    color: var(--white);
+  font-size: clamp(2.5rem, 7vw, 3.5rem); /* Increased font size */
+  font-weight: bold;
+  color: var(--white);
+}
+
+.location-icon {
+  width: clamp(2rem, 6vw, 2.5rem); /* Increased icon size */
+  height: auto;
+}
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .presentation-content {
+    padding: 1.5rem;
+    justify-content: flex-start; /* Adjust content to top */
+  }
+
+  .studio-title,
+  .multidisciplinaire-title {
+    font-size: clamp(4rem, 9vw, 6rem); /* Increased font size */
+  }
+
+  .services-item {
+    flex-direction: row; /* Stack services vertically */
+    align-items: flex-start;
+    font-size: clamp(1.5rem, 5vw, 2.2rem); /* Increased font size */
+    gap: 0.5rem;
+  }
+
+  .location {
+    flex-direction: row; /* Stack location items */
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .location-city {
+    font-size: clamp(2rem, 6vw, 3rem); /* Increased font size */
+  }
+
+  .location-icon {
+    width: clamp(1.5rem, 5vw, 2rem); /* Increased icon size */
+  }
+}
+
+/* Phone (max-width: 480px) */
+@media (max-width: 480px) {
+  .presentation-content {
+    padding: 1rem;
+  }
+
+  .studio-title,
+  .multidisciplinaire-title {
+    font-size: clamp(3rem, 8vw, 4.5rem); /* Increased font size */
+  }
+
+  .services-item {
+    font-size: clamp(1.2rem, 4vw, 1.8rem); /* Increased font size */
+    gap: 0.3rem;
+  }
+
+  .location-city {
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Increased font size */
+  }
+
+  .location-icon {
+    width: clamp(1.2rem, 4.5vw, 1.8rem); /* Increased icon size */
+  }
 }
