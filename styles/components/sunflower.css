@@ -14,7 +14,7 @@
   padding: 2rem;
   max-width: 30%; /* Limit text width on desktop */
   color: var(--white); /* Assuming white text for contrast */
-  margin-bottom: 15rem;
+  margin-bottom: 25rem;
   margin-left: 15rem;
 }
 
@@ -22,12 +22,31 @@
   font-size: clamp(2.5rem, 6vw, 4rem); /* Responsive title size */
   font-weight: bold;
   margin-bottom: 1rem;
+  background: linear-gradient(
+    to bottom left,
+    #808080,
+    #ffffff
+  ); /* Gray top-right to white bottom-left */
+  -webkit-background-clip: text; /* For WebKit browsers */
+  background-clip: text; /* Standard property */
+  color: transparent; /* Make text transparent to show gradient */
+  -webkit-text-fill-color: transparent; /* Ensure compatibility */
 }
 
 .sunflower-content p {
   font-size: clamp(1rem, 3vw, 1.5rem); /* Responsive paragraph size */
   line-height: 1.6;
   margin: 0;
+  background: linear-gradient(
+    to bottom left,
+    #808080,
+    #ffffff,
+    #ffffff
+  ); /* Gray top-right to white bottom-left */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .sunflower-image {
@@ -46,34 +65,52 @@
   .sunflower {
     flex-direction: column; /* Stack content and image vertically */
     justify-content: center;
-    height: auto; /* Allow content to dictate height */
+    height: 100vh; /* Full viewport height */
     padding: 1.5rem;
     overflow: hidden; /* Prevent image overflow */
   }
 
   .sunflower-content {
-    max-width: 90%; /* Slightly less than full width for breathing room */
+    max-width: 50%; /* Slightly less than full width for breathing room */
     padding: 1.5rem;
-    margin-left: 0; /* Remove large desktop margin */
     text-align: left; /* Keep left-aligned text for consistency */
+    margin-top: 15rem;
+    margin-left: -5rem; /* Adjust margin for better alignment */
   }
 
   .sunflower-title {
-    font-size: clamp(2.2rem, 5.5vw, 3.5rem); /* Slightly larger than before */
+    font-size: clamp(2.2rem, 5.5vw, 3.5rem);
+    background: linear-gradient(
+      to bottom left,
+      #808080,
+      #ffffff
+    ); /* Maintain gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 0.8rem;
   }
 
   .sunflower-content p {
-    font-size: clamp(1rem, 3vw, 1.4rem); /* Slightly larger paragraph */
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    background: linear-gradient(
+      to bottom left,
+      #808080,
+      #ffffff
+    ); /* Maintain gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
     line-height: 1.5;
   }
 
   .sunflower-image {
     width: clamp(20rem, 50vw, 30rem); /* Larger than before, but fits tablet */
-    position: relative; /* Remove absolute positioning */
-    transform: translateX(20%) rotate(-34deg); /* Maintain rotation and offset */
     margin: 1rem auto; /* Center image */
     max-width: 80%; /* Prevent overflow */
+    top: 0;
   }
 }
 
@@ -84,25 +121,34 @@
   }
 
   .sunflower-content {
-    max-width: 100%; /* Full width for phones */
     padding: 1rem;
-    margin-left: 0;
     text-align: left;
   }
 
   .sunflower-title {
-    font-size: clamp(1.8rem, 5vw, 3rem); /* Larger for better visibility */
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    background: linear-gradient(
+      to bottom left,
+      #808080,
+      #ffffff
+    ); /* Maintain gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 
   .sunflower-content p {
-    font-size: clamp(0.9rem, 2.5vw, 1.3rem); /* Slightly larger */
+    font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+    background: linear-gradient(
+      to bottom left,
+      #808080,
+      #ffffff
+    ); /* Maintain gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
     line-height: 1.4;
-  }
-
-  .sunflower-image {
-    width: clamp(15rem, 45vw, 20rem); /* Larger but constrained for phones */
-    transform: translateX(15%) rotate(-34deg); /* Reduced offset, keep rotation */
-    max-width: 90%; /* Ensure it fits */
-    margin: 0.5rem auto;
   }
 }

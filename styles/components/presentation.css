@@ -61,6 +61,11 @@
 
 /* Tablet (max-width: 768px) */
 @media (max-width: 768px) {
+  .presentation {
+    height: 20vh; /* Adjust height for tablet */
+    margin-bottom: 10rem; /* Adjust margin for tablet */
+  }
+
   .presentation-content {
     padding: 1.5rem;
     justify-content: flex-start; /* Adjust content to top */
