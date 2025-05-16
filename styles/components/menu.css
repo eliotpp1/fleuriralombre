@@ -2,7 +2,7 @@
   position: absolute;
   top: 3cm;
   left: 7rem;
-  z-index: 10;
+  z-index: 20;
 }
 
 .menu {
@@ -27,6 +27,7 @@
   border-left: 2px solid white;
   border-top-left-radius: 8px;
 }
+
 .menu::after {
   content: "";
   position: absolute;
@@ -57,38 +58,66 @@
   display: block;
 }
 
-.burger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.burger .bar {
-  width: 24px;
-  height: 2px;
-  background-color: white;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .burger {
-    display: flex;
+/* Tablette */
+@media (max-width: 1024px) {
+  .menu-wrapper {
+    top: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .menu {
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    width: 200px;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 12px;
   }
 
-  .menu.open {
-    display: block;
+  .menu-logo {
+    width: 7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .menu li a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+
+  .menu::before,
+  .menu::after {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+  }
+}
+
+/* Téléphone */
+@media (max-width: 768px) {
+  .menu-wrapper {
+    top: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .menu {
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .menu-logo {
+    width: 7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .menu li a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+
+  .menu::before,
+  .menu::after {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
   }
 }

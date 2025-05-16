@@ -3,19 +3,19 @@ import * as THREE from "three";
 
 export default function ModelViewer() {
   const containerRef = useRef();
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+    const checkMobileOrTablet = () => {
+      setIsMobileOrTablet(window.innerWidth <= 1024); // Tablet and mobile
     };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    checkMobileOrTablet();
+    window.addEventListener("resize", checkMobileOrTablet);
+    return () => window.removeEventListener("resize", checkMobileOrTablet);
   }, []);
 
   useEffect(() => {
-    if (isMobile) return;
+    if (isMobileOrTablet) return;
 
     const container = containerRef.current;
     if (!container) return;
@@ -77,17 +77,13 @@ export default function ModelViewer() {
     }, 100);
 
     return () => clearTimeout(timeout);
-  }, [isMobile]);
+  }, [isMobileOrTablet]);
 
   return (
     <>
       <div ref={containerRef} className="model-3d"></div>
-
       <div className="model-image">
-        <img
-          src="/images/about.jpg"
-          alt="3D Model preview"
-        />
+        <img src="/images/about.jpg" alt="3D Model preview" />
       </div>
     </>
   );

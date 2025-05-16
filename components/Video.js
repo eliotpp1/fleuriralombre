@@ -3,55 +3,102 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVolumeXmark, faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
 
 export default function Video() {
-  const videoRef = useRef(null);
+  const playerRef = useRef(null);
   const [muted, setMuted] = useState(true);
-  const [videoSrc, setVideoSrc] = useState("");
+  const [player, setPlayer] = useState(null);
 
-  // Fonction pour détecter la taille et choisir la bonne vidéo
-  const chooseVideoSrc = () => {
-    const width = window.innerWidth;
-
-    if (width < 768) {
-      return "/videos/presentation-mobile.mp4";
-    } else if (width < 1024) {
-      return "/videos/presentation-tablet.mp4";
-    } else {
-      return "/videos/presentation-desktop.mp4";
-    }
-  };
-
-  // Détecter au chargement et à chaque resize
   useEffect(() => {
-    const handleResize = () => {
-      const newSrc = chooseVideoSrc();
-      setVideoSrc((prevSrc) => (prevSrc !== newSrc ? newSrc : prevSrc));
+    // Charger l  l'API YouTube
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName("script")[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // Initialiser le lecteur
+    window.onYouTubeIframeAPIReady = () => {
+      const newPlayer = new window.YT.Player("youtube-player", {
+        videoId: "yicesAE_a18",
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          showinfo: 0,
+          rel: 0,
+          modestbranding: 1,
+          loop: 1,
+          playlist: "yicesAE_a18",
+          mute: 1,
+          playsinline: 1,
+          iv_load_policy: 3,
+          vq: "hd1080", // Forcer la qualité HD
+        },
+        events: {
+          onReady: (event) => {
+            setPlayer(event.target);
+            event.target.setPlaybackQuality("hd1080");
+            event.target.playVideo();
+          },
+          onStateChange: (event) => {
+            if (event.data === window.YT.PlayerState.ENDED) {
+              event.target.seekTo(0); // Revenir au début pour éviter l'overlay
+              event.target.playVideo();
+            }
+          },
+        },
+      });
     };
 
-    handleResize(); // appel initial
+    // Ajuster la taille et centrer la vidéo
+    const handleResize = () => {
+      const playerElement = document.getElementById("youtube-player");
+      const sectionElement = document.querySelector(".video-section");
+      if (playerElement && sectionElement) {
+        const sectionWidth = sectionElement.offsetWidth;
+        const sectionHeight = sectionElement.offsetHeight;
+        const videoRatio = 16 / 9; // Ratio de la vidéo
+
+        const sectionRatio = sectionWidth / sectionHeight;
+
+        if (sectionRatio > videoRatio) {
+          // Section plus large : ajuster la hauteur
+          const newWidth = sectionHeight * videoRatio;
+          playerElement.style.width = `${newWidth}px`;
+          playerElement.style.height = `${sectionHeight}px`;
+          playerElement.style.left = `${(sectionWidth - newWidth) / 2}px`;
+          playerElement.style.top = "0";
+        } else {
+          // Section plus haute : ajuster la largeur
+          const newHeight = sectionWidth / videoRatio;
+          playerElement.style.width = `${sectionWidth}px`;
+          playerElement.style.height = `${newHeight}px`;
+          playerElement.style.left = "0";
+          playerElement.style.top = `${(sectionHeight - newHeight) / 2}px`;
+        }
+      }
+    };
+
+    handleResize();
     window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      delete window.onYouTubeIframeAPIReady;
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setMuted(videoRef.current.muted);
+    if (player) {
+      if (muted) {
+        player.unMute();
+      } else {
+        player.mute();
+      }
+      setMuted(!muted);
     }
   };
 
   return (
     <section className="video-section">
-      <video
-        key={videoSrc} // force le rechargement quand src change
-        ref={videoRef}
-        className="video-background"
-        src={videoSrc}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+      <div id="youtube-player" className="video-background"></div>
       <button className="mute-button" onClick={toggleMute}>
         <FontAwesomeIcon icon={muted ? faVolumeXmark : faVolumeHigh} />
       </button>
