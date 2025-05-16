@@ -23,7 +23,8 @@
 .corner .bar-horizontal {
   width: 3rem;
   height: 0.15rem;
-  top: calc(1.5rem - 0.15rem); /* centré verticalement */
+  top: calc(1.5rem - 0.15rem);
+  /* centré verticalement */
   left: 0;
 }
 
@@ -32,7 +33,8 @@
   width: 0.15rem;
   height: 3rem;
   top: 0;
-  left: calc(1.5rem - 0.15rem); /* centré horizontalement */
+  left: calc(1.5rem - 0.15rem);
+  /* centré horizontalement */
 }
 
 /* Position des coins, avec un décalage de 2rem depuis les bords */
@@ -88,18 +90,29 @@
 
 .model-image {
   height: 55vh;
-  width: 80vw;
+
   z-index: 2;
   display: none;
 }
+
+.model-image img {
+
+  /* ou une autre valeur, comme 200px */
+  height: 50%;
+  /* ou une autre valeur */
+  object-fit: cover;
+}
+
 
 @media (max-width: 768px) {
   .model-3d {
     display: none;
   }
+
   .model-image {
     display: block;
   }
+
   .hero-footer {
     bottom: 6.5rem;
   }

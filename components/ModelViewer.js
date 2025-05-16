@@ -87,12 +87,6 @@ export default function ModelViewer() {
         <img
           src="/images/about.jpg"
           alt="3D Model preview"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            zIndex: 2,
-          }}
         />
       </div>
     </>
