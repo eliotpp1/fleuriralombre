@@ -21,7 +21,9 @@ export default function App({ Component, pageProps }) {
           content="fao.studio est un studio de design créatif spécialisé en graphisme, motion design et 3D"
         />
         <meta charset="UTF-8" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+
         <link
           rel="preload"
           href="/fonts/Switzer/Switzer-Bold.woff2"
@@ -47,6 +49,17 @@ export default function App({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
+        <script type="application/ld+json">
+          {`
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Fleurir à l’ombre",
+  "url": "https://fleuriralombre.com/",
+  "logo": "https://fleuriralombre.com/images/fao.svg"
+}
+`}
+        </script>
       </Head>
       <Component {...pageProps} />
     </>

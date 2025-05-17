@@ -42,3 +42,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/b
 #curseur qui disparait sur mac
 #faire grandir les éléments sur écrans 21:9
 #logo dans le favicon blanc
+
+heures jeudi 15/05/25 1h
+vendredi 16/05/25 4h
+samedi 17/05/25 4h
