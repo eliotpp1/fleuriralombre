@@ -27,11 +27,12 @@
 
 .hero-footer {
   position: absolute;
-  bottom: 2rem;
+  bottom: 0rem;
   left: 50%;
   transform: translateX(-50%);
-  font-size: clamp(2rem, 10vw, 7.5rem);
+  font-size: clamp(3rem, 15vw, 10rem);
   font-weight: bold;
+  margin-top: 3rem;
   color: white;
   width: 90%;
   text-align: center;
@@ -52,17 +53,21 @@
 }
 
 .corner .bar-horizontal {
-  width: 3rem;
+  width: 2.25rem; /* 3rem - 0.75rem */
   height: 0.15rem;
-  top: calc(1.5rem - 0.15rem);
+  top: calc(
+    1.125rem - 0.075rem
+  ); /* Ajusté pour centrer: (2.25rem / 2) - (0.15rem / 2) */
   left: 0;
 }
 
 .corner .bar-vertical {
   width: 0.15rem;
-  height: 3rem;
+  height: 2.25rem; /* 3rem - 0.75rem */
   top: 0;
-  left: calc(1.5rem - 0.15rem);
+  left: calc(
+    1.125rem - 0.075rem
+  ); /* Ajusté pour centrer: (2.25rem / 2) - (0.15rem / 2) */
 }
 
 .corner.top-left {
@@ -86,21 +91,20 @@
 }
 
 .model-3d {
-  width: 50vw;
-  height: 55vh;
+  width: 90vw; /* Augmenté de 60vw */
+  height: 90vh; /* Augmenté de 55vh */
   z-index: 2;
 }
 
 .model-image {
   display: none;
   width: 100%;
-  max-width: 600px;
+  max-width: 1000px;
   margin: 0 auto;
   z-index: 2;
   padding-top: 9rem;
   /* Limit size */
   margin-top: 3rem;
-
 }
 
 .model-image img {
@@ -112,7 +116,6 @@
 
 /* Tablet */
 @media (max-width: 1024px) {
-
   .model-3d {
     display: none;
   }
@@ -120,7 +123,9 @@
   .model-image {
     display: block;
     padding-top: 6rem;
-    width: 70vw;
+    width: 80vw; /* Increased from 70vw for consistency */
+    max-width: 1200px; /* Optional: allow larger image on tablets */
+    margin: 0 auto;
   }
 
   .model-image img {
@@ -132,18 +137,19 @@
   }
 
   .hero-footer {
-    font-size: clamp(1.5rem, 8vw, 5rem);
+    font-size: clamp(3rem, 12vw, 7.5rem);
     bottom: 4rem;
   }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-
   .model-image {
     display: block;
     padding-top: 6rem;
-    width: 80vw;
+    width: 90vw; /* Increased from 80vw for mobile */
+    max-width: 800px; /* Optional: limit max size */
+    margin: 0 auto;
   }
 
   .model-image img {
@@ -155,7 +161,7 @@
   }
 
   .hero-footer {
-    font-size: clamp(1.5rem, 8vw, 5rem);
+    font-size: clamp(2.5rem, 10vw, 7.5rem);
     bottom: 7rem;
   }
 }

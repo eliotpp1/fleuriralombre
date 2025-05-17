@@ -1,10 +1,19 @@
-// components/Menu.js
 export default function Menu() {
   return (
     <div className="menu-wrapper">
-
       <nav className="menu">
-        <img src="/images/fao.svg" alt="Logo" className="menu-logo" />
+        <div className="menu-logo-wrapper">
+          <img
+            src="/images/fao.svg"
+            alt="Logo Default"
+            className="menu-logo menu-logo-default"
+          />
+          <img
+            src="/images/fao-red.svg"
+            alt="Logo Red"
+            className="menu-logo menu-logo-red"
+          />
+        </div>
         <ul>
           <li>
             <a href="#portfolio">Nos Projets</a>

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// pages/index.js
 import Hero from "../components/Hero";
 import Portfolio from "../components/Portfolio";
 import AboutUs from "../components/AboutUs";
@@ -6,15 +6,17 @@ import Contact from "../components/Contact";
 import Video from "@/components/Video";
 import Presentation from "@/components/Presentation";
 import Sunflower from "@/components/Sunflower";
+import Competence from "@/components/Competence";
 import { createClient } from "contentful";
 
-export default function Home({ projects, about }) {
+export default function Home({ projects, about, competences }) {
   return (
     <div>
       <Hero />
       <Video />
       <Presentation />
       <Sunflower />
+      <Competence competences={competences} />
       <Portfolio projects={projects} />
       <AboutUs about={about} />
       <Contact />
@@ -23,7 +25,6 @@ export default function Home({ projects, about }) {
 }
 
 export async function getStaticProps() {
-  // Connexion à Contentful
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
@@ -31,21 +32,27 @@ export async function getStaticProps() {
 
   let projects = [];
   let about = { description: "", image: "" };
-
-  const projectEntries = await client.getEntries({
-    content_type: "projet",
-  });
-  console.log("Projets:", projectEntries);
-
-  const aboutEntry = await client.getEntries({
-    content_type: "a-propos",
-  });
-  console.log("À propos:", aboutEntry);
+  let competences = [];
 
   try {
-    // Récupérer les projets
+    // Compétences
+    const competenceEntries = await client.getEntries({
+      content_type: "competences",
+    });
+
+    console.log(
+      "Compétences récupérées depuis Contentful:",
+      competenceEntries.items
+    );
+
+    competences = competenceEntries.items.map((entry) => ({
+      competence_title: entry.fields.competenceTitle || null,
+      competence_prestation: entry.fields.competencePrestation || [],
+    }));
+
+    // Projets
     const projectEntries = await client.getEntries({
-      content_type: "projet", // Utilise l'ID correct
+      content_type: "projet",
     });
 
     projects = projectEntries.items.map((entry) => ({
@@ -57,9 +64,9 @@ export async function getStaticProps() {
         : "",
     }));
 
-    // Récupérer la section À propos
+    // À propos
     const aboutEntry = await client.getEntries({
-      content_type: "a-propos", // Utilise l'ID correct
+      content_type: "a-propos",
     });
 
     if (aboutEntry.items[0]) {
@@ -81,6 +88,7 @@ export async function getStaticProps() {
     props: {
       projects,
       about,
+      competences,
     },
   };
 }

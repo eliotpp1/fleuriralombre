@@ -9,6 +9,7 @@ import "../styles/components/video.css";
 import "../styles/components/menu.css";
 import "../styles/components/presentation.css";
 import "../styles/components/sunflower.css";
+import "../styles/components/competence.css";
 export default function App({ Component, pageProps }) {
   return (
     <>

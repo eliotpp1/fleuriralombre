@@ -1,7 +1,16 @@
+:root {
+  --black: #000000;
+  --red: #ff1100;
+  --white: #ffffff;
+  --font-size-base: 16px;
+  --font-size-large: 24px;
+  --font-size-xl: 36px;
+}
+
 .presentation {
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
   margin-bottom: 30rem;
 }
 
@@ -12,11 +21,11 @@
   justify-content: center;
   height: 100%;
   padding: 2rem;
-  box-sizing: border-box; /* Ensure padding doesn't increase size */
+  box-sizing: border-box;
 }
 
 .studio-title {
-  font-size: clamp(5rem, 12vw, 8.5rem); /* Increased font size */
+  font-size: clamp(5rem, 12vw, 8.5rem);
   font-weight: bold;
   color: var(--red);
 }
@@ -32,11 +41,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start; /* Align left for smaller screens */
+  justify-content: flex-start;
   gap: 1rem;
-  font-size: clamp(1.8rem, 6vw, 2.5rem); /* Increased font size */
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-  padding: 0; /* Remove default padding */
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  flex-wrap: wrap;
+  padding: 0;
 }
 
 .location {
@@ -45,56 +54,96 @@
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
-  flex-wrap: wrap; /* Wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
 .location-city {
-  font-size: clamp(2.5rem, 7vw, 3.5rem); /* Increased font size */
+  font-size: clamp(2.5rem, 7vw, 3.5rem);
   font-weight: bold;
   color: var(--white);
 }
 
+.location-icon-wrapper {
+  position: relative;
+  width: clamp(2rem, 6vw, 2.5rem);
+  height: clamp(2rem, 6vw, 2.5rem);
+}
+
 .location-icon {
-  width: clamp(2rem, 6vw, 2.5rem); /* Increased icon size */
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out; /* Transition fluide pour opacité et transform */
+}
+
+.location-icon-down {
+  opacity: 1;
+  transform: translate(0, 0) rotate(0deg); /* Flèche vers le bas */
+}
+
+.location-icon-right {
+  opacity: 0;
+  transform: translate(-0.2rem, 0.2rem) rotate(45deg); /* Légèrement à gauche et en bas, pivot partiel */
+}
+
+.location-icon-wrapper:hover .location-icon-down {
+  opacity: 0;
+  transform: translate(0.2rem, -0.2rem) rotate(-45deg); /* Pivot vers la droite, léger déplacement haut-droit */
+}
+
+.location-icon-wrapper:hover .location-icon-right {
+  opacity: 1;
+  transform: translate(0, 0) rotate(0deg); /* Position normale, flèche vers la droite */
 }
 
 /* Tablet (max-width: 768px) */
 @media (max-width: 768px) {
   .presentation {
-    height: 20vh; /* Adjust height for tablet */
-    margin-bottom: 10rem; /* Adjust margin for tablet */
+    height: 20vh;
+    margin-bottom: 10rem;
   }
 
   .presentation-content {
     padding: 1.5rem;
-    justify-content: flex-start; /* Adjust content to top */
+    justify-content: flex-start;
   }
 
   .studio-title,
   .multidisciplinaire-title {
-    font-size: clamp(4rem, 9vw, 6rem); /* Increased font size */
+    font-size: clamp(4rem, 9vw, 6rem);
   }
 
   .services-item {
-    flex-direction: row; /* Stack services vertically */
+    flex-direction: row;
     align-items: flex-start;
-    font-size: clamp(1.5rem, 5vw, 2.2rem); /* Increased font size */
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
     gap: 0.5rem;
   }
 
   .location {
-    flex-direction: row; /* Stack location items */
+    flex-direction: row;
     align-items: flex-start;
     gap: 0.5rem;
   }
 
   .location-city {
-    font-size: clamp(2rem, 6vw, 3rem); /* Increased font size */
+    font-size: clamp(2rem, 6vw, 3rem);
   }
 
-  .location-icon {
-    width: clamp(1.5rem, 5vw, 2rem); /* Increased icon size */
+  .location-icon-wrapper {
+    width: clamp(1.5rem, 5vw, 2rem);
+    height: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .location-icon-right {
+    transform: translate(-0.15rem, 0.15rem) rotate(-45deg); /* Ajustement pour tablette */
+  }
+
+  .location-icon-wrapper:hover .location-icon-down {
+    transform: translate(0.15rem, -0.15rem) rotate(45deg); /* Ajustement pour tablette */
   }
 }
 
@@ -106,19 +155,28 @@
 
   .studio-title,
   .multidisciplinaire-title {
-    font-size: clamp(3rem, 8vw, 4.5rem); /* Increased font size */
+    font-size: clamp(3rem, 8vw, 4.5rem);
   }
 
   .services-item {
-    font-size: clamp(1.2rem, 4vw, 1.8rem); /* Increased font size */
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
     gap: 0.3rem;
   }
 
   .location-city {
-    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Increased font size */
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
   }
 
-  .location-icon {
-    width: clamp(1.2rem, 4.5vw, 1.8rem); /* Increased icon size */
+  .location-icon-wrapper {
+    width: clamp(1.2rem, 4.5vw, 1.8rem);
+    height: clamp(1.2rem, 4.5vw, 1.8rem);
+  }
+
+  .location-icon-right {
+    transform: translate(-0.1rem, 0.1rem) rotate(-45deg); /* Ajustement pour mobile */
+  }
+
+  .location-icon-wrapper:hover .location-icon-down {
+    transform: translate(0.1rem, -0.1rem) rotate(45deg); /* Ajustement pour mobile */
   }
 }

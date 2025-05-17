@@ -1,13 +1,16 @@
-export default function Competence({ competence }) {
-    return (
-        <section className="competence" id="competence">
-            <div className="competence-content">
-                <h2 className="competence-title">Compétences</h2>
-                <p className="competence-text">{competence.description}</p>
-                {competence.image && (
-                    <img src={competence.image} alt="Compétences" className="competence-image" />
-                )}
-            </div>
-        </section>
-    );
+export default function Competence({ competences }) {
+  return (
+    <section className="competence" id="competence">
+      {competences.map((item, index) => (
+        <div className="competence-content" key={index}>
+          <h2 className="competence-title">{item.competence_title}</h2>
+          <ul className="competence-prestation">
+            {item.competence_prestation.map((prestation, idx) => (
+              <li key={idx}>{prestation}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </section>
+  );
 }

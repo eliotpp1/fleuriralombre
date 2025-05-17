@@ -1,0 +1,92 @@
+/* Assuming this is added to your existing CSS file, e.g., styles.css */
+
+.competence {
+  width: 100vw;
+  min-height: 100vh; /* Ensure each section is at least full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--black); /* Assuming dark theme from previous code */
+  color: var(--white);
+}
+
+.competence-content {
+  width: 100%;
+  padding: 2rem 4rem; /* Generous padding for spacing */
+  display: flex;
+  justify-content: space-between; /* Space title and list apart */
+  align-items: center; /* Vertically center content */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.05
+  ); /* Subtle background for rectangle */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator between sections */
+  box-sizing: border-box;
+}
+
+.competence-title {
+  font-size: clamp(2.5rem, 6vw, 4rem); /* Large, responsive font size */
+  font-weight: bold;
+  color: var(--red); /* Consistent with previous red accent */
+  margin: 0;
+  flex: 0 0 40%; /* Allocate ~40% width for title */
+  text-align: left;
+}
+
+.competence-prestation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 0 0 50%; /* Allocate ~50% width for list */
+  text-align: right;
+}
+
+.competence-prestation li {
+  font-size: clamp(1.2rem, 3vw, 1.8rem); /* Readable, responsive font size */
+  margin-bottom: 0.5rem; /* Spacing between list items */
+  color: var(--white);
+}
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .competence-content {
+    padding: 1.5rem 2rem;
+    flex-direction: column; /* Stack title and list vertically */
+    align-items: flex-start; /* Align left */
+  }
+
+  .competence-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    flex: none;
+    margin-bottom: 1.5rem; /* Space between title and list */
+    text-align: left;
+  }
+
+  .competence-prestation {
+    flex: none;
+    text-align: left; /* Align list items left */
+  }
+
+  .competence-prestation li {
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  }
+}
+
+/* Phone (max-width: 768px) */
+@media (max-width: 768px) {
+  .competence-content {
+    padding: 1rem 1.5rem;
+  }
+
+  .competence-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .competence-prestation li {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    margin-bottom: 0.4rem;
+  }
+}

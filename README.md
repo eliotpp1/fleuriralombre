@@ -38,3 +38,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+
+#curseur
+#logo plus gros hero
+#menu en 3d
+#croix plus petites
+#appartiion au scroll compétences
+#accentuezr dégradé dans l'omber de vos projet
+#link nos projet liens vers la page nos projets
+#titre fleurir à l'ombre plus gros comme figma
+#curseur qui disparait sur mac
+#faire grandir les éléments sur écrans 21:9
