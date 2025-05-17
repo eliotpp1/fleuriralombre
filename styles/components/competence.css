@@ -8,22 +8,50 @@
   align-items: center;
   background-color: var(--black); /* Assuming dark theme from previous code */
   color: var(--white);
+  margin-bottom: 5rem;
 }
 
 .competence-content {
   width: 100%;
-  padding: 2rem 4rem; /* Generous padding for spacing */
+  padding: 2rem 4rem;
   display: flex;
-  justify-content: space-between; /* Space title and list apart */
-  align-items: center; /* Vertically center content */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.05
-  ); /* Subtle background for rectangle */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator between sections */
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  position: relative; /* requis pour le ::after */
   box-sizing: border-box;
+}
+
+/* Animation d'apparition */
+.competence-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.competence-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.competence-content::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, var(--red), var(--white));
+}
+
+.competence-content:first-child::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, var(--red), var(--white));
 }
 
 .competence-title {
@@ -53,20 +81,19 @@
 @media (max-width: 1024px) {
   .competence-content {
     padding: 1.5rem 2rem;
-    flex-direction: column; /* Stack title and list vertically */
-    align-items: flex-start; /* Align left */
+    flex-direction: row; /* Stack title and list vertically */
+    gap: 1rem; /* Space between title and list */
   }
 
   .competence-title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1rem, 3vw, 2.5rem);
     flex: none;
-    margin-bottom: 1.5rem; /* Space between title and list */
     text-align: left;
   }
 
   .competence-prestation {
     flex: none;
-    text-align: left; /* Align list items left */
+    text-align: right; /* Align list items left */
   }
 
   .competence-prestation li {
@@ -81,12 +108,12 @@
   }
 
   .competence-title {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-size: clamp(1.6rem, 3.5vw, 2.1rem);
     margin-bottom: 1rem;
   }
 
   .competence-prestation li {
-    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-size: clamp(0.8rem, 1.8vw, 1.2rem);
     margin-bottom: 0.4rem;
   }
 }

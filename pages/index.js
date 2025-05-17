@@ -17,7 +17,7 @@ export default function Home({ projects, about, competences }) {
       <Presentation />
       <Sunflower />
       <Competence competences={competences} />
-      <Portfolio projects={projects} />
+      <Portfolio projects={projects} limit={3} />
       <AboutUs about={about} />
       <Contact />
     </div>
@@ -39,16 +39,12 @@ export async function getStaticProps() {
     const competenceEntries = await client.getEntries({
       content_type: "competences",
     });
-
-    console.log(
-      "Compétences récupérées depuis Contentful:",
-      competenceEntries.items
-    );
-
-    competences = competenceEntries.items.map((entry) => ({
-      competence_title: entry.fields.competenceTitle || null,
-      competence_prestation: entry.fields.competencePrestation || [],
-    }));
+    competences = competenceEntries.items
+      .map((entry) => ({
+        competence_title: entry.fields.competenceTitle || null,
+        competence_prestation: entry.fields.competencePrestation || [],
+      }))
+      .reverse(); // <-- Inverser l'ordre ici
 
     // Projets
     const projectEntries = await client.getEntries({

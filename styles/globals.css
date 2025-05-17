@@ -22,6 +22,8 @@ body {
   /* Permet au body d'être au moins la hauteur de l'écran */
   /* Supprime tout débordement horizontal */
   /* Permet le défilement vertical */
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* Masquer la barre de défilement tout en permettant le défilement */

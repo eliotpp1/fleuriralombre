@@ -1,8 +1,9 @@
 .contact {
   padding: 4rem 2rem;
   text-align: center;
+  color: #f2f2f2;
+  background-color: transparent;
 }
-
 
 .contact-content {
   max-width: 600px;
@@ -12,11 +13,13 @@
 .contact-title {
   font-size: var(--font-size-large);
   margin-bottom: 1rem;
+  color: var(--red);
 }
 
 .contact-text {
   font-size: 1rem;
   margin-bottom: 2rem;
+  color: #cccccc;
 }
 
 .contact-form {
@@ -34,30 +37,33 @@
 .form-label {
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  font-weight: 700;
+  font-weight: 600;
+  color: #f2f2f2;
 }
 
 .form-input {
   padding: 0.75rem;
-  border: 2px solid #fff;
-  border-radius: 4px;
+  border: 2px solid #444;
+  border-radius: 6px;
   font-family: "CustomFont", sans-serif;
   font-size: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--black);
-  transition: border-color 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-input:focus {
   outline: none;
+  border-color: var(--red);
+  box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.3);
 }
 
 .form-input.error {
-  border-color: #ff4d4d;
+  border-color: var(--red);
 }
 
 .form-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 textarea.form-input {
@@ -66,7 +72,7 @@ textarea.form-input {
 }
 
 .form-error {
-  color: #ff4d4d;
+  color: var(--red);
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
@@ -74,18 +80,19 @@ textarea.form-input {
 .contact-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: white;
-  border-radius: 4px;
+  background: var(--red);
+  border-radius: 6px;
   font-weight: 700;
   font-family: "CustomFont", sans-serif;
   border: none;
+  color: #000;
   cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .contact-button:hover {
   transform: scale(1.05);
-  background: #f0f0f0;
+  background: #ff6666;
 }
 
 .form-status {
@@ -95,7 +102,7 @@ textarea.form-input {
 }
 
 .form-status.error {
-  color: #ff4d4d;
+  color: var(--red);
 }
 
 @media (max-width: 768px) {

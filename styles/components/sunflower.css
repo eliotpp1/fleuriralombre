@@ -83,17 +83,17 @@ css Copier :root {
   .sunflower {
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
     padding: 1.5rem;
     overflow: hidden;
   }
 
   .sunflower-content {
-    max-width: 50%;
+    max-width: 55%;
     padding: 1.5rem;
     text-align: left;
-    margin-top: 15rem;
-    margin-left: -5rem;
+    margin-top: 30rem;
+    margin-left: -10rem;
   }
 
   .sunflower-title {
