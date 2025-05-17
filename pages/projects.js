@@ -1,12 +1,15 @@
 // pages/projects.js
 import { createClient } from "contentful";
-import Portfolio from "@/components/Portfolio";
+import PortfolioLink from "@/components/PortfolioLink";
+import Menu from "@/components/Menu";
+import Footer from "@/components/Footer";
 
 export default function ProjectsPage({ projects }) {
   return (
     <main className="projects-page">
-      <h1 className="page-title">Nos projets</h1>
-      <Portfolio projects={projects} />
+      <Menu />
+      <PortfolioLink projects={projects} />
+      <Footer />
     </main>
   );
 }

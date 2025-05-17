@@ -98,7 +98,7 @@ css Copier :root {
 
   .sunflower-title {
     font-size: clamp(2.2rem, 5.5vw, 3.5rem);
-    background: linear-gradient(to bottom left, #808080, #ffffff);
+    background: linear-gradient(to bottom left, #686868, #ffffff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

@@ -74,10 +74,9 @@
 /* Tablette (max-width: 1024px) */
 @media (max-width: 1024px) {
   .menu-wrapper {
-    /* top: 6rem;
+    top: 6rem;
     left: 50%;
-    transform: translateX(-50%); */
-    display: none;
+    transform: translateX(-50%);
   }
 
   .menu {
@@ -137,5 +136,48 @@
   .menu li a {
     font-size: 1.2rem;
     padding: 0.5rem 0;
+  }
+}
+
+/* Burger button - visible sur petits écrans */
+.burger-button {
+  display: none;
+  position: fixed;
+  top: 7rem;
+  left: 3rem;
+  background: none;
+  border: none;
+  color: white;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+/* Affiche le menu si ouvert */
+.menu-wrapper.open {
+  display: block !important;
+}
+
+/* Responsive pour tablettes et téléphones */
+@media (max-width: 1024px) {
+  .burger-button {
+    display: block;
+  }
+
+  .menu-wrapper {
+    display: none;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(50% - 2rem);
+    max-width: 300px;
+  }
+
+  .menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+  }
+
+  .menu ul {
+    text-align: center;
   }
 }

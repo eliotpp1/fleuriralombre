@@ -8,7 +8,6 @@
   align-items: center;
   background-color: var(--black); /* Assuming dark theme from previous code */
   color: var(--white);
-  margin-bottom: 5rem;
 }
 
 .competence-content {

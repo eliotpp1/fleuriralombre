@@ -1,26 +1,28 @@
 // pages/index.js
 import Hero from "../components/Hero";
-import Portfolio from "../components/Portfolio";
+import PortfolioLink from "../components/PortfolioLink";
 import AboutUs from "../components/AboutUs";
 import Contact from "../components/Contact";
 import Video from "@/components/Video";
 import Presentation from "@/components/Presentation";
 import Sunflower from "@/components/Sunflower";
 import Competence from "@/components/Competence";
+import Footer from "@/components/Footer";
 import { createClient } from "contentful";
 
 export default function Home({ projects, about, competences }) {
   return (
-    <div>
+    <main>
       <Hero />
       <Video />
       <Presentation />
       <Sunflower />
       <Competence competences={competences} />
-      <Portfolio projects={projects} limit={3} />
+      <PortfolioLink projects={projects} limit={1} />
       <AboutUs about={about} />
       <Contact />
-    </div>
+      <Footer />
+    </main>
   );
 }
 
