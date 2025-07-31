@@ -51,8 +51,8 @@
   transition: color 0.3s ease-in-out;
 }
 
-.menu-wrapper-test li a,
-.menu-mobile li a .black {
+.menu-wrapper-test li a.black,
+.menu-mobile li a.black {
   color: var(--black);
 }
 .menu-wrapper-test li a:hover,

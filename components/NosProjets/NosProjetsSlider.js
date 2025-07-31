@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useRef, useEffect } from "react";
 import { Carousel } from "primereact/carousel";
 
 export const NosProjetsSlider = ({ projects }) => {
@@ -36,9 +37,19 @@ export const NosProjetsSlider = ({ projects }) => {
     </div>
   );
 
+  const handleLeftClick = () => {
+    document.querySelector(".p-carousel-prev")?.click();
+  };
+
+  const handleRightClick = () => {
+    document.querySelector(".p-carousel-next")?.click();
+  };
+
   return (
-    <section id="slider-section" className="nosprojets-slider-section">
+    <section className="nosprojets-slider-section">
       <div className="slider-wrapper">
+        {/* Flèches personnalisées */}
+
         <Carousel
           value={backgroundProjects}
           numVisible={3}
@@ -49,8 +60,23 @@ export const NosProjetsSlider = ({ projects }) => {
           autoplayInterval={5000}
           itemClassName="custom-carousel-item"
           showIndicators={false}
-          showNavigators={true}
+          showNavigators={true} // ✅ on les garde pour cliquer dessus
         />
+
+        <div className="arrows-container-carousel">
+          <div
+            className="arrow-container-presentation left-arrow"
+            onClick={handleLeftClick}
+          >
+            <div className="arrow-presentation left-arrow"></div>
+          </div>
+          <div
+            className="arrow-container-presentation right-arrow"
+            onClick={handleRightClick}
+          >
+            <div className="arrow-presentation right-arrow"></div>
+          </div>
+        </div>
       </div>
     </section>
   );

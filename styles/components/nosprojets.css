@@ -83,10 +83,12 @@
 }
 
 .slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
   position: relative;
   max-width: 100%;
   padding: 0 5rem; /* espace pour les flèches */
-  overflow: hidden; /* évite scroll horizontal */
   box-sizing: border-box;
 }
 
@@ -207,13 +209,42 @@
 
 .p-carousel-prev,
 .p-carousel-next {
-  top: 50%;
-  transform: translateY(-50%);
+  visibility: hidden;
+  pointer-events: none;
   position: absolute;
-  z-index: 1;
 }
 
-/* éloignement des flèches */
+.arrows-container-carousel {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem;
+  z-index: 10;
+}
+
+/* Flèche gauche - état initial */
+.arrow-container-presentation.left-arrow .arrow-presentation {
+  transform: rotate(135deg);
+}
+
+/* Flèche droite - état initial */
+.arrow-container-presentation.right-arrow .arrow-presentation {
+  transform: rotate(45deg);
+}
+
+/* Hover spécifique pour flèche gauche */
+.arrow-container-presentation.left-arrow:hover .arrow-presentation {
+  transform: rotate(180deg);
+}
+
+/* Hover spécifique pour flèche droite */
+.arrow-container-presentation.right-arrow:hover .arrow-presentation {
+  transform: rotate(0deg);
+}
+/* 
+ éloignement des flèches
 .p-carousel-prev {
   left: 1rem;
 }
@@ -221,7 +252,7 @@
   right: 1rem;
 }
 
-/* style */
+
 .p-carousel .p-carousel-prev,
 .p-carousel .p-carousel-next {
   background-color: white;
@@ -240,7 +271,7 @@
 .p-carousel .p-carousel-prev:hover,
 .p-carousel .p-carousel-next:hover {
   transform: scale(1.1);
-}
+} */
 
 .nosprojets-mobile {
   display: none;
