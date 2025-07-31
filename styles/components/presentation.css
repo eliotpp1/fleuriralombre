@@ -1,0 +1,236 @@
+/* Styles généraux pour la section de présentation */
+.presentation {
+  width: 100vw;
+  height: 70vh;
+  margin-bottom: 20rem;
+}
+
+.presentation-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 70%;
+  padding: 2rem;
+  box-sizing: border-box;
+  margin-top: 5rem;
+}
+
+.studio-title {
+  font-size: clamp(5rem, 12vw, 8.5rem);
+  font-weight: bold;
+  color: var(--red);
+}
+
+.multidisciplinaire-title {
+  margin-top: -2rem;
+  width: 100vw;
+  font-size: clamp(6rem, 9vw, 10rem);
+  letter-spacing: -0.025em;
+}
+
+.services-item {
+  font-family: "Switzer-regular", sans-serif;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: clamp(3rem, 8vw, 3.5rem);
+  flex-wrap: wrap;
+  padding: 0;
+  letter-spacing: -0.05em;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.location-city {
+  font-size: clamp(3.5rem, 9vw, 5.5rem);
+  font-family: "Switzer-Variable", sans-serif;
+  font-weight: 400;
+  transition: transform 0.25s ease-in-out;
+  /* Transition fluide pour slide */
+}
+
+.arrow-container-presentation {
+  display: flex;
+  align-items: center;
+  /* Zone cliquable plus grande */
+}
+
+.arrow-presentation {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 3px;
+  margin: 29px 0;
+  background-color: var(--red);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: rotate(45deg);
+}
+
+.arrow-presentation::before,
+.arrow-presentation::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1.5px);
+  right: 0;
+  width: 60px;
+  height: 3px;
+  border-radius: 9999px;
+  background-color: var(--red);
+  transform-origin: calc(100% - 0.5px) 50%;
+}
+
+.arrow-presentation::before {
+  transform: rotate(45deg);
+}
+
+.arrow-presentation::after {
+  transform: rotate(-45deg);
+}
+
+.arrow-container-presentation:hover .arrow-presentation {
+  transform: rotate(0deg);
+}
+
+.location-city.shifted {
+  transform: translateX(calc(100vw - 60vw));
+  /* Slide pour écrans larges */
+}
+@media (max-width: 1500px) {
+  .presentation {
+    height: 60vh;
+    margin-bottom: 5rem;
+  }
+}
+
+/* Media queries */
+@media (max-width: 1024px) {
+  .presentation {
+    height: 30vh;
+  }
+
+  .presentation-content {
+    padding: 2rem;
+    justify-content: flex-start;
+    margin-top: -1rem;
+  }
+
+  .studio-title,
+  .multidisciplinaire-title {
+    font-size: clamp(5rem, 8vw, 7rem);
+    margin-top: -0.5rem;
+  }
+
+  .services-item {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    gap: 0.5rem;
+  }
+
+  .location-city {
+    font-size: clamp(2.5rem, 7vw, 3.5rem);
+  }
+
+  .location-city.shifted {
+    transform: translateX(70vw);
+    /* Slide pour tablette */
+  }
+
+  .arrow-presentation {
+    width: 60px;
+  }
+
+  .arrow-presentation::before,
+  .arrow-presentation::after {
+    width: 43px;
+  }
+}
+
+@media (max-width: 768px) {
+  .presentation {
+    height: 20vh;
+    margin-bottom: 2rem;
+  }
+
+  .presentation-content {
+    padding: 1.5rem;
+    justify-content: flex-start;
+  }
+
+  .studio-title,
+  .multidisciplinaire-title {
+    font-size: clamp(3rem, 9vw, 6rem);
+  }
+
+  .services-item {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    gap: 0.5rem;
+  }
+
+  .location {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .location-city {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .location-city.shifted {
+    transform: translateX(60vw);
+    /* Slide pour mobile */
+  }
+
+  .arrow-presentation {
+    width: 45px;
+  }
+
+  .arrow-presentation::before,
+  .arrow-presentation::after {
+    width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .presentation-content {
+    padding: 1rem;
+  }
+
+  .studio-title,
+  .multidisciplinaire-title {
+    font-size: clamp(1.5rem, 8vw, 4.5rem);
+  }
+
+  .services-item {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    gap: 0.3rem;
+  }
+
+  .location-city {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  .location-city.shifted {
+    transform: translateX(37vw);
+    /* Slide pour petits écrans */
+  }
+
+  .arrow-presentation {
+    width: 27px;
+  }
+
+  .arrow-presentation::before,
+  .arrow-presentation::after {
+    width: 20px;
+  }
+}

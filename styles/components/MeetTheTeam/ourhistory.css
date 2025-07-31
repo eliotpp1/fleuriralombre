@@ -1,0 +1,117 @@
+.our-history-fixed-wrapper {
+  align-items: center;
+  background-color: var(--white);
+  height: 140vh;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.our-history-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+  background-color: var(--white);
+  z-index: 10;
+}
+
+.our-history-image-container {
+  width: 50%;
+  height: 60vh;
+  position: relative;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.our-history-image {
+  box-sizing: border-box; /* ✅ essentiel pour que border soit inclus dans le 100% */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  border-radius: 1rem;
+  border: 1px solid var(--red);
+}
+
+.our-history-texts {
+  width: 45%;
+  font-family: "Switzer-Regular", sans-serif;
+}
+
+.our-history-title {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--red);
+}
+
+.our-history-paragraph {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  transition: color 0.3s ease-in-out;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .our-history-fixed-wrapper {
+    height: auto; /* Plus de hauteur fixe, pour laisser scroller */
+    overflow: visible; /* Scroll normal */
+  }
+
+  .our-history-fixed {
+    position: relative; /* Plus fixe, on laisse défiler la page */
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    align-items: flex-start;
+  }
+
+  .our-history-image-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  /* On montre seulement la première image, visible au-dessus */
+  .our-history-image {
+    position: relative;
+    opacity: 0;
+    transition: none;
+    height: auto;
+    max-height: 40vh;
+  }
+  .our-history-image:first-child {
+    opacity: 1 !important; /* Toujours visible sur mobile */
+    position: relative;
+  }
+
+  .our-history-texts {
+    width: 100%;
+  }
+
+  .our-history-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .our-history-paragraph {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    color: #000; /* Toujours noir sur mobile */
+    transition: none;
+  }
+}

@@ -1,0 +1,126 @@
+.competence {
+  width: 100vw;
+  min-height: 100vh;
+  /* Ensure each section is at least full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--black);
+  /* Assuming dark theme from previous code */
+  color: var(--red);
+}
+
+.competence-content {
+  width: 100%;
+  height: 40vh;
+  padding: 1.3rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--black);
+  position: relative;
+  gap: 5rem;
+  /* requis pour le ::after */
+  box-sizing: border-box;
+}
+
+/* Animation d'apparition */
+.competence-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.competence-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.competence-content::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, var(--red), var(--black) 70%);
+}
+
+.competence-content:first-child::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, var(--red), var(--black));
+}
+
+.competence-content:last-child::after {
+  height: 0px;
+  background: transparent;
+}
+
+.competence-title {
+  font-size: 6.8rem;
+  color: var(--white);
+  margin: 0;
+  flex: 0 0 40%;
+  text-align: left;
+  line-height: 82.9%;
+  font-family: "Switzer-Light", sans-serif;
+}
+
+.competence-prestation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 0 0 40%;
+  text-align: left;
+}
+
+.competence-prestation li {
+  font-size: 1rem;
+  line-height: 1.35;
+  color: var(--white);
+}
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .competence-content {
+    padding: 1.5rem 2rem;
+    flex-direction: row;
+    /* Stack title and list vertically */
+    gap: 2rem;
+    /* Space between title and list */
+  }
+
+  .competence-title {
+    font-size: 4rem;
+  }
+}
+
+/* Phone (max-width: 768px) */
+@media (max-width: 768px) {
+  .competence-content {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+    height: auto;
+  }
+
+  .competence-title {
+    font-size: 4rem;
+  }
+
+  .competence-prestation li {
+    font-size: clamp(0.9rem, 2.5vw, 1.6rem);
+  }
+}
+
+/* Phone (max-width: 480px) */
+@media (max-width: 480px) {
+  .competence-title {
+    font-size: clamp(2.5rem, 7.5vw, 5rem);
+  }
+}

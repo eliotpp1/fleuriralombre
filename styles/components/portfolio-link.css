@@ -1,0 +1,206 @@
+/* Portfolio Section */
+.portfolio-link {
+  width: 100%;
+  padding: 3rem 3rem;
+  background-color: var(--red);
+  color: #fff;
+  font-family: "Switzer-light", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.portfolio-link__text {
+  flex-basis: 65%;
+  max-width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section-title {
+  font-size: 10rem;
+  text-align: left;
+}
+
+.section-subtitle {
+  font-size: 2.5rem;
+  margin-bottom: 9rem;
+  text-align: left;
+}
+
+.portfolio-link__button {
+  width: 47.25rem;
+  height: 6rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 1rem;
+  box-shadow: inset -2px -2px 4px 0px rgba(255, 255, 255, 0.1),
+    5px 5px 10px 0px rgba(0, 0, 0, 0.2),
+    inset 2px 2px 4px 0px rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
+  padding: 0 3rem;
+}
+
+.portfolio-link:hover .portfolio-link__button {
+  background-color: var(--white);
+}
+
+.portfolio-link:hover .portfolio-link__button .arrow {
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    var(--red),
+    var(--black)
+  ); /* Red on left, black on right */
+}
+
+.portfolio-link:hover .portfolio-link__button .arrow::before,
+.portfolio-link:hover .portfolio-link__button .arrow::after {
+  background-color: var(--black); /* Arrowheads stay black */
+}
+
+.arrow-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.arrow {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 3px; /* Réduit de 4px à 3px */
+  margin: 29px 0;
+  border-radius: 9999px;
+  background-color: #ffffff; /* Default color */
+  transition: width 0.5s cubic-bezier(0.1, -0.1, 0.2, 0.75),
+    background 0.5s ease; /* Added background transition */
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1.5px); /* Ajusté pour 3px d'épaisseur (moitié de 3px) */
+  right: 0;
+  width: 30px; /* Taille conservée pour éviter tout débordement */
+  height: 3px; /* Réduit de 4px à 3px */
+  border-radius: 9999px;
+  background-color: #ffffff; /* Default color */
+  transform-origin: calc(100% - 0.5px) 50%;
+}
+
+.arrow::before {
+  transform: rotate(45deg);
+}
+
+.arrow::after {
+  transform: rotate(-45deg);
+}
+
+.portfolio-link__images {
+  flex-basis: 35%;
+  /* Occupe 35% de l'espace */
+  max-width: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-link__image-container {
+  width: 100%;
+  max-width: 25vw;
+  height: auto;
+  opacity: 0;
+  transform: translateX(150%) rotate(40deg);
+  /* Start further off-screen, rotated 40° */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.portfolio-link:hover .portfolio-link__image-container {
+  opacity: 1;
+  transform: translateX(0) rotate(0deg);
+  /* Slide in and rotate back to 0° */
+}
+
+.portfolio-link__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Screen semi-large */
+@media (max-width: 1200px) {
+  .portfolio-link__images {
+    display: none;
+  }
+
+  .section-subtitle {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+}
+
+/* Tablette */
+@media (max-width: 768px) {
+  .portfolio-link {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .portfolio-link__text {
+    max-width: 100%;
+  }
+
+  .portfolio-link__images {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .portfolio-link__button {
+    width: 100%;
+    max-width: 25rem;
+  }
+
+  .section-title {
+    font-size: 6rem;
+  }
+
+  .section-subtitle {
+    font-size: 2rem;
+  }
+
+  .portfolio-link__image-container {
+    max-width: 250px;
+    height: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .portfolio-link__button {
+    width: 100%;
+    max-width: 20rem;
+    height: 4rem;
+  }
+
+  .section-title {
+    font-size: 4rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-link__image-container {
+    max-width: 200px;
+    height: auto;
+  }
+}

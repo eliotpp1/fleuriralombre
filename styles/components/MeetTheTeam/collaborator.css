@@ -1,0 +1,160 @@
+.collaborators-container {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap; /* Force les cartes à rester côte à côte */
+  justify-content: space-between; /* Répartit l'espace entre les deux cartes */
+  gap: 2rem; /* Espace de 2rem entre les cartes */
+  padding: 10rem; /* Réduit pour maximiser la largeur */
+  width: 100vw; /* Utilise toute la largeur de la fenêtre */
+  margin: 0 auto; /* Centre le conteneur */
+  background-color: var(--white);
+  z-index: 1000;
+}
+.collaborator-card {
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: left; /* Alignement à gauche pour le contenu */
+  flex: 1; /* Chaque carte prend la moitié de l'espace disponible */
+  max-width: calc(50% - 1rem); /* Moitié de la largeur moins la moitié du gap */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alignement à gauche des éléments internes */
+  /* margin-top: 12rem; */
+}
+
+.collaborator-video-container {
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.collaborator-video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--black);
+}
+
+.collaborator-name {
+  color: var(--red);
+  font-size: 4.5rem; /* Taille adaptée */
+  margin: 0.2rem 0;
+}
+
+.collaborator-role {
+  font-size: 2rem; /* Lisibilité améliorée */
+  font-family: "Switzer-Medium", sans-serif; /* Police spécifique pour le rôle */
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.collaborator-quote {
+  font-style: italic;
+  font-size: 1.5rem; /* Lisibilité améliorée */
+  color: var(--black);
+
+  margin-top: 0.5rem;
+}
+
+/* Tablette (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .collaborators-container {
+    flex-direction: column; /* Empilement vertical */
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .collaborator-card {
+    max-width: calc(100% - 0.75rem); /* Moitié moins la moitié du gap */
+    flex: 1;
+  }
+
+  .collaborator-video-container {
+    height: 20rem; /* Hauteur fixe pour les vidéos */
+  }
+
+  .collaborator-name {
+    font-size: 2rem;
+  }
+
+  .collaborator-role {
+    font-size: 0.95rem;
+  }
+
+  .collaborator-quote {
+    font-size: 0.85rem;
+  }
+}
+
+/* Téléphone (max-width: 768px) */
+@media (max-width: 768px) {
+  .collaborators-container {
+    padding: 2rem 1rem; /* Réduit le padding pour les petits écrans */
+  }
+
+  .collaborator-card {
+    max-width: 100%; /* Utilise toute la largeur disponible */
+    flex: none; /* Supprime la flexibilité pour prendre toute la largeur */
+  }
+
+  .collaborator-name {
+    font-size: 1.8rem;
+  }
+
+  .collaborator-role {
+    font-size: 0.9rem;
+  }
+
+  .collaborator-quote {
+    font-size: 0.8rem;
+  }
+}
+
+/* Petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+  .collaborators-container {
+    padding: 3rem 1rem; /* Réduit le padding pour les petits écrans */
+
+    gap: 1rem;
+  }
+
+  .collaborator-card {
+    max-width: 100%;
+    padding: 0.8rem;
+  }
+
+  .collaborator-name {
+    font-size: 1.5rem;
+  }
+
+  .collaborator-role {
+    font-size: 0.85rem;
+  }
+
+  .collaborator-quote {
+    font-size: 0.75rem;
+  }
+}
+
+/* Hover effect for desktop */
+@media (hover: hover) and (pointer: fine) {
+  .collaborator-video-container:hover .collaborator-video {
+    /* Optional: Add visual feedback like a slight scale or opacity change */
+    transition: transform 0.3s ease;
+  }
+}
+
+/* Mobile devices: Ensure video is static and poster is visible */
+@media (max-width: 768px) {
+  .collaborator-video-container {
+    height: auto; /* Allow natural video height */
+  }
+
+  .collaborator-video {
+    /* Ensure video doesn't auto-play on mobile */
+    pointer-events: none; /* Disable interactions on mobile */
+  }
+}

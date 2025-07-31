@@ -1,0 +1,142 @@
+.our-reason-section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5rem 1rem;
+  background-color: rgb(0, 0, 0);
+  min-height: 100vh;
+  font-family: "Switzer-Regular", sans-serif;
+  gap: 5rem;
+  z-index: 1000;
+}
+
+.our-reason-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--red);
+  border-radius: 1rem;
+}
+
+.our-reason-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 1rem;
+  -webkit-filter: grayscale(100%);
+}
+
+.our-reason-image:hover {
+  -webkit-filter: grayscale(0%);
+  transition: -webkit-filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+}
+
+.our-reason-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-reason-container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 2rem 0rem;
+}
+
+.our-reason-flower-noise {
+  position: absolute;
+  top: 0rem; /* Ajuste cette valeur selon ton rendu */
+  left: -10rem;
+  opacity: 1;
+  pointer-events: none;
+  /*Blur effect for the flower noise image*/
+  filter: blur(15px);
+  z-index: 2;
+}
+
+.flower-noise-image {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+}
+
+.our-reason-title {
+  font-size: 7rem;
+  font-weight: bold;
+  color: var(--red);
+  margin-bottom: 1rem;
+  position: relative;
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+}
+
+.our-reason-title-notre {
+  z-index: 1;
+  position: relative;
+}
+
+.our-reason-title-raison {
+  z-index: 10;
+  position: relative;
+}
+
+.our-reason-text {
+  font-size: 1.2rem;
+  color: var(--white);
+  line-height: 1.6;
+  position: relative;
+  z-index: 3;
+}
+
+/* TABLETTE */
+@media (max-width: 1024px) {
+  .our-reason-section {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+  }
+
+  .our-reason-title {
+    font-size: 4rem;
+    text-align: left;
+  }
+
+  .our-reason-text {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .flower-noise-image {
+    max-width: 600px;
+  }
+  .our-reason-flower-noise {
+    top: 2rem;
+    left: -2rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .our-reason-title {
+    font-size: 2.5rem;
+  }
+
+  .our-reason-text {
+    font-size: 1rem;
+  }
+
+  .flower-noise-image {
+    max-width: 250px;
+  }
+
+  .our-reason-flower-noise {
+    top: 2rem;
+    left: -2rem;
+  }
+}

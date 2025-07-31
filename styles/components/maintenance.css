@@ -1,0 +1,25 @@
+.maintenance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.maintenance-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.maintenance-title {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.maintenance-text {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 2rem;
+}

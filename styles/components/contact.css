@@ -1,0 +1,333 @@
+.contact {
+  background-color: var(--white);
+}
+
+.contact-hero {
+  padding: 3rem 0 3rem 0;
+  height: 80vh;
+  color: var(--red);
+}
+
+.contact-hero-content {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.contact-hero-image {
+  position: absolute;
+  top: 2%;
+  right: 0;
+  width: 60%;
+  z-index: 1000;
+}
+
+.contact-hero-title {
+  align-self: flex-start;
+  padding: 0 5rem;
+  font-size: 15rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--red);
+  z-index: 2;
+}
+
+/* Contact Form Styles */
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.contact-form-grid .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 0.3fr;
+  grid-template-rows: repeat(10, auto);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Grid layout pour chaque champ */
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+} /* Prénom */
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+} /* Nom */
+.div3 {
+  grid-area: 2 / 2 / 3 / 5;
+} /* Email */
+.div4 {
+  grid-area: 3 / 3 / 7 / 5;
+} /* Message */
+.div5 {
+  grid-area: 7 / 3 / 8 / 4;
+} /* Bouton Soumettre */
+.div6 {
+  grid-area: 8 / 3 / 9 / 4;
+} /* Instagram */
+.div7 {
+  grid-area: 9 / 3 / 10 / 4;
+} /* Statut */
+.div8 {
+  grid-area: 10 / 2 / 11 / 4;
+} /* Erreurs */
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  background: var(--white);
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.125),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.75);
+  color: var(--black);
+  font-size: 1rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+textarea.form-input {
+  color: var(--black);
+  height: 200px;
+}
+
+/* Erreurs */
+.form-errors {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin-top: -0.5rem;
+  font-size: 0.875rem;
+  color: var(--red);
+}
+
+.form-input.error {
+  border-color: red;
+  background-color: #ffe6e6;
+  /* Autres styles pour les champs en erreur */
+}
+
+/* Boutons */
+.contact-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 4.5rem;
+  gap: 0.75rem;
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+  font-size: 1.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  background-color: var(--white);
+  font-family: "Switzer-Light", sans-serif;
+  box-shadow: inset -2px -2px 4px 0px rgba(0, 0, 0, 0.1),
+    13px 13px 17px 0px rgba(0, 0, 0, 0.1),
+    inset 2px 2px 5px 0px rgba(255, 255, 255, 0.5);
+}
+
+.contact-button.alt {
+  background: var(--white);
+  color: black;
+}
+
+.contact-button:not(.alt) {
+  background: black;
+  color: var(--white);
+}
+
+.contact-button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive : moins de 900px = stack vertical */
+@media (max-width: 900px) {
+  .contact-form-grid .form-grid {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    padding: 1rem;
+  }
+
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5,
+  .div6,
+  .div7 {
+    grid-area: unset;
+    width: 100%;
+  }
+
+  .contact-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* arrow button */
+.arrow-container-footer-contact {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.arrow-footer-contact {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 3px;
+  /* 4px thickness */
+  margin: 29px 0;
+  border-radius: 9999px;
+  background: linear-gradient(to right, var(--white) 5%, var(--white) 95%);
+  transition: width 0.5s cubic-bezier(0.1, -0.1, 0.2, 0.75),
+    background 0.5s ease; /* Added background transition */
+}
+
+.arrow-footer-contact::before,
+.arrow-footer-contact::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1.5px);
+  /* Adjusted for 4px thickness */
+  right: 0;
+  width: 30px;
+  /* Reduced to prevent overflow */
+  height: 3px;
+  /* 4px thickness */
+  border-radius: 9999px;
+  background-color: #ffffff;
+  /* Default black */
+  transform-origin: calc(100% - 1px) 50%;
+}
+
+.arrow-footer-contact::before {
+  transform: rotate(45deg);
+}
+
+.arrow-footer-contact::after {
+  transform: rotate(-45deg);
+}
+
+.contact-button:hover .arrow-footer-contact {
+  width: 100%;
+  background: linear-gradient(to right, var(--red), var(--white));
+}
+
+.contact-button:hover {
+  color: var(--red);
+}
+
+.contact-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.img-block-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to bottom, var(--white), rgba(255, 255, 255, 0));
+}
+.submit-button {
+  box-shadow: inset 4px 4px 6px 2px rgba(255, 255, 255, 0.5),
+    0px 2px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* <= 1300px */
+@media (max-width: 1300px) {
+  .contact-hero-title {
+    font-size: 10rem;
+    padding: 0 4rem;
+  }
+
+  .contact-hero-image {
+    width: 50%;
+  }
+}
+
+/* <= 900px */
+@media (max-width: 900px) {
+  .contact-hero-title {
+    font-size: 6rem;
+    padding: 0 2rem;
+  }
+
+  .contact-hero-image {
+    width: 60%;
+  }
+}
+
+/* <= 768px */
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 2rem 1rem;
+    height: auto;
+  }
+
+  .contact-hero-content {
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-hero-title {
+    font-size: 4rem;
+    padding: 0;
+  }
+
+  .contact-hero-image {
+    position: relative;
+    width: 80%;
+    height: auto;
+    top: unset;
+    right: unset;
+    margin-top: 2rem;
+  }
+}
+
+/* <= 480px (mobile) */
+@media (max-width: 480px) {
+  .contact-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-hero-image {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

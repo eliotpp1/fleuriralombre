@@ -1,0 +1,472 @@
+/* SECTION : Nos projets */
+.nosprojets-section {
+  position: relative;
+  height: 6000px;
+  color: white;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.nosprojets-title {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7.5rem;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.nosprojets-image,
+.nosprojets-image-fullscreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  transition: transform 0.2s linear, opacity 0.2s linear;
+}
+
+/* INTRO TEXTE */
+.projects-intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 1100;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  transition: opacity 0.6s ease-out;
+}
+
+.projects-text-container {
+  text-align: left;
+  position: absolute;
+  top: 10rem;
+  left: 2.5rem;
+}
+
+.projects-title {
+  font-size: 20rem;
+}
+
+.projects-description {
+  font-size: 2.5rem;
+  line-height: 1.4;
+}
+
+/* SLIDER SECTION */
+.nosprojets-slider-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url("/images/background-paint.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1200;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding: 40px;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 100%;
+  padding: 0 5rem; /* espace pour les flèches */
+  overflow: hidden; /* évite scroll horizontal */
+  box-sizing: border-box;
+}
+
+/* Supprime la marge à la fin pour éviter débordement */
+.p-carousel-items .p-carousel-item:last-child {
+  margin-right: 0 !important;
+}
+
+/* Contenu d’un élément du carousel */
+.slider-item {
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.1),
+    13px 13px 17px rgba(0, 0, 0, 0.2),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
+  margin: 0 1rem; /* espace entre les éléments */
+  font-family: "SwitezLight", sans-serif;
+}
+
+.slider-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.slider-image {
+  width: 100%;
+  height: 22rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.slider-caption {
+  padding: 1rem 0;
+  color: var(--white);
+}
+
+.slider-caption h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 0.5rem;
+}
+
+.slider-caption p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.slider-caption a {
+  display: inline-block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.1),
+    13px 13px 17px rgba(0, 0, 0, 0.2),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.slider-caption a:hover {
+  background-color: var(--white);
+  color: var(--black);
+  box-shadow: none;
+}
+
+/* Flèche animée */
+.arrow-container-carousel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.arrow-carousel {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 3px;
+  margin: 29px 0;
+  border-radius: 9999px;
+  background: linear-gradient(to right, var(--white) 5%, var(--white) 95%);
+  transition: width 0.5s cubic-bezier(0.1, -0.1, 0.2, 0.75),
+    background 0.5s ease;
+}
+
+.arrow-carousel::before,
+.arrow-carousel::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1.5px);
+  right: 0;
+  width: 30px;
+  height: 3px;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  transform-origin: calc(100% - 1px) 50%;
+}
+
+.arrow-carousel::before {
+  transform: rotate(45deg);
+}
+.arrow-carousel::after {
+  transform: rotate(-45deg);
+}
+
+.slider-caption a:hover .arrow-carousel {
+  width: 100%;
+  background: linear-gradient(to right, var(--red), var(--black));
+}
+.slider-caption a:hover .arrow-carousel::before,
+.slider-caption a:hover .arrow-carousel::after {
+  background: var(--black);
+}
+
+.p-carousel-prev,
+.p-carousel-next {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 1;
+}
+
+/* éloignement des flèches */
+.p-carousel-prev {
+  left: 1rem;
+}
+.p-carousel-next {
+  right: 1rem;
+}
+
+/* style */
+.p-carousel .p-carousel-prev,
+.p-carousel .p-carousel-next {
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.p-carousel .p-carousel-prev:hover,
+.p-carousel .p-carousel-next:hover {
+  transform: scale(1.1);
+}
+
+.nosprojets-mobile {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  .nosprojets-desktop {
+    display: none;
+  }
+  .nosprojets-mobile {
+    display: block;
+  }
+
+  .nosprojets-slider-section {
+    display: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slider-item {
+    width: 250px;
+    padding: 1rem;
+  }
+
+  .slider-caption h3 {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  }
+
+  .slider-caption p {
+    font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .nosprojets-slider-section {
+    padding: 2rem 1rem;
+  }
+
+  .slider-item {
+    width: 220px;
+    padding: 0.75rem;
+  }
+
+  .slider-caption {
+    padding: 0.5rem 0;
+  }
+}
+
+/* PARTIE MOBILE */
+
+/* Masque la scrollbar sur WebKit (Chrome, Safari, etc.) */
+.nosprojets-immersive::-webkit-scrollbar {
+  display: none;
+}
+
+/* Masque la scrollbar sur Firefox */
+.nosprojets-immersive {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.nosprojets-immersive {
+  display: flex;
+  flex-direction: column; /* très important */
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  position: relative;
+  background: url("/images/background-paint.png");
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory; /* si tu veux du snap */
+  -webkit-overflow-scrolling: touch; /* pour un scroll fluide sur iOS */
+}
+
+.immersive-slide {
+  scroll-snap-align: start;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  text-align: left;
+}
+
+.immersive-background {
+  filter: blur(8px);
+  z-index: 0;
+}
+
+.immersive-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  width: 90%;
+  padding: 2rem;
+  background-color: var(--black);
+  backdrop-filter: blur(5px);
+  box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.1),
+    13px 13px 17px rgba(0, 0, 0, 0.2),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(10px);
+  text-align: left;
+}
+
+.immersive-image {
+  width: 100%;
+  max-width: 500px;
+  height: 300px; /* ou plus si tu veux plus haut */
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.immersive-title {
+  font-size: 2rem;
+}
+
+.immersive-description {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.immersive-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.immersive-button:hover {
+  background-color: #444;
+}
+
+/* Slide immersive avec image en fond */
+.intro-slide {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.intro-slide .immersive-image-fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Le texte au centre de l'écran */
+.intro-slide .immersive-content {
+  margin-top: 10rem;
+  background-color: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  padding: 0;
+}
+.intro-slide .immersive-content h2 {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+}
+
+.intro-slide .immersive-content p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.immersive-image-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  border-radius: 0;
+  transition: all 0.8s ease;
+}
+/* BOUTON "Découvrir" */
+.immersive-button {
+  display: inline-block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.1),
+    13px 13px 17px rgba(0, 0, 0, 0.2),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* INDICATEUR DROIT */
+.immersive-indicator {
+  position: fixed;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.3);
+  transition: background 0.3s ease;
+}
+
+.dot.active {
+  background: white;
+}

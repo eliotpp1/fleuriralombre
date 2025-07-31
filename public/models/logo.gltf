@@ -1,0 +1,182 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v5.4.0)"
+    },
+    "extensionsUsed": [
+        "KHR_materials_volume",
+        "FB_ngon_encoding"
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 617531,
+            "type": "VEC3",
+            "max": [
+                11.131150245666504,
+                6.9578680992126465,
+                1.6664135456085205
+            ],
+            "min": [
+                -11.132120132446289,
+                -6.9503560066223145,
+                -1.6568975448608398
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 617531,
+            "type": "VEC3",
+            "max": [
+                0.9999655485153198,
+                0.9999954700469971,
+                1.0
+            ],
+            "min": [
+                -0.9999470114707947,
+                -0.9999920725822449,
+                -0.9999999403953552
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 617531,
+            "type": "VEC2",
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.02962327003479004
+            ]
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 3586020,
+            "type": "SCALAR",
+            "max": [
+                617530
+            ],
+            "min": [
+                0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 34105072,
+            "uri": "Final_Médaillon-FAO_3D_Site-Web(1)_0.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 7410372,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 7410372,
+            "byteLength": 7410372,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 14820744,
+            "byteLength": 4940248,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 19760992,
+            "byteLength": 14344080,
+            "target": 34963
+        }
+    ],
+    "images": [
+        {
+            "uri": "textures/image_0.png"
+        }
+    ],
+    "materials": [
+        {
+            "name": "Material.003",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.013410423882305622,
+                    0.013410423882305622,
+                    0.013410423882305622,
+                    1.0
+                ],
+                "metallicFactor": 0.8421758413314819,
+                "roughnessFactor": 0.23114754259586334
+            },
+            "normalTexture": {
+                "index": 0
+            },
+            "doubleSided": true
+        }
+    ],
+    "meshes": [
+        {
+            "name": "meshes[0].meshes[0].meshes[0].meshes[0]",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 3,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "Final_Médaillon-FAO_3D_Site-Web(1)",
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "Torus",
+            "mesh": 0,
+            "extras": {
+                "name": "Torus"
+            }
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9729,
+            "minFilter": 9987
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "source": 0,
+            "sampler": 0
+        }
+    ],
+    "scene": 0
+}
