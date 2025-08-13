@@ -76,15 +76,33 @@ export const OurHistorySection = ({ ourhistoryText, ourhistoryImages }) => {
         <div className="our-history-texts">
           <h2 className="our-history-title">Notre Histoire</h2>
           {paragraphs.map((text, idx) => (
-            <p
-              key={idx}
-              className="our-history-paragraph"
-              dangerouslySetInnerHTML={{ __html: text }}
-              style={{
-                color: isMobile ? "#000" : idx === index ? "#000" : "#999",
-                transition: isMobile ? "none" : "color 0.3s ease-in-out",
-              }}
-            />
+            <div className="paragraph-container" key={idx}>
+              <p
+                className="paragraph-index"
+                style={{
+                  color: isMobile
+                    ? "var(--black)"
+                    : idx === index
+                    ? "var(--red)"
+                    : "rgba(0, 0, 0, 0)",
+                  transition: isMobile ? "none" : "color 0.3s ease-in-out",
+                }}
+              >
+                0{idx + 1}.
+              </p>
+              <p
+                className="our-history-paragraph"
+                dangerouslySetInnerHTML={{ __html: text }}
+                style={{
+                  color: isMobile
+                    ? "var(--black)"
+                    : idx === index
+                    ? "var(--black)"
+                    : "rgba(0, 0, 0, 0.2)",
+                  transition: isMobile ? "none" : "color 0.3s ease-in-out",
+                }}
+              />
+            </div>
           ))}
         </div>
       </div>

@@ -22,7 +22,7 @@
 }
 
 .our-history-image-container {
-  width: 50%;
+  margin-left: 6vw;
   height: 60vh;
   position: relative;
   border-radius: 1rem;
@@ -31,9 +31,7 @@
 
 .our-history-image {
   box-sizing: border-box; /* ✅ essentiel pour que border soit inclus dans le 100% */
-  width: 100%;
   height: 100%;
-  object-fit: contain;
   position: absolute;
   top: 0;
   left: 0;
@@ -44,22 +42,37 @@
 }
 
 .our-history-texts {
-  width: 45%;
+  margin-left: 25vw;
+
   font-family: "Switzer-Regular", sans-serif;
 }
 
+.paragraph-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20rem;
+}
+
 .our-history-title {
-  font-size: 5rem;
+  font-size: 7.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: var(--red);
+  margin-top: 15rem;
+  color: var(--black);
 }
 
 .our-history-paragraph {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin: 1rem 0;
   line-height: 1.6;
   transition: color 0.3s ease-in-out;
+}
+
+.paragraph-index {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 /* ========== RESPONSIVE ========== */
@@ -109,7 +122,6 @@
 
   .our-history-paragraph {
     font-size: 1rem;
-    margin-bottom: 1.5rem;
     line-height: 1.4;
     color: #000; /* Toujours noir sur mobile */
     transition: none;
