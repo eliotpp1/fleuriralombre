@@ -28,7 +28,7 @@
 .competence-content {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
 
 .competence-content.visible {
@@ -80,7 +80,7 @@
 }
 
 .competence-prestation li {
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.35;
   color: var(--white);
 }

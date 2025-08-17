@@ -99,7 +99,7 @@
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     display: flex;
-    gap: 4.5rem;
+    gap: 7rem;
     align-items: center;
     justify-content: center;
     pointer-events: none;

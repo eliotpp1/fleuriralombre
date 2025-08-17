@@ -76,7 +76,7 @@
   position: relative;
   display: inline-block;
   width: 80px;
-  height: 3px; /* Réduit de 4px à 3px */
+  height: 2px; /* Réduit de 4px à 3px */
   margin: 29px 0;
   border-radius: 9999px;
   background-color: #ffffff; /* Default color */
@@ -91,7 +91,7 @@
   top: calc(50% - 1.5px); /* Ajusté pour 3px d'épaisseur (moitié de 3px) */
   right: 0;
   width: 30px; /* Taille conservée pour éviter tout débordement */
-  height: 3px; /* Réduit de 4px à 3px */
+  height: 2px; /* Réduit de 4px à 3px */
   border-radius: 9999px;
   background-color: #ffffff; /* Default color */
   transform-origin: calc(100% - 0.5px) 50%;

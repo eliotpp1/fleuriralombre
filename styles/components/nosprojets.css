@@ -61,7 +61,7 @@
 
 .projects-description {
   font-size: 2.5rem;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 /* SLIDER SECTION */
@@ -170,7 +170,7 @@
   position: relative;
   display: inline-block;
   width: 80px;
-  height: 3px;
+  height: 2px;
   margin: 29px 0;
   border-radius: 9999px;
   background: linear-gradient(to right, var(--white) 5%, var(--white) 95%);
@@ -185,10 +185,10 @@
   top: calc(50% - 1.5px);
   right: 0;
   width: 30px;
-  height: 3px;
+  height: 2px;
   border-radius: 9999px;
   background-color: #ffffff;
-  transform-origin: calc(100% - 1px) 50%;
+  transform-origin: calc(100%) 50%;
 }
 
 .arrow-carousel::before {

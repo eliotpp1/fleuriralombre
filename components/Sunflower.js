@@ -1,23 +1,12 @@
 import { useState } from "react";
 
 export default function Sunflower() {
-  const [isHovered1, setIsHovered1] = useState(false);
-
   return (
     <section className="sunflower" id="sunflower">
       <div className="sunflower-content">
         <h2 className="sunflower-title">
           <span className="title-main">Dans l'Ombre</span>
-          <span className="title-sub">
-            de vos{" "}
-            <span
-              className="hoverInstrumentRed"
-              onMouseEnter={() => setIsHovered1(true)}
-              onMouseLeave={() => setIsHovered1(false)}
-            >
-              {isHovered1 ? "fleurs" : "projets"}
-            </span>
-          </span>
+          <span className="title-sub">de vos projets</span>
         </h2>
         <p>
           La mission de Fleurir’A l’Ombre est de mettre en lumière vos idées
