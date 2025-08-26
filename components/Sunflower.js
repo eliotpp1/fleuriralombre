@@ -18,7 +18,7 @@ export default function Sunflower() {
         </p>
       </div>
       <img
-        src="/images/tournesol2.png"
+        src="/images/tournesol_red.png"
         alt="Sunflower"
         className="sunflower-image"
       />

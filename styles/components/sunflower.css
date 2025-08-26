@@ -43,16 +43,15 @@
 }
 
 .sunflower-image {
-  width: 60vw;
+  width: 70vw;
   height: auto;
   position: absolute;
   right: 0;
-  bottom: 1;
-  transform: translateX(20%);
+  bottom: 10%;
+  transform: translateX(30%);
   object-fit: contain;
-  rotate: -34deg;
+  rotate: -10deg;
   z-index: 1;
-  filter: blur(10px);
 }
 
 .hoverInstrumentRed {
