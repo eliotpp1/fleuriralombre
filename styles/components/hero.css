@@ -1,4 +1,8 @@
 .hero {
+  background-image: url("/images/background_Visual_Hero.png");
+  background-size: cover;
+  background-position: 100% 3%; /* calée en bas à droite */
+  background-repeat: no-repeat;
   position: relative;
   width: 100vw;
   min-height: 100vh;
@@ -15,6 +19,12 @@
   opacity: 1;
 }
 
+@media (max-width: 1850px) {
+  .hero {
+    background: none;
+  }
+}
+
 .hero-content {
   flex: 1;
   display: flex;
@@ -28,7 +38,7 @@
 .hero-footer {
   position: absolute;
   bottom: 0;
-  font-size: 12vw;
+  font-size: 9vw;
   font-weight: bold;
   color: var(--white);
   width: 100%;

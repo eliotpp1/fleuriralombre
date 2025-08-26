@@ -67,7 +67,7 @@
     top: 3rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 12.5vw;
+    width: 15rem;
     padding: 1.5rem 2rem;
     border-radius: 1rem;
     background-color: transparent;
@@ -262,5 +262,20 @@
   .menu-mobile li a.black {
     color: var(--black);
     font-weight: bold;
+  }
+}
+
+/* Styles entre 1024px et 1199px */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .menu-mobile .arrow-presentation,
+  .menu-mobile .arrow-presentation.black {
+    width: 60px; /* largeur de la barre → ajuste à ta taille voulue */
+  }
+
+  .menu-mobile .arrow-presentation::before,
+  .menu-mobile .arrow-presentation::after,
+  .menu-mobile .arrow-presentation.black::before,
+  .menu-mobile .arrow-presentation.black::after {
+    width: 43.84px; /* largeur des barres secondaires */
   }
 }

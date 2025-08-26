@@ -33,6 +33,6 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-problème des vidéo de collaborateurs qui ne chargent pas sur
+taille fixe box logo - a voir avec tad
 
-logo blanc et rouge au hover
+demander si image fond hero disparraisse en dessous de 1850px c'est good

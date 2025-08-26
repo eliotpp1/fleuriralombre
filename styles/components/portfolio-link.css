@@ -94,7 +94,7 @@
   height: 2px; /* Réduit de 4px à 3px */
   border-radius: 9999px;
   background-color: #ffffff; /* Default color */
-  transform-origin: calc(100% - 0.5px) 50%;
+  transform-origin: calc(100%) 50%;
 }
 
 .arrow::before {

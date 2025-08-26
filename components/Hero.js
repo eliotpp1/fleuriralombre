@@ -13,7 +13,7 @@ export default function Hero() {
         <ModelViewer />
       </div>
       <div className="hero-footer">
-        <span>Fleurir’A</span> <span>l’Ombre</span>
+        <span>FLEURIR’A</span> <span>L’OMBRE</span>
       </div>
     </section>
   );
