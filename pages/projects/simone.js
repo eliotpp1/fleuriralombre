@@ -15,7 +15,7 @@ export default function Simone({ project }) {
         <ProjectHeader project={project} description={description} />
         <section className="simone-full-image">
           <img
-            src="/images/projects/simone/Rendu_Simone_Fin.png"
+            src="/images/projects/simone/Boite_Ouverte_Simone.png"
             alt="Simone Project"
           />
         </section>

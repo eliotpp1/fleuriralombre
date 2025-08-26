@@ -38,6 +38,5 @@ taille fixe box logo - a voir avec tad
 demander si image fond hero disparraisse en dessous de 1850px c'est good
 Simone:
 
-- Manque la photo boite ouverte
 - Le bandeau qui défile
 - La typo en deux parties pour le responsive (ca marche bien en format a côté donc peut-etre inutila a voir avec toi)
