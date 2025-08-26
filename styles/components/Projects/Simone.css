@@ -1,4 +1,4 @@
-.simone-first-image {
+.simone-full-image {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -10,11 +10,51 @@
   margin: 5rem 0;
 }
 
-.simone-first-image img {
+.simone-full-image img {
   max-width: 90%;
   height: auto;
   width: auto;
   display: block;
+}
+
+.simone-bandeau img {
+  max-width: 100%;
+  height: 35vh;
+  display: block;
+}
+
+.simone-3-box {
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.simone-typo {
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15vh;
+  }
+}
+
+@media (max-width: 1200px) {
+  .simone-typo {
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 0vh;
+    }
+  }
+
+  .simone-full-image {
+    height: 40vh;
+    padding: 0 1.5rem;
+    margin: 10rem 0;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -29,7 +69,7 @@
 }
 
 @media (max-width: 768px) {
-  .simone-first-image {
+  .simone-full-image {
     height: 40vh;
     margin: 3rem 0;
     padding: 0 1.5rem;
@@ -37,13 +77,13 @@
 }
 
 @media (max-width: 480px) {
-  .simone-first-image {
+  .simone-full-image {
     height: auto;
     margin: 2rem 0;
     padding: 0 1rem;
   }
 
-  .simone-first-image img {
+  .simone-full-image img {
     max-width: 100%;
   }
 }

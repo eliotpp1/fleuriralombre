@@ -3,6 +3,7 @@ import { createClient } from "contentful";
 import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import ProjectHeader from "@/components/Projects/ProjectHeader";
+import Description_Projet from "@/components/Description_Projet";
 
 const description = `Simone est une marque conceptuelle qui valorise l’univers des pièces automobiles à travers une approche luxueuse et minimaliste. Elle met en lumière la qualité des matériaux, le savoir-faire mécanique et l’élégance discrète du métier. Chaque pièce devient un objet de design, pensé pour souligner la précision et la noblesse de cette industrie souvent laissée dans l’ombre.`;
 
@@ -12,18 +13,37 @@ export default function Simone({ project }) {
       <main>
         <Menu />
         <ProjectHeader project={project} description={description} />
-        <section className="simone-first-image">
+        <section className="simone-full-image">
           <img
-            src="/images/Files_site_FAO_V2/Simone/Rendu_Simone_Fin.png"
+            src="/images/projects/simone/Rendu_Simone_Fin.png"
             alt="Simone Project"
           />
         </section>
         <section className="simone-bandeau">
           <img
             src="/images/Files_site_FAO_V2/Simone/Rendu_Simone_Fin.png"
+            alt="Simone Bandeau"
+          />
+        </section>
+        <section className="simone-3-box">
+          <img
+            src="/images/projects/simone/Trois_Boite_Simone.png"
+            alt="Simone Bandeau"
+          />
+        </section>
+        <section className="simone-typo">
+          <img
+            src="/images/projects/simone/Typo_Simone.png"
+            alt="Simone Bandeau"
+          />
+        </section>
+        <section className="simone-full-image">
+          <img
+            src="/images/projects/simone/Rendu_Simone_Fin.png"
             alt="Simone Project"
           />
         </section>
+        <Description_Projet />
         <Footer />
       </main>
     </>

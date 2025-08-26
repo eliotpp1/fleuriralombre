@@ -19,13 +19,14 @@ import "../styles/components/nosprojets.css";
 import "../styles/components/maintenance.css";
 import "../styles/components/Projects/ProjectHeader.css";
 import "../styles/components/Projects/Simone.css";
+import "../styles/components/Description_Projet.css";
 import { PrimeReactProvider } from "primereact/api";
 import "primereact/resources/themes/lara-dark-indigo/theme.css"; // ou ton thème
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 
 export default function App({ Component, pageProps }) {
-  const isMaintenanceMode = false; // Toggle maintenance mode
+  const isMaintenanceMode = true; // Toggle maintenance mode
 
   return (
     <>
