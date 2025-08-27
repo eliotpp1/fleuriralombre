@@ -15,6 +15,13 @@
   z-index: 0;
 }
 
+/* Quand l'écran passe en dessous de 1200px */
+@media screen and (max-width: 1200px) {
+  .project-image {
+    object-fit: contain; /* ne pas crop */
+    background-color: black; /* optionnel : remplir les bords avec noir */
+  }
+}
 .project-dark-overlay {
   position: absolute;
   top: 0;
@@ -61,7 +68,7 @@
   }
 
   .project-image-overlay {
-    bottom: 1.5rem;
+    bottom: 3rem;
     left: 1.5rem;
     padding: 0.8rem;
   }
@@ -79,7 +86,7 @@
   }
 
   .project-image-overlay {
-    bottom: 1rem;
+    bottom: 4rem;
     left: 1rem;
     padding: 0.6rem;
   }

@@ -26,7 +26,7 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 
 export default function App({ Component, pageProps }) {
-  const isMaintenanceMode = true; // Toggle maintenance mode
+  const isMaintenanceMode = false; // Toggle maintenance mode
 
   return (
     <>

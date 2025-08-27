@@ -21,7 +21,7 @@ export default function Simone({ project }) {
         </section>
         <section className="simone-bandeau">
           <img
-            src="/images/Files_site_FAO_V2/Simone/Rendu_Simone_Fin.png"
+            src="/images/projects/simone/GIF_Simone.gif"
             alt="Simone Bandeau"
           />
         </section>
