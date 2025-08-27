@@ -6,7 +6,37 @@ import ProjectHeader from "@/components/Projects/ProjectHeader";
 import Description_Projet from "@/components/Description_Projet";
 
 const description = `Simone est une marque conceptuelle qui valorise l’univers des pièces automobiles à travers une approche luxueuse et minimaliste. Elle met en lumière la qualité des matériaux, le savoir-faire mécanique et l’élégance discrète du métier. Chaque pièce devient un objet de design, pensé pour souligner la précision et la noblesse de cette industrie souvent laissée dans l’ombre.`;
+const description_footer = `<li>
+            Le packaging conceptuel “Simone” est un projet qui vise à valoriser
+            l’univers mécanique à travers une approche graphique sensible et
+            engagée. Inspiré de l’expression “En voiture Simone”, le nom apporte
+            une touche décalée et familière à un domaine souvent perçu comme
+            strictement technique.
+          </li>
+          <br />
 
+          <li>
+            Les boîtes sont conçues en métal recyclé pour intégrer une dimension
+            écoresponsable au projet, en cohérence avec une démarche de design
+            durable. Tous les éléments sont sérigraphiés en noir directement sur
+            la boite, pour créer un contraste fort et assumé tout en limitant
+            les matières ajoutées. Les empreintes digitales, volontairement
+            intégrées comme des traces de doigts sales, rendent hommage au
+            métier de mécanicien en valorisant l’empreinte humaine derrière la
+            technique. Sur le couvercle, on retrouve le nom de la pièce
+            accompagnée d’un court texte explicatif sur son processus de
+            fabrication, apportant une dimension narrative au packaging.
+          </li>
+          <br />
+          <li>
+            Pour une lecture facilitée en stockage ou en atelier, la tranche de
+            la boîte affiche une illustration en traitement seuil de la pièce,
+            pensée comme un repère visuel rapide. Le projet « Simone » mêle
+            ainsi narration, fonction et esthétisation d’un univers brut à
+            travers un design épuré et impactant.
+          </li>
+
+<li>`;
 export default function Simone({ project }) {
   return (
     <>
@@ -43,7 +73,7 @@ export default function Simone({ project }) {
             alt="Simone Project"
           />
         </section>
-        <Description_Projet />
+        <Description_Projet title={"Simone"} description={description_footer} />
         <Footer />
       </main>
     </>
