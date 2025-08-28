@@ -39,7 +39,7 @@
 }
 
 .collaborator-name {
-  color: var(--red);
+  color: var(--black);
   font-size: 4.5rem; /* Taille adaptée */
   margin: 0.2rem 0;
 }

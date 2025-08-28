@@ -11,6 +11,18 @@ export default function Envision({ project }) {
     <>
       <Menu />
       <ProjectHeader project={project} description={description} />
+      <section className="envision-intro">
+        <video
+          src="/images/projects/envision/Intro.mp4"
+          alt="Livre HDA Project"
+        />
+      </section>
+      <section className="envision-double-video">
+        <video
+          src="/images/projects/envision/Intro.mp4"
+          alt="Livre HDA Project"
+        />
+      </section>
       <Footer />
     </>
   );
