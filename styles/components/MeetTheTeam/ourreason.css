@@ -36,6 +36,7 @@
 }
 
 .our-reason-text-container {
+  margin: 0rem 2rem;
 }
 
 .our-reason-container {
@@ -177,15 +178,15 @@
   }
 
   .our-reason-title-notre {
-    font-size: 7.5rem;
+    font-size: 6rem;
   }
   .our-reason-title-raison {
-    font-size: 7.5rem;
+    font-size: 6rem;
     margin-left: 10rem;
   }
 
   .our-reason-title-etre {
-    font-size: 7.5rem;
+    font-size: 6rem;
     margin-left: 10rem;
   }
 }

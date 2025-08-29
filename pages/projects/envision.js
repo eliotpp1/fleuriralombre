@@ -34,7 +34,7 @@ export default function Envision({ project }) {
 
       <section className="envision-full-video">
         <HoverVideo
-          poster="/images/projects/envision/images/envision-intro-preview.png"
+          // poster="/images/projects/envision/images/envision-intro-preview.png"
           src="/images/projects/envision/videos/Intro.mp4"
           className="envision-full-video"
           classNameImg="envision-full-video-preview"
@@ -44,14 +44,14 @@ export default function Envision({ project }) {
 
       <section className="envision-double-video">
         <HoverVideo
-          poster="/images/projects/envision/images/envision-left-preview.png"
+          // poster="/images/projects/envision/images/envision-left-preview.png"
           src="/images/projects/envision/videos/malette.mp4"
           className="envision-double-video-left"
           classNameImg="envision-double-video-left-preview"
           classNameVideo="envision-double-video-left-video"
         />
         <HoverVideo
-          poster="/images/projects/envision/images/salle-lumiere-preview.png"
+          // poster="/images/projects/envision/images/salle-lumiere-preview.png"
           src="/images/projects/envision/videos/salle-lumiere.mp4"
           className="envision-double-video-right"
           classNameImg="envision-double-video-right-preview"
@@ -61,7 +61,7 @@ export default function Envision({ project }) {
 
       <section className="envision-full-video">
         <HoverVideo
-          poster="/images/projects/envision/images/envision-dj-preview.png"
+          // poster="/images/projects/envision/images/envision-dj-preview.png"
           src="/images/projects/envision/videos/dj.mp4"
           className="envision-full-video"
           classNameImg="envision-full-video-preview"
@@ -71,14 +71,14 @@ export default function Envision({ project }) {
 
       <section className="envision-double-video">
         <HoverVideo
-          poster="/images/projects/envision/images/envision-left-preview.png"
+          // poster="/images/projects/envision/images/envision-left-preview.png"
           src="/images/projects/envision/videos/sj-asset.mp4"
           className="envision-double-video-left"
           classNameImg="envision-double-video-left-preview"
           classNameVideo="envision-double-video-left-video"
         />
         <HoverVideo
-          poster="/images/projects/envision/images/salle-lumiere-preview.png"
+          // poster="/images/projects/envision/images/salle-lumiere-preview.png"
           src="/images/projects/envision/videos/fiona-canape.mp4"
           className="envision-double-video-right"
           classNameImg="envision-double-video-right-preview"
@@ -88,7 +88,7 @@ export default function Envision({ project }) {
 
       <section className="envision-full-video">
         <HoverVideo
-          poster="/images/projects/envision/images/envision-dj-preview.png"
+          // poster="/images/projects/envision/images/envision-dj-preview.png"
           src="/images/projects/envision/videos/fin-drone.mp4"
           className="envision-full-video"
           classNameImg="envision-full-video-preview"

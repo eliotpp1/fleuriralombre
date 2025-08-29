@@ -75,8 +75,89 @@
   margin-top: 0.5rem;
 }
 
+.our-history-responsive {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  .our-history-responsive {
+    display: flex; /* pas besoin de display:block ET flex */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--white);
+  }
+
+  .our-history-fixed-wrapper {
+    display: none;
+  }
+
+  .our-history-responsive-image-container {
+    /*center image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh; /* hauteur fixe pour forcer le crop */
+    overflow: hidden; /* évite que l’image dépasse */
+    margin: 9rem 0;
+  }
+
+  .our-history-responsive-image {
+    width: 80%;
+    height: 100%;
+    object-fit: cover; /* crop propre */
+    border-radius: 1rem;
+  }
+
+  .our-history-responsive-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 5rem;
+    font-family: "Switzer-Regular", sans-serif;
+    color: var(--black);
+  }
+  .our-history-responsive-text {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .our-history-responsive-index {
+    margin-right: 20rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--red);
+  }
+
+  .our-history-responsive-paragraph {
+    flex: 1;
+    text-align: left;
+  }
+}
+
+@media (max-width: 1000px) {
+  .our-history-responsive-index {
+    margin-right: 12.5rem;
+  }
+  .our-history-responsive-texts {
+    padding: 0rem 3rem;
+  }
+
+  .our-history-responsive-image-container {
+    height: 50vh;
+  }
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
+  .our-history-responsive-index {
+    margin-right: 7.5rem;
+  }
   .our-history-fixed-wrapper {
     height: auto; /* Plus de hauteur fixe, pour laisser scroller */
     overflow: visible; /* Scroll normal */
@@ -125,5 +206,15 @@
     line-height: 1.4;
     color: #000; /* Toujours noir sur mobile */
     transition: none;
+  }
+
+  .our-history-responsive-image-container {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-history-responsive-image-container {
+    height: 30vh;
   }
 }

@@ -20,6 +20,8 @@ export const OurHistorySection = ({ ourhistoryText, ourhistoryImages }) => {
 
   const maxIndex = Math.min(paragraphs.length, ourhistoryImages.length) - 1;
 
+  console.log("OurHistoryThirdImage:", ourhistoryImages[2]);
+
   useEffect(() => {
     if (isMobile) {
       // En mobile : reset index à 0, pas de scroll piloté
@@ -50,62 +52,84 @@ export const OurHistorySection = ({ ourhistoryText, ourhistoryImages }) => {
   }, [index, isScrolling, maxIndex, isMobile]);
 
   return (
-    <section ref={containerRef} className="our-history-fixed-wrapper">
-      <div className="our-history-fixed">
-        <div className="our-history-image-container">
-          {ourhistoryImages.map((img, idx) => {
-            const isVisible = isMobile ? idx === 0 : idx === index;
-            return (
-              <img
-                key={idx}
-                src={img.url}
-                alt={img.alt}
-                className="our-history-image"
-                style={{
-                  display: isVisible ? "block" : "none", // <-- display none quand caché sur mobile
-                  opacity: isVisible ? 1 : 0,
-                  transition: isMobile ? "none" : "opacity 0.6s ease-in-out",
-                  position: isMobile ? "relative" : "absolute",
-                  height: isMobile ? "auto" : "100%",
-                }}
-              />
-            );
-          })}
-        </div>
+    <>
+      <section ref={containerRef} className="our-history-fixed-wrapper">
+        <div className="our-history-fixed">
+          <div className="our-history-image-container">
+            {ourhistoryImages.map((img, idx) => {
+              const isVisible = isMobile ? idx === 0 : idx === index;
+              return (
+                <img
+                  key={idx}
+                  src={img.url}
+                  alt={img.alt}
+                  className="our-history-image"
+                  style={{
+                    display: isVisible ? "block" : "none", // <-- display none quand caché sur mobile
+                    opacity: isVisible ? 1 : 0,
+                    transition: isMobile ? "none" : "opacity 0.6s ease-in-out",
+                    position: isMobile ? "relative" : "absolute",
+                    height: isMobile ? "auto" : "100%",
+                  }}
+                />
+              );
+            })}
+          </div>
 
-        <div className="our-history-texts">
-          <h2 className="our-history-title">Notre Histoire</h2>
+          <div className="our-history-texts">
+            <h2 className="our-history-title">Notre Histoire</h2>
+            {paragraphs.map((text, idx) => (
+              <div className="paragraph-container" key={idx}>
+                <p
+                  className="paragraph-index"
+                  style={{
+                    color: isMobile
+                      ? "var(--black)"
+                      : idx === index
+                      ? "var(--red)"
+                      : "rgba(0, 0, 0, 0)",
+                    transition: isMobile ? "none" : "color 0.3s ease-in-out",
+                  }}
+                >
+                  0{idx + 1}.
+                </p>
+                <p
+                  className="our-history-paragraph"
+                  dangerouslySetInnerHTML={{ __html: text }}
+                  style={{
+                    color: isMobile
+                      ? "var(--black)"
+                      : idx === index
+                      ? "var(--black)"
+                      : "rgba(0, 0, 0, 0.2)",
+                    transition: isMobile ? "none" : "color 0.3s ease-in-out",
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="our-history-responsive">
+        <div className="our-history-responsive-image-container">
+          <img
+            src={ourhistoryImages[2].url}
+            alt={ourhistoryImages[2].alt}
+            className="our-history-responsive-image"
+          />
+        </div>
+        <div className="our-history-responsive-texts">
           {paragraphs.map((text, idx) => (
-            <div className="paragraph-container" key={idx}>
+            <div key={idx} className="our-history-responsive-text">
+              <p className="our-history-responsive-index">0{idx + 1}.</p>
               <p
-                className="paragraph-index"
-                style={{
-                  color: isMobile
-                    ? "var(--black)"
-                    : idx === index
-                    ? "var(--red)"
-                    : "rgba(0, 0, 0, 0)",
-                  transition: isMobile ? "none" : "color 0.3s ease-in-out",
-                }}
-              >
-                0{idx + 1}.
-              </p>
-              <p
-                className="our-history-paragraph"
+                className="our-history-responsive-paragraph"
                 dangerouslySetInnerHTML={{ __html: text }}
-                style={{
-                  color: isMobile
-                    ? "var(--black)"
-                    : idx === index
-                    ? "var(--black)"
-                    : "rgba(0, 0, 0, 0.2)",
-                  transition: isMobile ? "none" : "color 0.3s ease-in-out",
-                }}
               />
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
