@@ -19,7 +19,7 @@ import "../styles/components/nosprojets.css";
 import "../styles/components/maintenance.css";
 import "../styles/components/Projects/ProjectHeader.css";
 import "../styles/components/Projects/Simone.css";
-import "../styles/components/Description_Projet.css";
+import "../styles/components/description_Projet.css";
 import "../styles/components/Projects/Hda.css";
 import "../styles/components/Projects/Envision.css";
 import { PrimeReactProvider } from "primereact/api";
