@@ -29,8 +29,10 @@ export const OurReasonSection = ({ ourreasonText }) => {
             <>
               <h2 className="our-reason-title">
                 <span className="our-reason-title-notre">Notre</span>
-                <span className="our-reason-title-raison">raison</span>
-                <span className="our-reason-title-etre">d&apos;être</span>
+                <span className="our-reason-title-raison">
+                  raison d&apos;être
+                </span>
+                {/* <span className="our-reason-title-etre">d&apos;être</span> */}
               </h2>
               <p
                 className="our-reason-text"

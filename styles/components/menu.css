@@ -73,7 +73,7 @@
     background-color: transparent;
     backdrop-filter: blur(5px);
     box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.1),
-      13px 13px 17px rgba(0, 0, 0, 0.2),
+      5px 5px 17px rgba(0, 0, 0, 0.075),
       inset 2px 2px 5px rgba(255, 255, 255, 0.5);
     z-index: 2000;
     text-align: center;

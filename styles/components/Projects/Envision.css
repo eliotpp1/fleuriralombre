@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin: 4rem 0;
+
   background-color: var(--black);
   font-family: "Switzer-Regular", sans-serif;
   z-index: 1000;

@@ -4,7 +4,9 @@ import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import ProjectHeader from "@/components/Projects/ProjectHeader";
 import Description_Projet from "@/components/Description_Projet";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const description = `Le livre HDA, est une synthèse de nos aventures, une trace de ce qui nous a menées a créer FAO. Toutes ses journées qui ont nourri notre créativité et notre passion. Dans ce livre, les aventures sont relatées telles qu’elle ont été vécues, avec les mots, les pensées et les images qui les résument. Pas de filtre, la simple complexité d’une journée réussie...`;
 const description_footer = `<li>
 Le livre Histoire d’Aventure, imaginé par Fleurir’A l’Ombre, raconte comment l’aventure peut naître n’importe quand et n’importe où. À travers une narration sincère et vivante, on suit les fondateurs de Fleurir’A l’Ombre, deux amis passionnés qui transforment chaque sortie en terrain de jeu.
@@ -18,6 +20,13 @@ Nés d’une amitié forgée à Tahiti, leurs récits mêlent images, anecdotes 
 Le ton est naturel, presque comme si on feuilletait leur journal. Le déroulement du livre donne l’impression d’être à leurs côtés. Histoire d’Aventure, c’est un livre qui donne envie de sortir, de créer, de vivre. Une invitation à explorer le monde, peu importe où l’on vit.
 </li>`;
 export default function LivreHda({ project }) {
+  const images = [
+    "/images/Simone.png",
+    "/images/Urbania.png",
+    "/images/tadeo_neige.png",
+    "/images/envision.png",
+  ];
+
   return (
     <>
       <Menu />
@@ -28,11 +37,19 @@ export default function LivreHda({ project }) {
           alt="Livre HDA Project"
         />
       </section>
-      <section className="simone-bandeau">
-        <img
-          src="/images/projects/hda/Bandeau_Anim_Photo_Livre.gif"
-          alt="Simone Bandeau"
-        />
+      <section className="carousel-section">
+        <div className="carousel-container">
+          <div className="carousel-track">
+            {[...images, ...images].map((src, index) => (
+              <img
+                key={index}
+                src={src}
+                alt={`Slide ${index + 1}`}
+                className="carousel-image"
+              />
+            ))}
+          </div>
+        </div>
       </section>
       <section className="hda-full-book first">
         <img
@@ -53,11 +70,7 @@ export default function LivreHda({ project }) {
           alt="Simone Bandeau"
         />
       </section>
-      <section className="hda-typo">
-        <img src="/images/projects/hda/typo/La_Cascade.png" alt="La Cascade" />
-        <img src="/images/projects/hda/typo/Roof_top.png" alt="Roof Top" />
-        <img src="/images/projects/hda/typo/Le_Motu.png" alt="Le Motu" />
-      </section>
+
       <Description_Projet title={"Hd'a"} description={description_footer} />
       <Footer />
     </>

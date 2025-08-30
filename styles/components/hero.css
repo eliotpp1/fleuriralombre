@@ -37,7 +37,7 @@
 
 .hero-footer {
   position: absolute;
-  bottom: 0;
+  bottom: -1.9vh;
   font-size: 9vw;
   font-weight: bold;
   color: var(--white);

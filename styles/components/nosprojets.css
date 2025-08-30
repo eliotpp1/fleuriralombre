@@ -103,7 +103,7 @@
   backdrop-filter: blur(5px);
   box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.1),
     13px 13px 17px rgba(0, 0, 0, 0.2),
-    inset 2px 2px 5px rgba(255, 255, 255, 0.5);
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3);
   border-radius: 0.5rem;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -131,8 +131,8 @@
 }
 
 .slider-caption h3 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 400;
 }
 
 .slider-caption p {
@@ -149,8 +149,8 @@
   text-decoration: none;
   border-radius: 5px;
   box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.1),
-    13px 13px 17px rgba(0, 0, 0, 0.2),
-    inset 2px 2px 5px rgba(255, 255, 255, 0.5);
+    13px 13px 17px rgba(0, 0, 0, 0.05),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3);
 }
 
 .slider-caption a:hover {

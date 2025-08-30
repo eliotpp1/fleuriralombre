@@ -11,9 +11,10 @@
   align-items: flex-start;
   justify-content: center;
   height: 70%;
-  padding: 2rem;
   box-sizing: border-box;
   margin-top: 5rem;
+  margin-left: 4.5rem;
+  z-index: 2;
 }
 
 .studio-title {
@@ -143,8 +144,9 @@
   }
 
   .presentation-content {
-    padding: 1.5rem;
+    padding: 2rem;
     justify-content: flex-start;
+    margin-left: 0;
   }
 
   .studio-title,
@@ -179,7 +181,7 @@
 
 @media (max-width: 480px) {
   .presentation-content {
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .studio-title,
