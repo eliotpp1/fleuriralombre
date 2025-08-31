@@ -22,6 +22,7 @@ import "../styles/components/Projects/Simone.css";
 import "../styles/components/description_Projet.css";
 import "../styles/components/Projects/Hda.css";
 import "../styles/components/Projects/Envision.css";
+import "../styles/components/Projects/Teahupoo.css";
 import { PrimeReactProvider } from "primereact/api";
 import "primereact/resources/themes/lara-dark-indigo/theme.css"; // ou ton thème
 import "primereact/resources/primereact.min.css";

@@ -26,6 +26,10 @@ export default function Competence({ title, description }) {
     return () => observer.disconnect();
   }, []);
 
+  // Vérifie si "title" est un chemin de fichier (simple regex)
+  const isImage =
+    typeof title === "string" && /\.(png|jpe?g|gif|svg|webp)$/i.test(title);
+
   return (
     <section
       className="description_projet"
@@ -33,7 +37,16 @@ export default function Competence({ title, description }) {
       ref={sectionRef}
     >
       <div className="description_projet-content">
-        <h2 className="description_projet-title">{title}</h2>
+        {isImage ? (
+          <img
+            src={title}
+            alt="Compétence"
+            className="description_projet-title-img"
+          />
+        ) : (
+          <h2 className="description_projet-title">{title}</h2>
+        )}
+
         <ul
           className="description_projet-prestation"
           dangerouslySetInnerHTML={{ __html: description }}

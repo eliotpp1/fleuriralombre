@@ -73,7 +73,10 @@ export default function Simone({ project }) {
             alt="Simone Project"
           />
         </section>
-        <Description_Projet title={"Simone"} description={description_footer} />
+        <Description_Projet
+          title={"/images/projects/simone/logo_footer_simone.png"}
+          description={description_footer}
+        />
         <Footer />
       </main>
     </>

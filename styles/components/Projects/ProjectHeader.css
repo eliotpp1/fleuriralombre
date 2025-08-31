@@ -18,7 +18,7 @@
 /* Quand l'écran passe en dessous de 1200px */
 @media screen and (max-width: 1200px) {
   .project-image {
-    object-fit: contain; /* ne pas crop */
+    object-fit: cover; /* ne pas crop */
     background-color: black; /* optionnel : remplir les bords avec noir */
   }
 }

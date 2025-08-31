@@ -71,7 +71,10 @@ export default function LivreHda({ project }) {
         />
       </section>
 
-      <Description_Projet title={"Hd'a"} description={description_footer} />
+      <Description_Projet
+        title={"/images/projects/hda/logo.png"}
+        description={description_footer}
+      />
       <Footer />
     </>
   );
