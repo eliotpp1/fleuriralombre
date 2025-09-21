@@ -72,7 +72,7 @@
 /* Mobile */
 @media (max-width: 768px) {
   .video-section {
-    height: 50vh;
+    height: 40vh;
   }
 
   .mute-button {

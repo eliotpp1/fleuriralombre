@@ -64,7 +64,6 @@ export async function getStaticProps() {
 
     if (ourReasonEntries.items.length > 0) {
       ourreasonText = ourReasonEntries.items[0].fields.notreRaisonTexte || "";
-      console.log("Texte de notre raison récupéré:", ourreasonText);
     } else {
       console.warn("Aucun texte de notre raison trouvé.");
     }
@@ -80,12 +79,18 @@ export async function getStaticProps() {
       content_type: "collaborateur",
     });
 
+    console.log(
+      "Entrées de collaborateurs récupérées:",
+      collaboratorsEntries.items
+    );
+
     collaborators = collaboratorsEntries.items.map((entry) => ({
       name: entry.fields.nomCollaborateur || "",
       role: entry.fields.metierCollaborateur || "",
       video: entry.fields.photoCollaborateur?.fields?.file?.url
         ? `https:${entry.fields.photoCollaborateur.fields.file.url}`
         : "",
+      poster: entry.fields.posterCollaborateur?.fields?.file?.url,
     }));
   } catch (error) {
     console.error(
@@ -98,11 +103,6 @@ export async function getStaticProps() {
     const ourHistoryImagesEntries = await client.getEntries({
       content_type: "notreHistoireImage",
     });
-
-    console.log(
-      "Entrées d'images de notre histoire récupérées:",
-      ourHistoryImagesEntries.items
-    );
 
     ourhistoryImages = ourHistoryImagesEntries.items.map((entry) => ({
       url: entry.fields.image?.fields?.file?.url

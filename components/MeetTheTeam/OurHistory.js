@@ -14,36 +14,47 @@ export const OurHistorySection = ({ ourhistoryText, ourhistoryImages }) => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // ✅ paragraphs & maxIndex doivent être définis avant le useEffect
   const paragraphs = ourhistoryText
     .split(/<br\s*\/?>\s*<br\s*\/?>/gi)
     .map((p) => p.trim());
 
   const maxIndex = Math.min(paragraphs.length, ourhistoryImages.length) - 1;
 
-  console.log("OurHistoryThirdImage:", ourhistoryImages[2]);
-
   useEffect(() => {
     if (isMobile) {
-      // En mobile : reset index à 0, pas de scroll piloté
       setIndex(0);
       return;
     }
 
+    const container = containerRef.current;
+
     const handleWheel = (e) => {
+      // 🔴 On bloque le scroll natif tant qu'on est dans la section
+      e.preventDefault();
+
       if (isScrolling) return;
 
       setIsScrolling(true);
 
       if (e.deltaY > 0 && index < maxIndex) {
-        setIndex((prev) => prev + 1);
+        setIndex((prev) => Math.min(prev + 1, maxIndex));
       } else if (e.deltaY < 0 && index > 0) {
-        setIndex((prev) => prev - 1);
+        setIndex((prev) => Math.max(prev - 1, 0));
+      } else {
+        // 👉 si on est au début ou à la fin, on libère le scroll
+        setIsScrolling(false);
+        window.scrollBy({
+          top: e.deltaY,
+          behavior: "smooth",
+        });
+        return;
       }
 
+      // ⏳ cooldown pour éviter les rafales
       setTimeout(() => setIsScrolling(false), 800);
     };
 
-    const container = containerRef.current;
     container?.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
@@ -65,7 +76,7 @@ export const OurHistorySection = ({ ourhistoryText, ourhistoryImages }) => {
                   alt={img.alt}
                   className="our-history-image"
                   style={{
-                    display: isVisible ? "block" : "none", // <-- display none quand caché sur mobile
+                    display: isVisible ? "block" : "none",
                     opacity: isVisible ? 1 : 0,
                     transition: isMobile ? "none" : "opacity 0.6s ease-in-out",
                     position: isMobile ? "relative" : "absolute",
@@ -110,11 +121,13 @@ export const OurHistorySection = ({ ourhistoryText, ourhistoryImages }) => {
           </div>
         </div>
       </section>
+
+      {/* Responsive fallback */}
       <section className="our-history-responsive">
         <div className="our-history-responsive-image-container">
           <img
-            src={ourhistoryImages[2].url}
-            alt={ourhistoryImages[2].alt}
+            src={ourhistoryImages[2]?.url}
+            alt={ourhistoryImages[2]?.alt}
             className="our-history-responsive-image"
           />
         </div>

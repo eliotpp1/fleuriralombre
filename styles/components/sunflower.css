@@ -172,7 +172,6 @@
     justify-content: center;
     height: 60vh;
     padding: 1.5rem;
-    overflow: hidden;
   }
 
   .sunflower-content {
@@ -238,7 +237,7 @@
 @media (max-width: 480px) {
   .sunflower {
     padding: 1rem;
-    height: 60vh;
+    height: 35vh;
   }
 
   .sunflower-content {
@@ -281,5 +280,16 @@
     -webkit-background-clip: initial;
     background-clip: initial;
     -webkit-text-fill-color: initial;
+  }
+
+  .sunflower-image {
+    width: 60vw;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: -5rem;
+    transform: translateX(7.5%);
+    object-fit: contain;
+    z-index: -1;
   }
 }

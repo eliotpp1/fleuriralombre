@@ -30,6 +30,14 @@
   width: 100%;
 }
 
+.collaborator-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--black);
+}
+
 .collaborator-video {
   width: 100%;
   height: auto;
@@ -70,10 +78,6 @@
   .collaborator-card {
     max-width: calc(100% - 0.75rem); /* Moitié moins la moitié du gap */
     flex: 1;
-  }
-
-  .collaborator-video-container {
-    height: 20rem; /* Hauteur fixe pour les vidéos */
   }
 
   .collaborator-name {
