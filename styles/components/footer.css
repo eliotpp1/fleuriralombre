@@ -36,6 +36,7 @@
   transition: all 0.3s ease-in-out;
   text-decoration: none;
   font-family: "Switzer-Medium", sans-serif;
+  cursor: none;
 }
 
 .footer-link:hover {
@@ -116,6 +117,7 @@
   width: 95%;
   height: 25rem;
   margin: 0.5rem auto;
+  cursor: none;
 }
 
 .footer-logo-image {

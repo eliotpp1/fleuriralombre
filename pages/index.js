@@ -16,8 +16,9 @@ export default function Home({ projects, competences, projectImage }) {
       <Video />
       <Presentation />
       <Sunflower />
-      <Competence competences={competences} />
       <PortfolioLink projects={projectImage} limit={1} />
+      <Competence competences={competences} />
+
       <Footer />
     </main>
   );

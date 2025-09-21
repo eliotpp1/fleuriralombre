@@ -91,8 +91,10 @@ export const OurHistorySection = ({ ourhistoryText, ourhistoryImages }) => {
             <h2 className="our-history-title">Notre Histoire</h2>
             {paragraphs.map((text, idx) => (
               <div className="paragraph-container" key={idx}>
-                <p
-                  className="paragraph-index"
+                <img
+                  className="paragraph-index-svg"
+                  src={`/images/point.svg`}
+                  alt={`Index ${idx + 1}`}
                   style={{
                     color: isMobile
                       ? "var(--black)"
@@ -101,9 +103,7 @@ export const OurHistorySection = ({ ourhistoryText, ourhistoryImages }) => {
                       : "rgba(0, 0, 0, 0)",
                     transition: isMobile ? "none" : "color 0.3s ease-in-out",
                   }}
-                >
-                  0{idx + 1}.
-                </p>
+                />
                 <p
                   className="our-history-paragraph"
                   dangerouslySetInnerHTML={{ __html: text }}

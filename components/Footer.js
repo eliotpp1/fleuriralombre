@@ -1,11 +1,6 @@
 export default function Footer() {
   return (
-    <footer
-      className="footer"
-      style={{
-        cursor: 'url("/cursor-black.svg") 16 16, auto',
-      }}
-    >
+    <footer className="footer">
       <div className="footer-content">
         <div className="footer-links">
           <a href="/projects" className="footer-link">

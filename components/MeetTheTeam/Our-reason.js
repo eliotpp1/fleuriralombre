@@ -2,12 +2,7 @@ import React from "react";
 
 export const OurReasonSection = ({ ourreasonText }) => {
   return (
-    <section
-      className="our-reason-section"
-      style={{
-        cursor: 'url("/cursor.svg") 16 16, auto',
-      }}
-    >
+    <section className="our-reason-section">
       <div className="our-reason-image-container">
         <img
           src="/images/ourreason.jpg"

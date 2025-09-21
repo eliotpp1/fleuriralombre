@@ -4,7 +4,6 @@ import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import ProjectHeader from "@/components/Projects/ProjectHeader";
 import Description_Projet from "@/components/Description_Projet";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 const description = `Le livre HDA, est une synthèse de nos aventures, une trace de ce qui nous a menées a créer FAO. Toutes ses journées qui ont nourri notre créativité et notre passion. Dans ce livre, les aventures sont relatées telles qu’elle ont été vécues, avec les mots, les pensées et les images qui les résument. Pas de filtre, la simple complexité d’une journée réussie...`;
@@ -33,7 +32,7 @@ export default function LivreHda({ project }) {
       <ProjectHeader project={project} description={description} />
       <section className="hda-gif-book">
         <img
-          src="/images/projects/hda/Anim_Pages_Livre_Debut.gif"
+          src="/images/projects/livre_hda/Anim_Pages_Livre_Debut.gif"
           alt="Livre HDA Project"
         />
       </section>
@@ -53,26 +52,26 @@ export default function LivreHda({ project }) {
       </section>
       <section className="hda-full-book first">
         <img
-          src="/images/projects/hda/Couverture_Page_Livre.png"
+          src="/images/projects/livre_hda/Couverture_Page_Livre.png"
           alt="Simone Bandeau"
         />
       </section>
       <section className="hda-book">
         <img
-          src="/images/projects/hda/grid/Group 25.png"
+          src="/images/projects/livre_hda/grid/Group 25.png"
           alt="Simone Bandeau"
         />
       </section>
 
       <section className="hda-full-book">
         <img
-          src="/images/projects/hda/GrosPlan_Livre.png"
+          src="/images/projects/livre_hda/GrosPlan_Livre.png"
           alt="Simone Bandeau"
         />
       </section>
 
       <Description_Projet
-        title={"/images/projects/hda/logo.png"}
+        title={"/images/projects/livre_hda/logo.png"}
         description={description_footer}
       />
       <Footer />
@@ -94,8 +93,6 @@ export async function getStaticProps() {
       content_type: "projet",
       "fields.slug": "livrehda", // Filtrer par le slug du projet
     });
-
-    console.log("Projet récupéré :", entries.items);
 
     if (entries.items.length > 0) {
       project = entries.items[0].fields;

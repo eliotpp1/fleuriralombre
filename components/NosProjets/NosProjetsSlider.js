@@ -27,7 +27,6 @@ export const NosProjetsSlider = ({ projects }) => {
       )}
       <div className="slider-caption">
         <h3>{project.title}</h3>
-        <p>{project.description}</p>
         <a href={`/projects/${project.slug}`} className="project-link">
           <div className="arrow-container-carousel">
             <div className="arrow-carousel"></div>

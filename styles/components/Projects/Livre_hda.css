@@ -1,0 +1,92 @@
+.hda-gif-book {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 1rem; /* petit padding horizontal */
+  margin: 5rem 0;
+}
+
+.hda-gif-book img {
+  max-width: 90%;
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+.hda-book {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+
+  overflow: hidden;
+  padding: 0 1rem; /* petit padding horizontal */
+  margin: 2.5rem 0 0;
+}
+
+.hda-book img {
+  max-width: 90%;
+  height: auto;
+}
+.first {
+  margin-top: 2.5rem;
+}
+.hda-full-book {
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hda-gif-book img {
+    width: 150vw;
+    max-width: fit-content;
+  }
+}
+
+@media (max-width: 1024px) {
+}
+
+.carousel-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-container {
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(33.33% * 8); /* 4 images doublées, chaque image à 33.33% */
+  animation: slide 10s linear infinite;
+}
+
+.carousel-image {
+  width: 33.33vw; /* Chaque image prend 1/3 de la largeur de l'écran */
+  height: 600px; /* Hauteur augmentée comme demandé */
+  object-fit: cover; /* Uniformise les images sans déformation */
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -50%
+    ); /* Défile jusqu'à la moitié (images doublées) */
+  }
+}
+
+/* Pause au survol pour améliorer l'expérience utilisateur */
+.carousel-track:hover {
+  animation-play-state: paused;
+}

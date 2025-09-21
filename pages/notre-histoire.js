@@ -12,11 +12,7 @@ export default function NotreHistoire({
   ourhistoryImages = [],
 }) {
   return (
-    <main
-      style={{
-        cursor: 'url("/cursor-black.svg") 16 16, auto',
-      }}
-    >
+    <main>
       <Menu blackLogo={true} />
       <OurHistorySection
         ourhistoryText={ourhistoryText}

@@ -20,9 +20,12 @@ import "../styles/components/maintenance.css";
 import "../styles/components/Projects/ProjectHeader.css";
 import "../styles/components/Projects/Simone.css";
 import "../styles/components/description_Projet.css";
+import "../styles/components/Projects/Livre_hda.css";
 import "../styles/components/Projects/Hda.css";
 import "../styles/components/Projects/Envision.css";
 import "../styles/components/Projects/Teahupoo.css";
+import "../styles/components/targetCursor.css";
+import TargetCursor from "@/components/TargetCursor";
 import { PrimeReactProvider } from "primereact/api";
 import "primereact/resources/themes/lara-dark-indigo/theme.css"; // ou ton thème
 import "primereact/resources/primereact.min.css";
@@ -90,6 +93,7 @@ export default function App({ Component, pageProps }) {
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
         ></script>
       </Head>
+      <TargetCursor />
       <PrimeReactProvider>
         {isMaintenanceMode ? <Maintenance /> : <Component {...pageProps} />}
       </PrimeReactProvider>

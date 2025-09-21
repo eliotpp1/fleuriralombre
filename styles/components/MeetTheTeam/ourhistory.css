@@ -22,8 +22,8 @@
 }
 
 .our-history-image-container {
-  margin-left: 6vw;
-  height: 60vh;
+  margin-left: 3vw;
+  height: 80vh;
   position: relative;
   border-radius: 1rem;
   object-fit: cover;
@@ -42,16 +42,16 @@
 }
 
 .our-history-texts {
-  margin-left: 25vw;
-
+  margin-left: 30vw;
   font-family: "Switzer-Regular", sans-serif;
 }
 
 .paragraph-container {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  gap: 20rem;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
 }
 
 .our-history-title {
@@ -60,6 +60,7 @@
   margin-bottom: 2rem;
   margin-top: 15rem;
   color: var(--black);
+  margin-left: -5rem;
 }
 
 .our-history-paragraph {
@@ -69,10 +70,12 @@
   transition: color 0.3s ease-in-out;
 }
 
-.paragraph-index {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+.paragraph-index-svg {
+  width: 0.85rem;
+  font-size: 0.5rem;
+  font-weight: bold;
+  color: var(--red);
+  flex-shrink: 0; /* Empêche le rétrécissement */
 }
 
 .our-history-responsive {

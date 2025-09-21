@@ -131,8 +131,9 @@
 }
 
 .slider-caption h3 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 400;
+  margin: 2rem 0;
 }
 
 .slider-caption p {
@@ -153,6 +154,9 @@
     inset 2px 2px 5px rgba(255, 255, 255, 0.3);
 }
 
+.project-link {
+  cursor: none;
+}
 .slider-caption a:hover {
   background-color: var(--white);
   color: var(--black);

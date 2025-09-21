@@ -66,13 +66,7 @@ export default function Contact() {
   };
 
   return (
-    <main
-      className="contact"
-      id="contact"
-      style={{
-        cursor: 'url("/cursor-black.svg") 16 16, auto',
-      }}
-    >
+    <main className="contact" id="contact">
       <section className="contact-hero">
         <div className="contact-hero-content">
           <img

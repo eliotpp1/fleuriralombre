@@ -40,3 +40,5 @@ Simone:
 
 - Le bandeau qui défile
 - La typo en deux parties pour le responsive (ca marche bien en format a côté donc peut-etre inutila a voir avec toi)
+
+- FAO menu hover + crop li menu

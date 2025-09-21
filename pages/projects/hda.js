@@ -3,7 +3,7 @@ import { createClient } from "contentful";
 import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import ProjectHeader from "@/components/Projects/ProjectHeader";
-
+import HoverVideo from "@/components/HoverVideo";
 const description = `Histoire d’aventure est une série de 2 vidéos entièrement conçues par FAO. De l’identité graphique à la réalisation audiovisuelle, tout a été minutieusement construit afin d’immerger le spectateur dans l’univers de cette aventure. Ces vidéos suivent le périple d’un jeune de 18 ans au Costa Rica. En l’espace de 9 jours, il enchaîne rencontres, découvertes et expériences qui le transforment personnellement. Un récit visuel et émotionnel qui mêle exploration, introspection et apprentissages.`;
 
 export default function Hda({ project }) {
@@ -11,6 +11,33 @@ export default function Hda({ project }) {
     <>
       <Menu />
       <ProjectHeader project={project} description={description} />
+      <section className="hda-full-image">
+        <img src="/images/projects/hda/costa_rica.png" alt="Simone Project" />
+      </section>
+      <section className="envision-full-video">
+        <HoverVideo
+          src="/images/projects/hda/ara.mp4"
+          className="envision-full-video"
+          classNameImg="envision-full-video-preview"
+          classNameVideo="envision-full-video-video"
+        />
+      </section>
+      <section className="envision-double-video">
+        <HoverVideo
+          // poster="/images/projects/envision/images/envision-left-preview.png"
+          src="/images/projects/envision/videos/malette.mp4"
+          className="envision-double-video-left"
+          classNameImg="envision-double-video-left-preview"
+          classNameVideo="envision-double-video-left-video"
+        />
+        <HoverVideo
+          // poster="/images/projects/envision/images/salle-lumiere-preview.png"
+          src="/images/projects/envision/videos/salle-lumiere.mp4"
+          className="envision-double-video-right"
+          classNameImg="envision-double-video-right-preview"
+          classNameVideo="envision-double-video-right-video"
+        />
+      </section>
       <Footer />
     </>
   );

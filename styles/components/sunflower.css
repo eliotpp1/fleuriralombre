@@ -207,7 +207,7 @@
     height: auto;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -5rem;
     transform: translateX(7.5%);
     object-fit: contain;
     z-index: -1;
@@ -287,7 +287,7 @@
     height: auto;
     position: absolute;
     right: 0;
-    bottom: -5rem;
+    bottom: -3.5rem;
     transform: translateX(7.5%);
     object-fit: contain;
     z-index: -1;
