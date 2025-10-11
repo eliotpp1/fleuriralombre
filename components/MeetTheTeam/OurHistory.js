@@ -91,17 +91,16 @@ export const OurHistorySection = ({ ourhistoryText, ourhistoryImages }) => {
             <h2 className="our-history-title">Notre Histoire</h2>
             {paragraphs.map((text, idx) => (
               <div className="paragraph-container" key={idx}>
-                <img
+                <div
                   className="paragraph-index-svg"
-                  src={`/images/point.svg`}
-                  alt={`Index ${idx + 1}`}
                   style={{
-                    color: isMobile
-                      ? "var(--black)"
-                      : idx === index
-                      ? "var(--red)"
-                      : "rgba(0, 0, 0, 0)",
-                    transition: isMobile ? "none" : "color 0.3s ease-in-out",
+                    mask: `url(/images/point.svg) no-repeat center / contain`,
+                    WebkitMask: `url(/images/point.svg) no-repeat center / contain`,
+                    backgroundColor:
+                      idx === index ? "var(--red)" : "rgba(0, 0, 0, 0.1)",
+                    width: "10px",
+                    height: "10px",
+                    transition: "background-color 0.3s ease-in-out",
                   }}
                 />
                 <p

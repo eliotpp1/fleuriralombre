@@ -47,12 +47,14 @@
 }
 
 .collaborator-name {
+  padding-left: 1rem;
   color: var(--black);
   font-size: 4.5rem; /* Taille adaptée */
   margin: 0.2rem 0;
 }
 
 .collaborator-role {
+  padding-left: 1rem;
   font-size: 2rem; /* Lisibilité améliorée */
   font-family: "Switzer-Medium", sans-serif; /* Police spécifique pour le rôle */
   color: var(--black);

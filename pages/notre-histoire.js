@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import Footer from "@/components/Footer";
 import Menu from "@/components/Menu";
 import { OurHistorySection } from "@/components/MeetTheTeam/OurHistory";
@@ -11,16 +12,62 @@ export default function NotreHistoire({
   ourreasonText,
   ourhistoryImages = [],
 }) {
+  const [blackLogo, setBlackLogo] = useState(true);
+
+  const reasonRef = useRef(null);
+  const footerRef = useRef(null);
+  useEffect(() => {
+    const MENU_HEIGHT = 80; // adapte à la hauteur réelle de ton menu
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let reasonVisible = false;
+        let footerVisible = false;
+
+        entries.forEach((entry) => {
+          if (entry.target === reasonRef.current) {
+            reasonVisible = entry.isIntersecting;
+          }
+          if (entry.target === footerRef.current) {
+            footerVisible = entry.isIntersecting;
+          }
+        });
+
+        // Si raison OU footer visible → logo blanc
+        if (reasonVisible || footerVisible) {
+          setBlackLogo(false);
+        } else {
+          setBlackLogo(true);
+        }
+      },
+      {
+        threshold: 0, // dès que le bord supérieur atteint la zone observée
+        rootMargin: `-${MENU_HEIGHT}px 0px -80% 0px`,
+        // -80% en bas évite que ça déclenche trop tôt
+      }
+    );
+
+    if (reasonRef.current) observer.observe(reasonRef.current);
+    if (footerRef.current) observer.observe(footerRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main>
-      <Menu blackLogo={true} />
+      <Menu blackLogo={blackLogo} />
       <OurHistorySection
         ourhistoryText={ourhistoryText}
         ourhistoryImages={ourhistoryImages}
       />
       <MeetTheTeam collaborators={collaborators} />
-      <OurReasonSection ourreasonText={ourreasonText} />
-      <Footer />
+      <div ref={reasonRef}>
+        <OurReasonSection ourreasonText={ourreasonText} />
+      </div>
+
+      <div ref={footerRef}>
+        <Footer />
+      </div>
     </main>
   );
 }
