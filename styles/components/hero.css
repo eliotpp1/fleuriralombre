@@ -1,5 +1,4 @@
 .hero {
-  background-image: url("/images/background_Visual_Hero.png");
   background-size: cover;
   background-position: 100% 3%; /* calée en bas à droite */
   background-repeat: no-repeat;

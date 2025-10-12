@@ -1,55 +1,55 @@
 @font-face {
   font-family: "Grotesk-Black";
-  src: url("/fonts/Grotesk/BDOGrotesk-Black") format("woff2");
-  font-weight: 100;
+  src: url("/fonts/Grotesk/BDOGrotesk-Black.woff2") format("woff2");
+  font-weight: 900;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Grotesk-Bold";
-  src: url("/fonts/Grotesk/BDOGrotesk-Bold") format("woff2");
-  font-weight: 100;
+  src: url("/fonts/Grotesk/BDOGrotesk-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Grotesk-DemiBold";
-  src: url("/fonts/Grotesk/BDOGrotesk-DemiBold") format("woff2");
-  font-weight: 100;
+  src: url("/fonts/Grotesk/BDOGrotesk-DemiBold.woff2") format("woff2");
+  font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Grotesk-ExtraBold";
-  src: url("/fonts/Grotesk/BDOGrotesk-ExtraBold") format("woff2");
-  font-weight: 100;
+  src: url("/fonts/Grotesk/BDOGrotesk-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Grotesk-Light";
-  src: url("/fonts/Grotesk/BDOGrotesk-Light") format("woff2");
-  font-weight: 100;
+  src: url("/fonts/Grotesk/BDOGrotesk-Light.woff2") format("woff2");
+  font-weight: 300;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Grotesk-Medium";
-  src: url("/fonts/Grotesk/BDOGrotesk-Medium") format("woff2");
-  font-weight: 100;
+  src: url("/fonts/Grotesk/BDOGrotesk-Medium.woff2") format("woff2");
+  font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Grotesk-Regular";
-  src: url("/fonts/Grotesk/BDOGrotesk-Regular") format("woff2");
-  font-weight: 100;
+  src: url("/fonts/Grotesk/BDOGrotesk-Regular.woff2") format("woff2");
+  font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
