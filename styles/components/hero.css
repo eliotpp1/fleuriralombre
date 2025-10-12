@@ -38,11 +38,11 @@
   position: absolute;
   bottom: -1.9vh;
   font-size: 9vw;
-  font-weight: bold;
+  font-weight: 500;
   color: var(--white);
   width: 100%;
   text-align: center;
-  letter-spacing: -0.05rem;
+  letter-spacing: -0.6rem;
 }
 
 .model-3d {
