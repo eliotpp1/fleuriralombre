@@ -51,6 +51,8 @@
   color: var(--black);
   font-size: 4.5rem; /* Taille adaptée */
   margin: 0.2rem 0;
+  font-weight: 500;
+  letter-spacing: -0.3rem;
 }
 
 .collaborator-role {
@@ -58,6 +60,8 @@
   font-size: 2rem; /* Lisibilité améliorée */
   color: var(--black);
   margin-bottom: 0.5rem;
+  font-weight: 400;
+  letter-spacing: -0.1rem;
 }
 
 .collaborator-quote {

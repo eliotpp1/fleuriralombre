@@ -54,12 +54,13 @@
 }
 
 .our-history-title {
-  font-size: 7.5rem;
-  font-weight: bold;
+  font-size: 9rem;
   margin-bottom: 2rem;
   margin-top: 15rem;
   color: var(--black);
   margin-left: -5rem;
+  font-weight: 500;
+  letter-spacing: -0.5rem;
 }
 
 .our-history-paragraph {
@@ -67,6 +68,8 @@
   margin: 1rem 0;
   line-height: 1.6;
   transition: color 0.3s ease-in-out;
+  font-weight: 400;
+  letter-spacing: -0.1rem;
 }
 
 .paragraph-index-svg {

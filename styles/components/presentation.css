@@ -18,16 +18,18 @@
 }
 
 .studio-title {
-  font-size: clamp(5rem, 12vw, 8.5rem);
-  font-weight: bold;
+  font-weight: 500;
+  letter-spacing: -0.6rem;
+  font-size: clamp(9rem, 15vw, 11rem);
   color: var(--red);
 }
 
 .multidisciplinaire-title {
+  font-weight: 500;
+  letter-spacing: -0.6rem;
   margin-top: -2rem;
   width: 100vw;
   font-size: clamp(6rem, 9vw, 10rem);
-  letter-spacing: -0.025em;
 }
 
 .location {
@@ -37,11 +39,12 @@
   justify-content: flex-start;
   gap: 1rem;
   flex-wrap: wrap;
+  letter-spacing: -0.3rem;
 }
 
 .location-city {
   font-size: clamp(3.5rem, 9vw, 5.5rem);
-  font-weight: 400;
+  font-weight: 500;
   transition: transform 0.25s ease-in-out;
   /* Transition fluide pour slide */
 }

@@ -44,9 +44,11 @@
 }
 
 .project-title {
-  font-size: 7rem;
+  font-size: 9rem;
   font-weight: bold;
   margin: 0 0 0.5rem 0;
+  font-weight: 500;
+  letter-spacing: -0.5rem;
 }
 
 .project-description {
@@ -54,6 +56,8 @@
   max-width: 60%;
   line-height: 1.4;
   margin: 0;
+  font-weight: 400;
+  letter-spacing: -0.1rem;
 }
 
 .arrow-container-project {

@@ -28,10 +28,11 @@
   align-self: flex-start;
   padding: 0 5rem;
   font-size: 15rem;
-  font-weight: 700;
   margin-bottom: 1rem;
   color: var(--red);
   z-index: 2;
+  font-weight: 500;
+  letter-spacing: -0.6rem;
 }
 
 /* Contact Form Styles */
@@ -92,6 +93,9 @@
   resize: vertical;
   font-family: inherit;
   cursor: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.1rem;
 }
 
 textarea.form-input {
@@ -127,6 +131,8 @@ textarea.form-input {
   padding: 0.25rem 1rem;
   border-radius: 1rem;
   font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: -0.1rem;
   cursor: pointer;
   transition: all 0.2s ease;
   border: none;

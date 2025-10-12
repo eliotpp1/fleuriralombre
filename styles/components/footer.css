@@ -150,8 +150,8 @@
   position: absolute;
   bottom: 1rem;
   right: 3rem;
-  font-size: 1rem;
-  line-height: 132%;
+  font-size: 1.05rem;
+  font-weight: 500;
 }
 
 @media (max-width: 1024px) {
