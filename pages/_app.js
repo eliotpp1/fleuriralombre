@@ -1,9 +1,7 @@
 import Head from "next/head";
 import Maintenance from "@/components/Maintenance";
 import "../styles/globals.css";
-// import "../styles/fonts/switzer.css";
-// import "../styles/fonts/instrumentserif.css";
-import "../styles/fonts/grotesk.css";
+import "../styles/fonts/grotesk.css"; // ✅ ta font locale
 import "../styles/components/hero.css";
 import "../styles/components/portfolio-link.css";
 import "../styles/components/contact.css";
@@ -28,12 +26,12 @@ import "../styles/components/Projects/Teahupoo.css";
 import "../styles/components/targetCursor.css";
 import TargetCursor from "@/components/TargetCursor";
 import { PrimeReactProvider } from "primereact/api";
-import "primereact/resources/themes/lara-dark-indigo/theme.css"; // ou ton thème
+import "primereact/resources/themes/lara-dark-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 
 export default function App({ Component, pageProps }) {
-  const isMaintenanceMode = false; // Toggle maintenance mode
+  const isMaintenanceMode = false;
 
   return (
     <>
@@ -43,29 +41,43 @@ export default function App({ Component, pageProps }) {
           name="description"
           content="fao.studio est un studio de design créatif spécialisé en graphisme, motion design et 3D"
         />
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+
+        {/* ✅ Import correct de la font Inter */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+          rel="stylesheet"
+        />
+
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
-        <script type="application/ld+json">
-          {`
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Fleurir à l’ombre",
-  "url": "https://fleuriralombre.com/",
-  "logo": "https://fleuriralombre.com/images/fao.svg"
-}
-`}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Fleurir à l’ombre",
+              url: "https://fleuriralombre.com/",
+              logo: "https://fleuriralombre.com/images/fao.svg",
+            }),
+          }}
+        />
         <script
           type="module"
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
         ></script>
       </Head>
+
       <TargetCursor />
       <PrimeReactProvider>
         {isMaintenanceMode ? <Maintenance /> : <Component {...pageProps} />}
