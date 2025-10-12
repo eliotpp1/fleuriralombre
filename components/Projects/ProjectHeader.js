@@ -18,6 +18,13 @@ export default function ProjectHeader({ project, description }) {
         <p className="project-description">{description}</p>
       </div>
       <div className="project-header-fade" />
+
+      <button
+        className="arrow-container-project"
+        onClick={() => window.history.back()}
+      >
+        <div className="arrow-project"></div>
+      </button>
     </header>
   );
 }

@@ -5,7 +5,6 @@
   margin: 4rem 0;
 
   background-color: var(--black);
-  font-family: "Switzer-Regular", sans-serif;
   z-index: 1000;
 }
 
@@ -26,8 +25,6 @@
   gap: 2rem;
   background-color: var(--black);
   margin-bottom: 2rem;
-
-  font-family: "Switzer-Regular", sans-serif;
   z-index: 1000;
 }
 

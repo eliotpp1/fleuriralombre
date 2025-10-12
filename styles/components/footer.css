@@ -3,7 +3,6 @@
   background-color: var(--white);
   color: var(--black);
   padding: 3rem 1rem;
-  font-family: "SwitzerRegular", sans-serif;
   position: relative;
 }
 
@@ -35,7 +34,6 @@
   color: var(--black);
   transition: all 0.3s ease-in-out;
   text-decoration: none;
-  font-family: "Switzer-Medium", sans-serif;
   cursor: none;
 }
 

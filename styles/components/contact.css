@@ -131,7 +131,6 @@ textarea.form-input {
   transition: all 0.2s ease;
   border: none;
   background-color: var(--white);
-  font-family: "Switzer-Light", sans-serif;
   box-shadow: inset -2px -2px 4px 0px rgba(255, 255, 255, 0.1),
     5px 5px 10px 0px rgba(0, 0, 0, 0.2),
     inset 2px 2px 4px 0px rgba(255, 255, 255, 0.5);

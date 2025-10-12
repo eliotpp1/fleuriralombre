@@ -56,6 +56,75 @@
   margin: 0;
 }
 
+.arrow-container-project {
+  position: fixed;
+  top: 3rem;
+  left: 3rem;
+  display: flex;
+  justify-content: center; /* ✅ Centre horizontalement */
+  align-items: center; /* ✅ Centre verticalement */
+  width: 5rem;
+  height: 5rem;
+  z-index: 1001;
+
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: none;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.1),
+    5px 5px 17px rgba(0, 0, 0, 0.075),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+}
+
+.arrow-project {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 2px;
+  border-radius: 9999px;
+  transition: width 0.5s cubic-bezier(0.1, -0.1, 0.2, 0.75),
+    background 0.5s ease;
+  transform: rotate(180deg); /* ✅ Rotation 180° */
+  background-color: var(--white);
+}
+
+.arrow-project::before,
+.arrow-project::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  width: 30px;
+  height: 2px;
+  border-radius: 9999px;
+  background-color: var(--white);
+  transform-origin: 100% 50%;
+}
+
+.arrow-project::before {
+  transform: rotate(45deg);
+}
+
+.arrow-project::after {
+  transform: rotate(-45deg);
+}
+
+.arrow-container-project:hover .arrow-project,
+.arrow-container-project:hover .arrow-project::before,
+.arrow-container-project:hover .arrow-project::after {
+  background-color: var(--red); /* ✅ change en rouge au hover */
+}
+
+.arrow-project,
+.arrow-project::before,
+.arrow-project::after {
+  transition: background-color 0.3s ease,
+    width 0.5s cubic-bezier(0.1, -0.1, 0.2, 0.75);
+}
+
 /* TABLETTE */
 @media screen and (max-width: 1024px) {
   .project-title {

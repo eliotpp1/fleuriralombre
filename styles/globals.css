@@ -19,7 +19,6 @@
 
 html,
 body {
-  font-family: "Switzer-Regular";
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
@@ -45,7 +44,7 @@ html::-webkit-scrollbar {
 /* Appliquer le masquage également à body pour plus de robustesse */
 body {
   position: relative;
-  font-family: "Switzer-Light", sans-serif;
+  font-family: "Grotesk-Medium", sans-serif;
   font-weight: 400;
   background-color: var(--black);
   color: var(--white);
@@ -67,7 +66,6 @@ a {
 }
 .form-input::placeholder,
 textarea::placeholder {
-  font-family: "Switzer-Light", sans-serif;
   color: var(--light-gray);
 }
 /* Responsive breakpoints */

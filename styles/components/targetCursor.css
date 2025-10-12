@@ -10,36 +10,40 @@
   transform: translate(-50%, -50%);
 }
 
-.target-cursor-corner {
+.target-cursor-cross {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 6px;
-  height: 6px;
-  border: 2px solid #fff;
-  will-change: transform;
+  width: 24px; /* ✅ taille de la croix */
+  height: 24px;
+  transform: translate(-50%, -50%);
 }
 
-.corner-tl {
-  transform: translate(-150%, -150%);
-  border-right: none;
-  border-bottom: none;
+.target-cursor-cross::before,
+.target-cursor-cross::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.corner-tr {
-  transform: translate(50%, -150%);
-  border-left: none;
-  border-bottom: none;
+/* ✅ Barre verticale */
+.target-cursor-cross::before {
+  width: 2px;
+  height: 100%;
 }
 
-.corner-br {
-  transform: translate(50%, 50%);
-  border-left: none;
-  border-top: none;
+/* ✅ Barre horizontale */
+.target-cursor-cross::after {
+  width: 100%;
+  height: 2px;
 }
 
-.corner-bl {
-  transform: translate(-150%, 50%);
-  border-right: none;
-  border-top: none;
+/* ✅ Cache complètement le curseur pour les écrans < 1200px */
+@media (max-width: 1200px) {
+  .target-cursor-wrapper {
+    display: none !important;
+  }
 }

@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Maintenance from "@/components/Maintenance";
 import "../styles/globals.css";
-import "../styles/fonts/switzer.css";
-import "../styles/fonts/instrumentserif.css";
+// import "../styles/fonts/switzer.css";
+// import "../styles/fonts/instrumentserif.css";
+import "../styles/fonts/grotesk.css";
 import "../styles/components/hero.css";
 import "../styles/components/portfolio-link.css";
 import "../styles/components/contact.css";
@@ -45,34 +46,6 @@ export default function App({ Component, pageProps }) {
         <meta charset="UTF-8" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link
-          rel="preload"
-          href="/fonts/Switzer/Switzer-Bold.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Switzer/Switzer-Regular.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Switzer/Switzer-Semibold.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/models/logo.gtlf"
-          as="model"
-          type="model/gltf-binary"
-          crossOrigin="anonymous"
-        />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"

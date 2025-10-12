@@ -56,7 +56,6 @@
 .collaborator-role {
   padding-left: 1rem;
   font-size: 2rem; /* Lisibilité améliorée */
-  font-family: "Switzer-Medium", sans-serif; /* Police spécifique pour le rôle */
   color: var(--black);
   margin-bottom: 0.5rem;
 }

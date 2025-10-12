@@ -43,7 +43,6 @@
 
 .our-history-texts {
   margin-left: 30vw;
-  font-family: "Switzer-Regular", sans-serif;
 }
 
 .paragraph-container {
@@ -122,7 +121,6 @@
     max-width: 800px;
     text-align: center;
     margin-bottom: 5rem;
-    font-family: "Switzer-Regular", sans-serif;
     color: var(--black);
   }
   .our-history-responsive-text {
