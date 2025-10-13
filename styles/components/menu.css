@@ -21,10 +21,10 @@
 }
 
 /* Switch au hover */
-.menu-wrapper-test:hover .menu-logo-default {
+.menu-logo-link:hover .menu-logo-default {
   opacity: 0;
 }
-.menu-wrapper-test:hover .menu-logo-red {
+.menu-logo-link:hover .menu-logo-red {
   opacity: 1;
 }
 
@@ -123,6 +123,18 @@
 
   .menu-mobile {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .menu-wrapper-test:hover {
+    width: 45vw;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .menu-wrapper-test:hover {
+    width: 50vw;
   }
 }
 
