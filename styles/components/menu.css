@@ -102,8 +102,7 @@
 
   .menu-list-test {
     opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-30px);
     display: flex;
     gap: 7rem;
     align-items: center;
@@ -118,7 +117,7 @@
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-    transition: opacity 0.6s ease 0.1s, transform 0.4s ease;
+    transition: opacity 1.5s ease 0.1s, transform 0.4s ease;
   }
 
   .menu-mobile {
@@ -182,7 +181,7 @@
   .menu-mobile .mobile-header-logo {
     position: fixed;
     top: 2rem;
-    left: 0.35rem;
+    left: 2rem;
     padding: 1rem;
     z-index: 1500;
   }
@@ -204,7 +203,7 @@
     opacity: 1;
   }
   .menu-mobile .menu-logo {
-    width: 100px;
+    width: 10rem;
     height: auto;
   }
 
@@ -222,7 +221,7 @@
       13px 13px 17px rgba(0, 0, 0, 0.2),
       inset 2px 2px 5px rgba(255, 255, 255, 0.5);
     border-radius: 0.4rem;
-    padding: 0rem 0.5rem;
+    padding: 0.5rem 0.5rem;
   }
 
   .menu-mobile .arrow-presentation {
@@ -296,5 +295,20 @@
   .menu-mobile .arrow-presentation.black::before,
   .menu-mobile .arrow-presentation.black::after {
     width: 43.84px; /* largeur des barres secondaires */
+  }
+}
+
+/* ---------- MOBILE ----------- */
+@media screen and (max-width: 600px) {
+  .menu-wrapper-test {
+    display: none;
+  }
+
+  .menu-mobile .arrow-presentation {
+    width: 35px; /* largeur de la barre → ajuste à ta taille voulue */
+  }
+  .menu-mobile .arrow-presentation::before,
+  .menu-mobile .arrow-presentation::after {
+    width: 25.54px; /* largeur des barres secondaires */
   }
 }

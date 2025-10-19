@@ -87,10 +87,12 @@
 
   .collaborator-name {
     font-size: 2rem;
+    letter-spacing: -0.2rem;
   }
 
   .collaborator-role {
     font-size: 0.95rem;
+    letter-spacing: -0.05rem;
   }
 
   .collaborator-quote {

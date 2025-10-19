@@ -55,6 +55,9 @@
   cursor: none;
 }
 
+.portfolio-link__button:hover {
+  transform: scale(1.01);
+}
 .portfolio-link:hover .portfolio-link__button {
   background-color: var(--white);
 }
@@ -179,10 +182,12 @@
 
   .section-title {
     font-size: 6rem;
+    letter-spacing: -0.2rem;
   }
 
   .section-subtitle {
     font-size: 2rem;
+    letter-spacing: -0.1rem;
   }
 
   .portfolio-link__image-container {

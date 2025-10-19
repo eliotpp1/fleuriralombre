@@ -13,7 +13,7 @@
 .competence-content {
   width: 100%;
   height: 40vh;
-  padding: 1.3rem 4.5rem;
+  padding: 2rem 4.5rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -108,10 +108,12 @@
 
   .competence-title {
     font-size: 4rem;
+    letter-spacing: -0.1rem;
   }
 
   .competence-prestation li {
-    font-size: clamp(0.9rem, 2.5vw, 1.6rem);
+    font-size: 1.1rem;
+    letter-spacing: -0.025rem;
   }
 }
 

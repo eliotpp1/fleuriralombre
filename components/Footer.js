@@ -29,16 +29,18 @@ export default function Footer() {
           </a>
         </div>
         <div className="footer-logo">
-          <img
-            src="/images/fao-black.svg"
-            alt="Logo Black"
-            className="footer-logo-image footer-logo-default"
-          />
-          <img
-            src="/images/fao-red.svg"
-            alt="Logo Red"
-            className="footer-logo-image footer-logo-red"
-          />
+          <a href="/" className="footer-logo-link">
+            <img
+              src="/images/fao-black.svg"
+              alt="Logo Black"
+              className="footer-logo-image footer-logo-default"
+            />
+            <img
+              src="/images/fao-red.svg"
+              alt="Logo Red"
+              className="footer-logo-image footer-logo-red"
+            />
+          </a>
         </div>
       </div>
       <div className="footer-credits">

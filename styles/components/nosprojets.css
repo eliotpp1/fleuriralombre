@@ -1,5 +1,6 @@
 /* SECTION : Nos projets */
 .nosprojets-section {
+  background: url("/images/background-nosprojets.jpg");
   position: relative;
   height: 6000px;
   color: white;

@@ -54,7 +54,7 @@ export default function NotreHistoire({
   }, []);
 
   return (
-    <main>
+    <main className="our-history-page">
       <Menu blackLogo={blackLogo} />
       <OurHistorySection
         ourhistoryText={ourhistoryText}
@@ -88,8 +88,9 @@ export async function getStaticProps() {
     });
 
     if (ourHistoryEntries.items.length > 0) {
-      ourhistoryText =
-        ourHistoryEntries.items[0].fields.notreHistoireTexte || "";
+      ourhistoryText = ourHistoryEntries.items.map(
+        (entry) => entry.fields.notreHistoireTexte || ""
+      );
     } else {
       console.warn("Aucun texte de notre histoire trouvé.");
     }

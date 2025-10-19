@@ -95,7 +95,7 @@
   cursor: none;
   font-size: 1.2rem;
   font-weight: 400;
-  letter-spacing: -0.1rem;
+  letter-spacing: -0.025rem;
 }
 
 textarea.form-input {
@@ -132,7 +132,7 @@ textarea.form-input {
   border-radius: 1rem;
   font-size: 1.75rem;
   font-weight: 400;
-  letter-spacing: -0.1rem;
+  letter-spacing: -0.025rem;
   cursor: pointer;
   transition: all 0.2s ease;
   border: none;
