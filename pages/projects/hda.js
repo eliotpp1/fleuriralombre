@@ -4,9 +4,11 @@ import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import ProjectHeader from "@/components/Projects/ProjectHeader";
 import HoverVideo from "@/components/HoverVideo";
+import { useState } from "react";
 const description = `Histoire d’aventure est une série de 2 vidéos entièrement conçues par FAO. De l’identité graphique à la réalisation audiovisuelle, tout a été minutieusement construit afin d’immerger le spectateur dans l’univers de cette aventure. Ces vidéos suivent le périple d’un jeune de 18 ans au Costa Rica. En l’espace de 9 jours, il enchaîne rencontres, découvertes et expériences qui le transforment personnellement. Un récit visuel et émotionnel qui mêle exploration, introspection et apprentissages.`;
 
 export default function Hda({ project }) {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <>
       <Menu />
@@ -25,17 +27,55 @@ export default function Hda({ project }) {
       <section className="envision-double-video">
         <HoverVideo
           // poster="/images/projects/envision/images/envision-left-preview.png"
-          src="/images/projects/envision/videos/malette.mp4"
+          src="/images/projects/hda/Asset Pura Vida.mp4"
           className="envision-double-video-left"
           classNameImg="envision-double-video-left-preview"
           classNameVideo="envision-double-video-left-video"
         />
         <HoverVideo
           // poster="/images/projects/envision/images/salle-lumiere-preview.png"
-          src="/images/projects/envision/videos/salle-lumiere.mp4"
+          src="/images/projects/hda/Titres chapitres.mp4"
           className="envision-double-video-right"
           classNameImg="envision-double-video-right-preview"
           classNameVideo="envision-double-video-right-video"
+        />
+      </section>
+      <section
+        className="hda-full-image"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <img
+          src={
+            isHovered
+              ? "/images/projects/hda/miniature_HDA_2.PNG"
+              : "/images/projects/hda/Minature Jayen Original.jpg"
+          }
+          alt="Simone Project"
+        />
+      </section>
+      <section className="envision-double-video">
+        <HoverVideo
+          // poster="/images/projects/envision/images/envision-left-preview.png"
+          src="/images/projects/hda/Podcast angle.mp4"
+          className="envision-double-video-left"
+          classNameImg="envision-double-video-left-preview"
+          classNameVideo="envision-double-video-left-video"
+        />
+        <HoverVideo
+          // poster="/images/projects/envision/images/salle-lumiere-preview.png"
+          src="/images/projects/hda/Facecam v1.mp4"
+          className="envision-double-video-right"
+          classNameImg="envision-double-video-right-preview"
+          classNameVideo="envision-double-video-right-video"
+        />
+      </section>
+      <section className="envision-full-video">
+        <HoverVideo
+          src="/images/projects/hda/Drapeau.mp4"
+          className="envision-full-video"
+          classNameImg="envision-full-video-preview"
+          classNameVideo="envision-full-video-video"
         />
       </section>
       <Footer />
