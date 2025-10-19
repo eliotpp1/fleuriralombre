@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export default function Competence({ title, description, videoUrl }) {
+export default function Competence({ title, description, videoUrl, logo }) {
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -52,14 +52,29 @@ export default function Competence({ title, description, videoUrl }) {
             className="description_projet-text-prestation"
             dangerouslySetInnerHTML={{ __html: description }}
           />
-          {videoUrl && (
-            <a href={videoUrl} target="_blank" className="footer-link-project">
-              <div className="footer-link-project-text">Visionner</div>
-              <div className="arrow-container-footer-project">
-                <div className="arrow-footer-project"></div>
+          <div className="description_projet-footer-links">
+            {videoUrl && (
+              <a
+                href={videoUrl}
+                target="_blank"
+                className="footer-link-project"
+              >
+                <div className="footer-link-project-text">Visionner</div>
+                <div className="arrow-container-footer-project">
+                  <div className="arrow-footer-project"></div>
+                </div>
+              </a>
+            )}
+            {logo && (
+              <div className="description_projet-logo-container">
+                <img
+                  src={logo}
+                  alt="Logo"
+                  className="description_projet-logo"
+                />
               </div>
-            </a>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </section>
