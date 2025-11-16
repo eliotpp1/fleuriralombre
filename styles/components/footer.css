@@ -199,6 +199,9 @@
 
 /*  */
 @media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem 1rem 1rem;
+  }
   .footer-logo {
     height: 80px;
     max-width: 600px;
@@ -230,6 +233,10 @@
     justify-content: center;
     font-size: 0.85rem;
   }
+
+  .footer-logo-image {
+    height: auto;
+  }
 }
 
 /* Mobile */
@@ -243,10 +250,11 @@
   .footer-link {
     font-size: 1.2rem;
     padding: 0.8rem;
+    letter-spacing: -0.05rem;
   }
 
   .footer-credits {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     align-items: center;
     margin-top: 1rem;
   }

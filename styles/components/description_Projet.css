@@ -230,6 +230,9 @@
   .description_projet-prestation li {
     font-size: clamp(0.9rem, 2.5vw, 1.6rem);
   }
+  .description_projet-title-img {
+    max-width: 45vw;
+  }
 }
 
 /* Phone (max-width: 480px) */

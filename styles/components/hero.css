@@ -81,10 +81,10 @@
 
   .hero-footer span:first-child {
     line-height: 0.1;
-    font-size: 7rem;
+    font-size: 6.5rem;
   }
 
   .hero-footer span:last-child {
-    font-size: 7.4rem;
+    font-size: 7.2rem;
   }
 }

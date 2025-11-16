@@ -178,8 +178,8 @@ textarea.form-input {
   }
 
   .contact-button {
+    letter-spacing: -0.05rem;
     width: 100%;
-    justify-content: center;
   }
 }
 
@@ -301,6 +301,7 @@ textarea.form-input {
     margin-left: 11rem;
     font-size: 9rem;
     padding: 0 2rem;
+    letter-spacing: -0.3rem;
   }
 
   .contact-hero-image {
@@ -360,7 +361,7 @@ textarea.form-input {
   }
   .contact-hero-title {
     font-size: 6rem;
-    margin-left: 9rem;
+    margin-left: -1rem;
   }
 }
 
@@ -372,7 +373,6 @@ textarea.form-input {
   }
   .contact-hero-title {
     font-size: 5rem;
-    margin-left: 5rem;
   }
 
   .contact-hero-image {

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Maintenance from "@/components/Maintenance";
 import "../styles/globals.css";
-import "../styles/fonts/grotesk.css"; // ✅ ta font locale
+import "../styles/fonts/grotesk.css";
 import "../styles/components/hero.css";
 import "../styles/components/portfolio-link.css";
 import "../styles/components/contact.css";
@@ -30,8 +30,31 @@ import "primereact/resources/themes/lara-dark-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import Loader from "@/components/Loader";
+
 export default function App({ Component, pageProps }) {
   const isMaintenanceMode = false;
+
+  // Loader state
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const handleStart = () => setLoading(true);
+    const handleEnd = () => setLoading(false);
+
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleEnd);
+    router.events.on("routeChangeError", handleEnd);
+
+    return () => {
+      router.events.off("routeChangeStart", handleStart);
+      router.events.off("routeChangeComplete", handleEnd);
+      router.events.off("routeChangeError", handleEnd);
+    };
+  }, [router]);
 
   return (
     <>
@@ -44,13 +67,13 @@ export default function App({ Component, pageProps }) {
         <meta charSet="UTF-8" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-        {/* ✅ Import correct de la font Inter */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
           rel="stylesheet"
@@ -79,7 +102,9 @@ export default function App({ Component, pageProps }) {
       </Head>
 
       <TargetCursor />
+
       <PrimeReactProvider>
+        {loading && <Loader />} {/* 👈 loader ici */}
         {isMaintenanceMode ? <Maintenance /> : <Component {...pageProps} />}
       </PrimeReactProvider>
     </>

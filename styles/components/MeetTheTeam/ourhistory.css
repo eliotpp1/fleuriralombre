@@ -128,7 +128,8 @@
   }
 
   .our-history-title {
-    font-size: clamp(2rem, 9vw, 4rem);
+    margin-left: 1rem;
+    font-size: 3.5rem;
   }
 
   .our-history-image {

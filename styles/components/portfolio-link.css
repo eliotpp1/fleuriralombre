@@ -55,9 +55,6 @@
   cursor: none;
 }
 
-.portfolio-link__button:hover {
-  transform: scale(1.01);
-}
 .portfolio-link:hover .portfolio-link__button {
   background-color: var(--white);
 }
@@ -98,9 +95,9 @@
 .arrow::after {
   content: "";
   position: absolute;
-  top: calc(50% - 1.5px); /* Ajusté pour 3px d'épaisseur (moitié de 3px) */
+  top: calc(100% - 2px); /* Ajusté pour 3px d'épaisseur (moitié de 3px) */
   right: 0;
-  width: 30px; /* Taille conservée pour éviter tout débordement */
+  width: 20px; /* Taille conservée pour éviter tout débordement */
   height: 2px; /* Réduit de 4px à 3px */
   border-radius: 9999px;
   background-color: #ffffff; /* Default color */
@@ -200,6 +197,7 @@
 @media (max-width: 480px) {
   .portfolio-link {
     margin-bottom: 2.5rem;
+    padding: 2rem 1.5rem;
   }
   .portfolio-link__button {
     width: 100%;
@@ -213,6 +211,7 @@
 
   .section-subtitle {
     font-size: 1.5rem;
+    margin-bottom: 3.5rem;
   }
 
   .portfolio-link__image-container {

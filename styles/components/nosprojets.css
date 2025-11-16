@@ -183,7 +183,7 @@
   display: inline-block;
   width: 80px;
   height: 2px;
-  margin: 29px 0;
+  margin: 20px 0;
   border-radius: 9999px;
   background: linear-gradient(to right, var(--white) 5%, var(--white) 95%);
   transition: width 0.5s cubic-bezier(0.1, -0.1, 0.2, 0.75),
@@ -196,7 +196,7 @@
   position: absolute;
   top: calc(50% - 1.5px);
   right: 0;
-  width: 30px;
+  width: 25px;
   height: 2px;
   border-radius: 9999px;
   background-color: #ffffff;
@@ -255,35 +255,6 @@
 .arrow-container-presentation.right-arrow:hover .arrow-presentation {
   transform: rotate(0deg);
 }
-/* 
- éloignement des flèches
-.p-carousel-prev {
-  left: 1rem;
-}
-.p-carousel-next {
-  right: 1rem;
-}
-
-
-.p-carousel .p-carousel-prev,
-.p-carousel .p-carousel-next {
-  background-color: white;
-  color: black;
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.p-carousel .p-carousel-prev:hover,
-.p-carousel .p-carousel-next:hover {
-  transform: scale(1.1);
-} */
 
 .nosprojets-mobile {
   display: none;
@@ -361,13 +332,11 @@
 
 .immersive-slide {
   scroll-snap-align: start;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  padding: 2rem;
   box-sizing: border-box;
   scroll-snap-align: start;
   text-align: left;
@@ -379,6 +348,7 @@
 }
 
 .immersive-content {
+  margin-top: 5rem;
   position: relative;
   z-index: 1;
   max-width: 600px;
@@ -403,12 +373,20 @@
   margin-bottom: 1.5rem;
 }
 .immersive-title {
-  font-size: 2rem;
+  font-weight: 500;
+  font-size: 2.5rem;
+  letter-spacing: -0.2rem;
+  margin-left: 2rem;
 }
 
 .immersive-description {
-  font-size: 1.1rem;
+  margin-left: 2rem;
+
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
+  letter-spacing: -0.01rem;
+  font-weight: 400;
+  line-height: 2.25rem;
 }
 
 .immersive-button {
@@ -456,12 +434,12 @@
   padding: 0;
 }
 .intro-slide .immersive-content h2 {
-  font-size: 6rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
 }
 
 .intro-slide .immersive-content p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -488,6 +466,7 @@
   box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.1),
     13px 13px 17px rgba(0, 0, 0, 0.2),
     inset 2px 2px 5px rgba(255, 255, 255, 0.5);
+  border: none;
 }
 
 /* INDICATEUR DROIT */

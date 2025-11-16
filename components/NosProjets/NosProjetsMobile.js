@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 
 export default function NosProjetsMobile({ projects }) {
   const containerRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
 
   const filteredProjects = projects.filter((p) => p.slug !== "background");
 
@@ -13,11 +12,6 @@ export default function NosProjetsMobile({ projects }) {
     const handleScroll = () => {
       const scrollTop = containerRef.current?.scrollTop || 0;
       const height = window.innerHeight;
-      const index = Math.floor(scrollTop / height);
-      // +1 pour prendre en compte la slide "intro"
-      if (index <= filteredProjects.length) {
-        setActiveIndex(index);
-      }
     };
 
     const ref = containerRef.current;
@@ -88,17 +82,6 @@ export default function NosProjetsMobile({ projects }) {
           </motion.div>
         </section>
       ))}
-
-      {/* ✅ Scroll dots incluant la slide d’intro */}
-      <div className="immersive-indicator">
-        <div className={`dot ${activeIndex === 0 ? "active" : ""}`} />
-        {filteredProjects.map((_, i) => (
-          <div
-            key={i}
-            className={`dot ${activeIndex === i + 1 ? "active" : ""}`}
-          />
-        ))}
-      </div>
     </div>
   );
 }

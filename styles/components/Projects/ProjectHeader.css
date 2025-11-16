@@ -180,7 +180,8 @@
 /* MOBILE */
 @media screen and (max-width: 600px) {
   .project-title {
-    font-size: 3rem;
+    font-size: 2.6rem;
+    letter-spacing: -0.1rem;
   }
 
   .project-description {
