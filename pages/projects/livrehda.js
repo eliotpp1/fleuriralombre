@@ -19,13 +19,6 @@ Nés d’une amitié forgée à Tahiti, leurs récits mêlent images, anecdotes 
 Le ton est naturel, presque comme si on feuilletait leur journal. Le déroulement du livre donne l’impression d’être à leurs côtés. Histoire d’Aventure, c’est un livre qui donne envie de sortir, de créer, de vivre. Une invitation à explorer le monde, peu importe où l’on vit.
 </li>`;
 export default function LivreHda({ project }) {
-  const images = [
-    "/images/Simone.png",
-    "/images/Urbania.png",
-    "/images/tadeo_neige.png",
-    "/images/envision.png",
-  ];
-
   return (
     <>
       <Menu />
@@ -36,20 +29,7 @@ export default function LivreHda({ project }) {
           alt="Livre HDA Project"
         />
       </section>
-      <section className="carousel-section">
-        <div className="carousel-container">
-          <div className="carousel-track">
-            {[...images, ...images].map((src, index) => (
-              <img
-                key={index}
-                src={src}
-                alt={`Slide ${index + 1}`}
-                className="carousel-image"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+
       <section className="hda-full-book first">
         <img
           src="/images/projects/livre_hda/Couverture_Page_Livre.png"

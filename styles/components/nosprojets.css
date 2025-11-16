@@ -376,12 +376,9 @@
   font-weight: 500;
   font-size: 2.5rem;
   letter-spacing: -0.2rem;
-  margin-left: 2rem;
 }
 
 .immersive-description {
-  margin-left: 2rem;
-
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   letter-spacing: -0.01rem;
@@ -434,11 +431,13 @@
   padding: 0;
 }
 .intro-slide .immersive-content h2 {
+  margin-left: 2rem;
   font-size: 4rem;
   margin-bottom: 1rem;
 }
 
 .intro-slide .immersive-content p {
+  margin-left: 2rem;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }

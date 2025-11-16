@@ -226,13 +226,14 @@
 @media (max-width: 480px) {
   .sunflower {
     padding: 1rem;
-    height: 40vh;
+    height: 45vh;
   }
 
   .sunflower-content {
     padding: 1rem;
     text-align: left;
     margin-left: -12rem;
+    max-width: 57.5%;
   }
 
   .sunflower-title {
