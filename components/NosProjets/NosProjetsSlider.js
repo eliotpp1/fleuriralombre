@@ -47,6 +47,7 @@ export const NosProjetsSlider = ({ projects }) => {
   return (
     <section className="nosprojets-slider-section">
       <video className="slider-background-video" autoPlay muted loop playsInline>
+        <source src="/images/background-animated.webm" type="video/webm" />
         <source src="/images/background-animated.mp4" type="video/mp4" />
       </video>
       <div className="slider-wrapper">
