@@ -44,6 +44,9 @@ export default function NosProjets({ projects }) {
     <>
       {/* <Menu /> */}
       <main className="nosprojets-section" style={{ position: "relative" }}>
+        <video className="nosprojets-video" autoPlay muted loop playsInline>
+          <source src="/images/background-animated.mp4" type="video/mp4" />
+        </video>
         <h1 className="nosprojets-title">Projets</h1>
 
         {reversedProjects.map((project, index) => {

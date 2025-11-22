@@ -216,9 +216,8 @@ export default function Contact() {
 
             {status && (
               <p
-                className={`form-status ${
-                  status.includes("succès") ? "" : "error"
-                }`}
+                className={`form-status ${status.includes("succès") ? "" : "error"
+                  }`}
               >
                 {status}
               </p>

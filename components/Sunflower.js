@@ -5,16 +5,11 @@ export default function Sunflower() {
     <section className="sunflower" id="sunflower">
       <div className="sunflower-content">
         <h2 className="sunflower-title">
-          <span className="title-main">Dans l'Ombre</span>
-          <span className="title-sub">de vos projets</span>
+          <span className="title-main">L'Ombre de</span>
+          <span className="title-sub">vos projets</span>
         </h2>
         <p>
-          La mission de Fleurir’A l’Ombre est de mettre en lumière vos idées
-          afin de donner vie à des projets concrets. Nous mettons l’accent sur
-          la créativité et l’authenticité avec une attention particulière à
-          chaque détail pour raconter votre histoire au travers de réalisations
-          uniques. C’est dans l’ombre de votre vision que nous feront germer les
-          graines de vos futurs projets.
+          L’ombre de la fleur est trop souvent ignorée, pourtant elle révèle toute la part singulière du caractère de la fleur, celle qui la rend véritablement remarquable. Notre mission est de comprendre votre Ombre, ce qui constitue la réalité profonde de votre entreprise et de vos projets afin de raconter votre histoire au travers de réalisations authentiques et uniques.
         </p>
       </div>
       <img

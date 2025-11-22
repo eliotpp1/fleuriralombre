@@ -1,8 +1,4 @@
-import { useState } from "react";
-
 export default function Presentation() {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <section className="presentation" id="presentation">
       <div className="presentation-content">
@@ -13,12 +9,10 @@ export default function Presentation() {
           <h3 className="location-city">Montréal</h3>
           <div
             className="arrow-container-presentation"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
           >
             <div className="arrow-presentation"></div>
           </div>
-          <h3 className={`location-city ${isHovered ? "shifted" : ""}`}>
+          <h3 className={`location-city`}>
             Tahiti
           </h3>
         </div>

@@ -9,6 +9,9 @@ export default function Hero() {
 
   return (
     <section className="hero">
+      <video className="hero-video" autoPlay muted loop playsInline>
+        <source src="/images/background-animated.mp4" type="video/mp4" />
+      </video>
       <div className="hero-content">
         <ModelViewer />
       </div>
