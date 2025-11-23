@@ -156,7 +156,6 @@ export async function getStaticProps() {
     }));
 
     //reverse the order of images
-    ourhistoryImages.reverse();
   } catch (error) {
     console.error(
       "Erreur lors de la récupération des images de notre histoire:",

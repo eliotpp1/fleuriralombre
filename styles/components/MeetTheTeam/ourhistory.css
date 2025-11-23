@@ -1,150 +1,231 @@
-.our-history-page {
-  background-color: var(--white);
-  color: var(--black);
-}
+/* —————————————————————————————
+   DESKTOP (styles existants)
+————————————————————————————— */
 
 .our-history-wrapper {
-  background-color: var(--white);
-  color: var(--black);
-  min-height: 100vh;
-  padding: 10rem 2.5rem 1rem 1rem;
+    padding: 3rem 5rem;
+    background-color: var(--white);
 }
 
 .our-history-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-}
-.our-history-image-container {
-  width: 50%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-}
-.our-history-image {
-  width: 37.5rem;
-  object-fit: cover;
-  border-radius: 1rem;
+    max-width: 100vw;
+    margin-top: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.our-history-texts {
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  padding: 4rem 2rem;
+.our-history-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.our-history-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
 }
 
 .our-history-title {
-  font-size: 6vw;
-  letter-spacing: -0.2rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-.paragraph-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  max-width: 40vw;
-}
-
-.our-history-paragraph {
-  font-size: 1.4rem;
-  color: var(--black);
-  font-weight: 400;
-}
-
-/* === Responsive dès 1200px === */
-@media (max-width: 1460px) {
-  .our-history-title {
-    font-size: 4rem;
-    letter-spacing: -0.1rem;
-  }
-
-  .our-history-image {
-    max-width: 450px;
-  }
-  .our-history-paragraph {
-    font-size: 1.2rem;
+    font-size: 10rem;
+    font-weight: 500;
     color: var(--black);
-    font-weight: 400;
-  }
+    margin-bottom: 8rem;
+    margin-top: 2rem;
 }
 
-@media (max-width: 1200px) {
-  .our-history-wrapper {
-    padding: 8rem 0rem 0rem 0rem;
-  }
-
-  .our-history-content {
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .our-history-image-container {
-    width: 100%;
-    padding: 0;
+.our-history-paysage-container {
     display: flex;
-    justify-content: center; /* centre horizontalement */
-    align-items: center; /* centre verticalement si besoin */
-  }
-
-  .our-history-image {
-    width: 100%; /* prend toute la largeur */
-    max-width: none; /* enlève la limite */
-    height: auto; /* garde les proportions */
-    border-radius: 0; /* optionnel : bord arrondi désactivé pour plein écran */
-    object-fit: cover; /* garde un rendu propre */
-  }
-
-  .our-history-title {
-    font-size: 5rem;
-    letter-spacing: -0.2rem;
-    margin-left: 2rem;
-  }
-
-  .our-history-texts {
-    text-align: left;
     width: 100%;
-    padding: 2rem 0rem;
-  }
-
-  .paragraph-container {
-    max-width: 90%;
-    margin: 0 auto; /* centre le texte */
-  }
+    align-items: stretch;
+    gap: 5rem;
+    margin-bottom: 8rem;
 }
 
-/* === Petits écrans (≈ <600px) === */
-@media (max-width: 600px) {
-  .our-history-wrapper {
-    padding-top: 12.5rem;
-  }
+.our-history-paysage-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    color: var(--black);
+}
 
-  .our-history-title {
-    margin-left: 1rem;
-    font-size: 3.5rem;
-  }
+.our-history-paysage-image-container {
+    width: 40%;
+}
 
-  .our-history-image {
-    width: 95%;
-    max-width: 320px;
-  }
-
-  .our-history-paragraph {
-    font-size: 1rem;
-  }
-
-  .our-history-image-container {
+.our-history-paysage-image {
     width: 100%;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-  }
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.our-history-text-1 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.our-history-text-2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.our-history-card-container {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    gap: 5rem;
+    margin-top: 5rem;
+}
+
+.our-history-card-image-container {
+    width: 50%;
+}
+
+.our-history-card-image {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.our-history-card-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    color: var(--black);
+}
+
+.our-history-citation {
+    margin-top: 5rem;
+    font-size: 5rem;
+    font-weight: 400;
+    color: var(--black);
+    text-align: left;
+}
+
+
+/* —————————————————————————————
+   TABLET : 1024px et moins
+————————————————————————————— */
+@media (max-width: 1024px) {
+
+    .our-history-wrapper {
+        padding: 2rem 3rem;
+    }
+
+    .our-history-title {
+        font-size: 6rem;
+    }
+
+    .our-history-paysage-container,
+    .our-history-card-container {
+        gap: 3rem;
+    }
+
+    .our-history-text-1 {
+        font-size: 2.5rem;
+    }
+
+    .our-history-text-2 {
+        font-size: 1.4rem;
+    }
+
+    .our-history-citation {
+        font-size: 3.5rem;
+    }
+}
+
+
+/* —————————————————————————————
+   MOBILE : 768px et moins
+————————————————————————————— */
+@media (max-width: 768px) {
+
+    .our-history-wrapper {
+        padding: 2rem;
+    }
+
+    .our-history-title {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    /* → Layout passe en colonne */
+    .our-history-paysage-container,
+    .our-history-card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    /* → Images passent en haut en full width */
+    .our-history-paysage-image-container,
+    .our-history-card-image-container {
+        width: 100%;
+    }
+
+    .our-history-paysage-image,
+    .our-history-card-image {
+        height: auto;
+    }
+
+    /* → Textes en full width et plus petits */
+    .our-history-paysage-text,
+    .our-history-card-text {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 2rem;
+        text-align: left;
+    }
+
+    .our-history-text-1 {
+        font-size: 2rem;
+    }
+
+    .our-history-text-2 {
+        font-size: 1.3rem;
+    }
+
+    .our-history-citation {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+
+
+
+/* —————————————————————————————
+   MOBILE PETIT : 480px et moins
+————————————————————————————— */
+@media (max-width: 480px) {
+
+    .our-history-wrapper {
+        padding: 1.5rem;
+    }
+
+    .our-history-title {
+        font-size: 3rem;
+    }
+
+    .our-history-text-1 {
+        font-size: 1.8rem;
+    }
+
+    .our-history-text-2 {
+        font-size: 1.2rem;
+    }
+
+    .our-history-citation {
+        font-size: 2rem;
+    }
 }

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Maintenance from "@/components/Maintenance";
+import SmallScreenWarning from "@/components/SmallScreenWarning";
 import "../styles/globals.css";
 import "../styles/fonts/grotesk.css";
 import "../styles/components/hero.css";
@@ -24,6 +25,7 @@ import "../styles/components/Projects/Hda.css";
 import "../styles/components/Projects/Envision.css";
 import "../styles/components/Projects/Teahupoo.css";
 import "../styles/components/targetCursor.css";
+import "../styles/components/smallcreenWarning.css";
 import TargetCursor from "@/components/TargetCursor";
 import { PrimeReactProvider } from "primereact/api";
 import "primereact/resources/themes/lara-dark-indigo/theme.css";
@@ -106,6 +108,7 @@ export default function App({ Component, pageProps }) {
       <PrimeReactProvider>
         {loading && <Loader />} {/* 👈 loader ici */}
         {isMaintenanceMode ? <Maintenance /> : <Component {...pageProps} />}
+        <SmallScreenWarning />
       </PrimeReactProvider>
     </>
   );
