@@ -157,6 +157,32 @@ textarea.form-input {
   transform: scale(1.05);
 }
 
+.contact-button.alert-success {
+  position: fixed;
+  top: 1rem;
+  right: 3rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  background-color: #92eb80;
+  color: #1a9a00;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.contact-button.alert-error {
+  position: fixed;
+  top: 1rem;
+  right: 3rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  background-color: #ee7979;
+  color: #8d2d2d;
+  justify-content: center;
+  z-index: 10000;
+}
+
 /* Responsive : moins de 900px = stack vertical */
 @media (max-width: 900px) {
   .contact-form-grid .form-grid {
