@@ -39,8 +39,6 @@ export default function Contact() {
     setErrors({});
     setStatus("");
     setIsLoading(true);
-    setShowAlertError(true);
-    setTimeout(() => setShowAlertError(false), 3000);
 
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
