@@ -26,8 +26,8 @@ export default function SmallScreenWarning() {
                 />
 
                 <p className="warning-text">
-                    Pour profiter d’une meilleure expérience, veuillez utiliser un écran plus large
-                    que <strong>1200px</strong>.
+                    Pour profiter d’une meilleure expérience, veuillez utiliser un écran
+                    <strong> d'ordinateur</strong>.
                 </p>
             </div>
         </div>

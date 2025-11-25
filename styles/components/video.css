@@ -21,8 +21,9 @@
   left: 0;
   margin: 0;
   padding: 0;
+  width: 100vh;
+  height: 100vw;
   border: none;
-  object-fit: cover;
   pointer-events: none; /* Prevent interactions with iframe */
 }
 

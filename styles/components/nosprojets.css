@@ -280,7 +280,7 @@
   display: none;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1199px) {
   .nosprojets-desktop {
     display: none;
   }

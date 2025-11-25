@@ -37,6 +37,8 @@
     color: var(--black);
     margin-bottom: 8rem;
     margin-top: 2rem;
+    letter-spacing: -0.6rem;
+
 }
 
 .our-history-paysage-container {
@@ -68,13 +70,15 @@
 }
 
 .our-history-text-1 {
+    line-height: 1.25;
     font-size: 3rem;
     font-weight: 400;
 }
 
 .our-history-text-2 {
-    font-size: 1.5rem;
+    font-size: 1.90rem;
     font-weight: 300;
+    line-height: 1.35;
 }
 
 .our-history-card-container {
@@ -107,10 +111,12 @@
 
 .our-history-citation {
     margin-top: 5rem;
-    font-size: 5rem;
+    font-size: 7.5rem;
     font-weight: 400;
     color: var(--black);
     text-align: left;
+    line-height: 1.2;
+    letter-spacing: -0.1rem;
 }
 
 
